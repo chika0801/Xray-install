@@ -60,7 +60,7 @@ VLESS-gRPC
 
 6.重启Nginx和Xray
 
-<pre>systemctl restart nginx && systemctl restart xray && systemctl status nginx && systemctl status xray</pre>
+<pre>systemctl stop nginx && systemctl stop xray && systemctl start nginx && systemctl start xray  && systemctl status nginx && systemctl status xray</pre>
 
 7.下载和设置v2rayN
 
@@ -100,5 +100,3 @@ VLESS-gRPC
 <details><summary>手动更新SSL证书命令</summary>
 
 <pre>acme.sh --renew -d chika.example.com --force --ecc</pre></details>
-  
-11.如果你要在VLESS-TCP-XTLS和VLESS-gRPC之间切换配置，再使用了下载相应配置的命令后，需使用reboot命令重启VPS，使其生效。直接使用重启Nginx和Xray命令会报错。
