@@ -26,7 +26,7 @@ Debian 11
 
 4.申请免费的SSL证书
 
-你先要购买一个域名，然后添加一个子域名，将它指向你VPS的IP。因为DNS解析需要一点时间，建议设置好了等5分钟，再执行下面的命令。你可以通过ping你的域名，查看IP是否为你VPS的IP，判断域名解析是否成功。将chika.example.com替换成你的子域名。
+你先要购买一个域名，然后添加一个子域名，将它指向你VPS的IP。因为DNS解析需要一点时间，建议设置好了等5分钟，再执行下面的命令。你可以通过ping你的域名，查看IP是否为你VPS的IP，判断域名解析是否成功。注意：将chika.example.com替换成你的子域名。
 
 <pre>apt install -y socat
 
@@ -89,6 +89,8 @@ VLESS-gRPC
 
 点击“检查更新 — Xray-Core — 是否下载? — 是”。
 
+现在你已经能科学上网了。
+
 9.修改服务器配置文件的方法
 
 使用WinSCP登陆你的VPS，进入/usr/local/etc/xray/目录，双击config.json文件编辑，找到"id": "chika"，修改后并保存，然后重启Nginx和Xray，使其生效。
@@ -97,4 +99,6 @@ VLESS-gRPC
 
 <details><summary>手动更新SSL证书命令</summary>
 
-<pre>acme.sh --renew -d chika.example.com --force --ecc</pre>
+<pre>acme.sh --renew -d chika.example.com --force --ecc</pre></details>
+  
+11.如果你要在VLESS-TCP-XTLS和VLESS-gRPC之间切换配置，再使用了下载相应配置的命令后，需使用reboot命令重启VPS，使其生效。直接使用重启Nginx和Xray命令会报错。
