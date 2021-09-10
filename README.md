@@ -54,7 +54,7 @@ VLESS-TCP-XTLS（推荐使用）
 
 <pre>wget -qO /etc/nginx/nginx.conf https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-XTLS/nginx2.conf && wget -qO /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-XTLS/config_server.json</pre>
 
-VLESS-gRPC
+VLESS-gRPC-TLS
 
 <pre>wget -qO /etc/nginx/nginx.conf https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-gRPC-TLS/nginx2.conf && wget -qO /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-gRPC-TLS/config_server.json</pre>
 
@@ -81,7 +81,7 @@ VLESS-gRPC
 
 ![VLESS-TCP-XTLS](https://user-images.githubusercontent.com/88967758/132801053-cc8b3aee-5da8-45d5-9e23-115f3b766e52.jpg)</details>
 
-<details><summary>VLESS-gRPC</summary>
+<details><summary>VLESS-gRPC-TLS</summary>
 
 点击“服务器 — 添加[VLESS]服务器”，按下图所示填写，地址填写你的子域名(例如chika.example.com)
 
