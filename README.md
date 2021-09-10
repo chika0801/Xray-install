@@ -107,7 +107,7 @@ VLESS-gRPC
 
 ## 在安卓系统手机科学上网的方法
 
-1.在电脑上下载v2rayNG 打开链接 https://github.com/2dust/v2rayNg/releases 找到名为v2rayNG_1.6.19_arm64-v8a.apk的文件并下载（通常是选择最新版本），通过数据线连接手机和电脑，将下载的文件复制到你手机内的任意文件夹。
+1.在电脑上下载v2rayNG 打开链接 https://github.com/2dust/v2rayNg/releases 找到名为v2rayNG_1.6.19_arm64-v8a.apk的文件并下载（通常是选择最新版本），通过数据线连接手机和电脑，将下载的文件复制到你的手机内。
 
 2.在你的手机中打开文件管理APP，找到你刚才复制进来的apk文件，并安装它。
 
