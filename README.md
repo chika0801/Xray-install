@@ -105,7 +105,7 @@ VLESS-gRPC-TLS
 
 <pre>acme.sh --renew -d chika.example.com --force --ecc</pre></details>
 
-## 在安卓系统手机科学上网的方法
+## 安卓系统手机科学上网的方法
 
 1.在电脑上下载v2rayNG 打开链接 https://github.com/2dust/v2rayNg/releases 找到名为v2rayNG_1.6.19_arm64-v8a.apk的文件并下载（通常是选择最新版本），通过数据线连接手机和电脑，将下载的文件复制到你的手机内。
 
