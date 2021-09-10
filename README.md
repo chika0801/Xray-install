@@ -56,7 +56,7 @@ VLESS-TCP-XTLS（推荐使用）
 
 VLESS-gRPC
 
-<pre>wget -qO /etc/nginx/nginx.conf https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-gRPC/nginx2.conf && wget -qO /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-gRPC/config_server.json</pre>
+<pre>wget -qO /etc/nginx/nginx.conf https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-gRPC-TLS/nginx2.conf && wget -qO /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-gRPC-TLS/config_server.json</pre>
 
 6.重启Nginx和Xray
 
