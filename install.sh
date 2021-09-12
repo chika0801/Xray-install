@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-#
 wget -qO /usr/share/keyrings/nginx-archive-keyring.key https://nginx.org/keys/nginx_signing.key
 #
 printf "deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.key] https://nginx.org/packages/mainline/debian/ bullseye nginx" > /etc/apt/sources.list.d/sources.list
