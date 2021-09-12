@@ -24,21 +24,3 @@ wget -qO /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika
 wget -qO /usr/local/share/xray/geosite.dat https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat
 #
 wget -qO /usr/local/share/xray/geoip.dat https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat
-#
-printf "wget -qO /usr/local/share/xray/geosite.dat https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat\nwget -qO /usr/local/share/xray/geoip.dat https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat\nsleep 3s\nsystemctl restart xray" > update_geodata.sh
-#
-chmod +x update_geodata.sh
-#
-printf "0 7 * * * /root/update_v2ray-rules-dat.sh\n" > /var/spool/cron/crontabs/root
-#
-systemctl restart cron
-#
-systemctl restart nginx
-#
-systemctl restart xray
-#
-sleep 3s
-#
-systemctl status nginx
-#
-systemctl status xray
