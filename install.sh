@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-clear
+clear111
 
 wget -qO /usr/share/keyrings/nginx-archive-keyring.key https://nginx.org/keys/nginx_signing.key
 
