@@ -22,5 +22,4 @@ wget -qO /etc/nginx/nginx.conf https://raw.githubusercontent.com/chika0801/tool/
 wget -qO /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika0801/tool/main/config.json
 #
 wget -qO /usr/local/share/xray/geosite.dat https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat
-#
 wget -qO /usr/local/share/xray/geoip.dat https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat
