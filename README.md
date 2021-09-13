@@ -62,7 +62,19 @@ VLESS-gRPC-TLS
 
 <pre>systemctl stop nginx && systemctl stop xray && systemctl start nginx && systemctl start xray  && systemctl status nginx && systemctl status xray</pre>
 
-7.下载和设置v2rayN
+PS1.修改服务器配置文件的方法
+
+使用WinSCP登陆你的VPS，进入/usr/local/etc/xray/目录，双击config.json文件编辑，找到"id": "chika"，修改后并保存，然后重启Nginx和Xray，使其生效。
+
+PS2.SSL证书是每90天自动更新，更新时需要使用80端口，因此在Nginx的配置文件中，没有监听80端口。申请免费证书，每周限制5次，超过次数会报错，具体限制规则https://letsencrypt.org/zh-cn/docs/rate-limits/
+
+<details><summary>手动更新SSL证书命令</summary>
+
+<pre>acme.sh --renew -d chika.example.com --force --ecc</pre></details>
+
+## Windows系统电脑电脑科学上网的方法
+
+1.下载和设置v2rayN
 
 下载链接 https://github.com/2dust/v2rayN/releases/download/4.20/v2rayN-Core.zip
 解压后运行v2rayN.exe。
@@ -73,7 +85,7 @@ VLESS-gRPC-TLS
 
 右键点击屏幕右下角的v2rayN图标，点击“系统代理 — 自动配置系统代理”。
 
-8.在v2rayN中添加服务器
+2.在v2rayN中添加服务器
 
 <details><summary>VLESS-TCP-XTLS</summary>
 
@@ -92,18 +104,6 @@ VLESS-gRPC-TLS
 点击“检查更新 — Update GeoSite — 是否下载? — 是”。
 
 点击“检查更新 — Update GeoIP — 是否下载? — 是”。
-
-### 现在你已经能科学上网了
-
-9.修改服务器配置文件的方法
-
-使用WinSCP登陆你的VPS，进入/usr/local/etc/xray/目录，双击config.json文件编辑，找到"id": "chika"，修改后并保存，然后重启Nginx和Xray，使其生效。
-
-10.SSL证书是每90天自动更新，更新时需要使用80端口，因此在Nginx的配置文件中，没有监听80端口。申请免费证书，每周限制5次，超过次数会报错，具体限制规则https://letsencrypt.org/zh-cn/docs/rate-limits/
-
-<details><summary>手动更新SSL证书命令</summary>
-
-<pre>acme.sh --renew -d chika.example.com --force --ecc</pre></details>
 
 ## 安卓系统手机科学上网的方法
 
