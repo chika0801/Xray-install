@@ -8,17 +8,17 @@ Xshell 7 免费版 https://www.netsarang.com/en/free-for-home-school/ WinSCP htt
 
 1.安装curl wget
 
-<pre>apt update -y && apt install -y curl wget && timedatectl set-timezone Asia/Shanghai && mkdir -p /var/log/journal</pre>
+<pre>apt update -y && apt install -y curl wget</pre>
 
 2.安装Nginx
 
 Debian 10
 
-<pre>wget -qO /usr/share/keyrings/nginx-archive-keyring.key https://nginx.org/keys/nginx_signing.key && printf "deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.key] https://nginx.org/packages/mainline/debian/ buster nginx" > /etc/apt/sources.list.d/sources.list && apt update -y && apt install -y nginx && mkdir -p /etc/systemd/system/nginx.service.d && printf "[Service]\nExecStartPost=/bin/sleep 0.1\n" > /etc/systemd/system/nginx.service.d/override.conf && nginx -v</pre>
+<pre>wget -qO /usr/share/keyrings/nginx-archive-keyring.key https://nginx.org/keys/nginx_signing.key && printf "deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.key] https://nginx.org/packages/mainline/debian/ buster nginx" > /etc/apt/sources.list.d/sources.list && apt update -y && apt install -y nginx && nginx -v</pre>
 
 Debian 11
 
-<pre>wget -qO /usr/share/keyrings/nginx-archive-keyring.key https://nginx.org/keys/nginx_signing.key && printf "deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.key] https://nginx.org/packages/mainline/debian/ bullseye nginx" > /etc/apt/sources.list.d/sources.list && apt update -y && apt install -y nginx && mkdir -p /etc/systemd/system/nginx.service.d && printf "[Service]\nExecStartPost=/bin/sleep 0.1\n" > /etc/systemd/system/nginx.service.d/override.conf && nginx -v</pre>
+<pre>wget -qO /usr/share/keyrings/nginx-archive-keyring.key https://nginx.org/keys/nginx_signing.key && printf "deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.key] https://nginx.org/packages/mainline/debian/ bullseye nginx" > /etc/apt/sources.list.d/sources.list && apt update -y && apt install -y nginx && nginx -v</pre>
 
 3.安装Xray
 
