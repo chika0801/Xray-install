@@ -38,7 +38,7 @@ acme.sh --install-cert -d chika.example.com --ecc \
 
 --fullchain-file /etc/ssl/private/fullchain.pem \
 
---key-file /etc/ssl/private/key.pem
+--key-file /etc/ssl/private/privkey.pem
 
 chown -R nobody:nogroup /etc/ssl/private/</pre>
 
