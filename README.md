@@ -4,7 +4,7 @@
 
 Xshell 7 免费版 https://www.netsarang.com/en/free-for-home-school/ WinSCP https://winscp.net/eng/download.php
 
-0.把VPS的系统重装为Debian 10或Debian 11，使用Xshell 7 免费版登陆你的VPS
+0.把VPS的系统重装为Debian 10或Debian 11，使用Xshell 7连接你的VPS
 
 1.安装curl wget
 
@@ -68,7 +68,7 @@ VLESS-gRPC-TLS
 
 PS1.修改服务器配置文件的方法
 
-使用WinSCP登陆你的VPS，进入/usr/local/etc/xray/目录，双击config.json文件编辑，找到"id": "chika"，修改后并保存，然后重启Nginx和Xray，使其生效。
+使用WinSCP连接你的VPS，进入/usr/local/etc/xray/目录，双击config.json文件编辑，找到"id": "chika"，修改后并保存，然后重启Nginx和Xray，使其生效。
 
 PS2.SSL证书是每90天自动更新，更新时需要使用80端口，因此在Nginx的配置文件中，没有监听80端口。申请免费证书，每周限制5次，超过次数会报错，具体限制规则https://letsencrypt.org/zh-cn/docs/rate-limits/
 
