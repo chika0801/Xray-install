@@ -48,6 +48,10 @@ acme.sh --install-cert -d chika.example.com --ecc \
 
 chown -R nobody:nogroup /etc/ssl/private/</pre>
 
+<details><summary>过程图</summary>
+
+![屏幕截图 2021-09-14 152117](https://user-images.githubusercontent.com/88967758/133214340-d3a7f546-8020-4321-8fc5-c036599569c1.jpg)</details>
+
 5.下载Nginx和Xray的配置文件
 
 VLESS-TCP-XTLS（推荐使用）
