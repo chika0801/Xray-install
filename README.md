@@ -60,7 +60,11 @@ VLESS-gRPC-TLS
 
 6.重启Nginx和Xray
 
-<pre>systemctl restart nginx && systemctl restart xray  && systemctl status nginx && systemctl status xray</pre>
+<pre>systemctl restart nginx && systemctl restart xray</pre>
+
+<details><summary>查看Nginx和Xray状态</summary>
+
+<pre>systemctl status nginx && systemctl status xray</pre></details>
 
 PS1.修改服务器配置文件的方法
 
