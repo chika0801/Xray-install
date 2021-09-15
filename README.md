@@ -143,7 +143,7 @@ acme.sh --renew -d chika.example.com --force --ecc
 
 [Nginx](http://nginx.org/en/linux_packages.html)
 
-[Xray-install](https://github.com/XTLS/Xray-install) [v2ray-fhs-install](https://github.com/v2fly/fhs-install-v2ray/wiki)
+[Xray-install](https://github.com/XTLS/Xray-install) [v2ray-fhs-install-wiki](https://github.com/v2fly/fhs-install-v2ray/wiki)
 
 [acme.sh](https://github.com/acmesh-official/acme.sh)
 
