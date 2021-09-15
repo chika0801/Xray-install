@@ -28,11 +28,19 @@ apt update -y && apt install -y curl wget
 apt install -y gnupg2 ca-certificates lsb-release debian-archive-keyring && curl https://nginx.org/keys/nginx_signing.key | gpg --dearmor > /usr/share/keyrings/nginx-archive-keyring.gpg && printf "deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] https://nginx.org/packages/mainline/debian `lsb_release -cs` nginx" > /etc/apt/sources.list.d/nginx.list && printf "Package: *\nPin: origin nginx.org\nPin: release o=nginx\nPin-Priority: 900" > /etc/apt/preferences.d/99nginx && apt update -y && apt install -y nginx
 ```
 
+<details><summary>安装成功的示意图</summary>
+
+![1](https://user-images.githubusercontent.com/88967758/133460525-7f71faae-cd70-46fd-aaa2-8c04a10c895e.jpg)</details>
+
 3.安装Xray
 
 ```
 bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install
 ```
+
+<details><summary>安装成功的示意图</summary>
+
+![2](https://user-images.githubusercontent.com/88967758/133460630-687d8860-7f98-4611-ad7d-dd11ba021388.jpg)</details>
 
 4.申请免费的SSL证书（每行命令依次执行）
 
@@ -76,6 +84,10 @@ wget -O /etc/nginx/nginx.conf https://raw.githubusercontent.com/chika0801/Xray-e
 wget -O /etc/nginx/nginx.conf https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-gRPC-TLS/nginx.conf && wget -O /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-gRPC-TLS/config_server.json
 ```
 
+<details><summary>下载成功的示意图</summary>
+
+![3](https://user-images.githubusercontent.com/88967758/133460802-0e4ee7b7-2202-4fdf-93fc-f863f3be743d.jpg)</details>
+
 6.重启Nginx和Xray
 
 ```
@@ -87,7 +99,10 @@ systemctl stop nginx && systemctl stop xray && systemctl start nginx && systemct
 ```
 systemctl status nginx && systemctl status xray
 ```
-</details>
+
+<details><summary>成功的示意图</summary>
+
+![4](https://user-images.githubusercontent.com/88967758/133461438-0c2a8f1d-166e-4f2b-a962-da8558678fa4.jpg)</details>
 
 PS1.修改服务器配置文件的方法：使用WinSCP连接你的VPS，进入/usr/local/etc/xray/目录，双击config.json文件编辑，找到"id": "chika"，修改后并保存，然后重启Nginx和Xray，使其生效。
 
