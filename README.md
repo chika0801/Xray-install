@@ -2,25 +2,33 @@
 
 准备软件
 
-Xshell 7 免费版 https://www.netsarang.com/en/free-for-home-school/ WinSCP https://winscp.net/eng/download.php
+[Xshell 7 免费版](https://www.netsarang.com/en/free-for-home-school/)
 
-0.把VPS的系统重装为Debian 10或Debian 11，使用Xshell 7连接你的VPS
+[WinSCP](https://winscp.net/eng/download.php)
+
+- 把VPS的系统重装为Debian 10或Debian 11，使用Xshell 7连接你的VPS
 
 1.安装curl wget
 
-<pre>apt update -y && apt install -y curl wget</pre>
+```
+apt update -y && apt install -y curl wget
+```
 
 2.安装Nginx
 
-<pre>apt install -y gnupg2 ca-certificates lsb-release debian-archive-keyring && curl https://nginx.org/keys/nginx_signing.key | gpg --dearmor > /usr/share/keyrings/nginx-archive-keyring.gpg && printf "deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] https://nginx.org/packages/mainline/debian `lsb_release -cs` nginx" > /etc/apt/sources.list.d/nginx.list && printf "Package: *\nPin: origin nginx.org\nPin: release o=nginx\nPin-Priority: 900" > /etc/apt/preferences.d/99nginx && apt update -y && apt install -y nginx</pre>
+```
+apt install -y gnupg2 ca-certificates lsb-release debian-archive-keyring && curl https://nginx.org/keys/nginx_signing.key | gpg --dearmor > /usr/share/keyrings/nginx-archive-keyring.gpg && printf "deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] https://nginx.org/packages/mainline/debian `lsb_release -cs` nginx" > /etc/apt/sources.list.d/nginx.list && printf "Package: *\nPin: origin nginx.org\nPin: release o=nginx\nPin-Priority: 900" > /etc/apt/preferences.d/99nginx && apt update -y && apt install -y nginx
+```
 
 3.安装Xray
 
-<pre>bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install</pre>
+```
+bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install
+```
 
 4.申请免费的SSL证书（每行命令依次执行）
 
-你先要购买一个域名，然后添加一个子域名，将它指向你VPS的IP。因为DNS解析需要一点时间，建议设置好了等5分钟，再执行下面的命令。你可以通过ping你的域名，查看IP是否为你VPS的IP，判断域名解析是否成功。注意：将chika.example.com替换成你的子域名。
+- 你先要购买一个域名，然后添加一个子域名，将它指向你VPS的IP。因为DNS解析需要一点时间，建议设置好了等5分钟，再执行下面的命令。你可以通过ping你的域名，查看IP是否为你VPS的IP，判断域名解析是否成功。注意：将chika.example.com替换成你的子域名。
 
 <pre>apt install -y socat
 
@@ -48,44 +56,54 @@ chown -R nobody:nogroup /etc/ssl/private/</pre>
 
 5.下载Nginx和Xray的配置文件
 
-VLESS-TCP-XTLS（推荐使用）
+- VLESS-TCP-XTLS（推荐使用）
 
-<pre>wget -O /etc/nginx/nginx.conf https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-XTLS/nginx.conf && wget -O /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-XTLS/config_server.json</pre>
+```
+wget -O /etc/nginx/nginx.conf https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-XTLS/nginx.conf && wget -O /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-XTLS/config_server.json
+```
 
-VLESS-gRPC-TLS
+- VLESS-gRPC-TLS
 
-<pre>wget -O /etc/nginx/nginx.conf https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-gRPC-TLS/nginx.conf && wget -O /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-gRPC-TLS/config_server.json</pre>
+```
+wget -O /etc/nginx/nginx.conf https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-gRPC-TLS/nginx.conf && wget -O /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-gRPC-TLS/config_server.json
+```
 
 6.重启Nginx和Xray
 
-<pre>systemctl stop nginx && systemctl stop xray && systemctl start nginx && systemctl start xray</pre>
+```
+systemctl stop nginx && systemctl stop xray && systemctl start nginx && systemctl start xray
+```
 
-<details><summary>查看Nginx和Xray状态</summary>
+7.查看Nginx和Xray状态
 
-<pre>systemctl status nginx && systemctl status xray</pre></details>
+```
+systemctl status nginx && systemctl status xray
+```
+</details>
 
-PS1.修改服务器配置文件的方法
+PS1.修改服务器配置文件的方法：使用WinSCP连接你的VPS，进入/usr/local/etc/xray/目录，双击config.json文件编辑，找到"id": "chika"，修改后并保存，然后重启Nginx和Xray，使其生效。
 
-使用WinSCP连接你的VPS，进入/usr/local/etc/xray/目录，双击config.json文件编辑，找到"id": "chika"，修改后并保存，然后重启Nginx和Xray，使其生效。
-
-PS2.SSL证书是每90天自动更新，更新时需要使用80端口，因此在Nginx的配置文件中，没有监听80端口。申请免费证书，每周限制5次，超过次数会报错，具体限制规则https://letsencrypt.org/zh-cn/docs/rate-limits/
+PS2.SSL证书是每90天自动更新，更新时需要使用80端口，因此在Nginx的配置文件中，没有监听80端口。申请免费证书，每周限制5次，超过次数会报错，[具体限制规则](https://letsencrypt.org/zh-cn/docs/rate-limits/)
 
 <details><summary>手动更新SSL证书命令</summary>
 
-<pre>acme.sh --renew -d chika.example.com --force --ecc</pre></details>
+```
+acme.sh --renew -d chika.example.com --force --ecc
+```
+</details>
 
 ## Windows系统电脑电脑科学上网的方法
 
 1.下载和设置v2rayN
 
-下载链接 https://github.com/2dust/v2rayN/releases/download/4.20/v2rayN-Core.zip
+[下载链接](https://github.com/2dust/v2rayN/releases/download/4.20/v2rayN-Core.zip)
 解压后运行v2rayN.exe。
 
-点击“设置 — 参数设置 — v2rayN设置”，将Core类型改为“Xray_core”，确定。
+- 点击“设置 — 参数设置 — v2rayN设置”，将Core类型改为“Xray_core”，确定。
 
-点击“设置 — 路由设置 — 基础功能 — 一键导入基础规则 — 确定”。
+- 点击“设置 — 路由设置 — 基础功能 — 一键导入基础规则 — 确定”。
 
-右键点击屏幕右下角的v2rayN图标，点击“系统代理 — 自动配置系统代理”。
+- 右键点击屏幕右下角的v2rayN图标，点击“系统代理 — 自动配置系统代理”。
 
 2.在v2rayN中添加服务器
 
@@ -101,15 +119,17 @@ PS2.SSL证书是每90天自动更新，更新时需要使用80端口，因此在
 
 ![VLESS-gRPC](https://user-images.githubusercontent.com/88967758/132800221-1e67083c-6d38-4f00-8f24-38ae688f3d09.jpg)</details>
 
-点击“检查更新 — Xray-Core — 是否下载? — 是”。
+- 点击“检查更新 — Xray-Core — 是否下载? — 是”。
 
-点击“检查更新 — Update GeoSite — 是否下载? — 是”。
+- 点击“检查更新 — Update GeoSite — 是否下载? — 是”。
 
-点击“检查更新 — Update GeoIP — 是否下载? — 是”。
+- 点击“检查更新 — Update GeoIP — 是否下载? — 是”。
 
 ## 安卓系统手机科学上网的方法
 
-1.在电脑上下载v2rayNG 打开链接 https://github.com/2dust/v2rayNg/releases 点击最新版本栏里的“▸ Assets”，找到名为v2rayNG_1.x.x_arm64-v8a.apk的文件并下载，通过数据线连接手机和电脑，将下载的文件复制到你的手机内。
+1.在电脑上下载v2rayNG
+
+[打开链接](https://github.com/2dust/v2rayNg/releases) 点击最新版本栏里的“▸ Assets”，找到名为v2rayNG_1.x.x_arm64-v8a.apk的文件并下载，通过数据线连接手机和电脑，将下载的文件复制到你的手机内。
 
 2.在你的手机中打开文件管理APP，找到你刚才复制进来的apk文件，并安装它。
 
