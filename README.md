@@ -2,11 +2,15 @@
 
 准备软件
 
-[Xshell 7 免费版](https://www.netsarang.com/en/free-for-home-school/)
+- [Xshell 7 免费版](https://www.netsarang.com/en/free-for-home-school/)
+- [WinSCP](https://winscp.net/eng/download.php)
 
-[WinSCP](https://winscp.net/eng/download.php)
+准备系统
 
-- 把VPS的系统重装为Debian 10或Debian 11，使用Xshell 7连接你的VPS
+- Debian 10
+- Debian 11
+
+使用Xshell 7连接你的VPS
 
 1.安装curl wget
 
@@ -100,9 +104,7 @@ acme.sh --renew -d chika.example.com --force --ecc
 解压后运行v2rayN.exe。
 
 - 点击“设置 — 参数设置 — v2rayN设置”，将Core类型改为“Xray_core”，确定。
-
 - 点击“设置 — 路由设置 — 基础功能 — 一键导入基础规则 — 确定”。
-
 - 右键点击屏幕右下角的v2rayN图标，点击“系统代理 — 自动配置系统代理”。
 
 2.在v2rayN中添加服务器
@@ -120,9 +122,7 @@ acme.sh --renew -d chika.example.com --force --ecc
 ![VLESS-gRPC](https://user-images.githubusercontent.com/88967758/132800221-1e67083c-6d38-4f00-8f24-38ae688f3d09.jpg)</details>
 
 - 点击“检查更新 — Xray-Core — 是否下载? — 是”。
-
 - 点击“检查更新 — Update GeoSite — 是否下载? — 是”。
-
 - 点击“检查更新 — Update GeoIP — 是否下载? — 是”。
 
 ## 安卓系统手机科学上网的方法
@@ -141,20 +141,10 @@ acme.sh --renew -d chika.example.com --force --ecc
 
 ## 参考
 
-Nginx
+[Nginx](http://nginx.org/en/linux_packages.html)
 
-http://nginx.org/en/linux_packages.html
+[Xray-install](https://github.com/XTLS/Xray-install) [v2ray-fhs-install](https://github.com/v2fly/fhs-install-v2ray/wiki)
 
-Xray
+[acme.sh](https://github.com/acmesh-official/acme.sh)
 
-https://github.com/XTLS/Xray-install
-
-https://github.com/v2fly/fhs-install-v2ray/wiki
-
-acme.sh
-
-https://github.com/acmesh-official/acme.sh
-
-配置文件
-
-https://github.com/lxhao61/integrated-examples
+[配置文件](https://github.com/lxhao61/integrated-examples)
