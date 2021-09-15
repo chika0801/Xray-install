@@ -145,7 +145,7 @@ acme.sh --renew -d chika.example.com --force --ecc
 
 [Xray-install](https://github.com/XTLS/Xray-install)
 
-[v2ray-fhs-install-wiki](https://github.com/v2fly/fhs-install-v2ray/wiki)
+[v2ray-fhs-install-wiki](https://github.com/v2fly/fhs-install-v2ray/wiki/Insufficient-permissions-when-using-certificates)
 
 [acme.sh](https://github.com/acmesh-official/acme.sh)
 
