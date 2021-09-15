@@ -118,3 +118,23 @@ PS2.SSL证书是每90天自动更新，更新时需要使用80端口，因此在
 4.返回v2rayNG主界面，点击右上角的“+”，点击“扫描二维码”。在电脑上双击屏幕右下角的v2rayN图标，打开v2rayN的主界面，点击选中要使用的服务器整行，点击“分享”，用手机扫描屏幕上的二维码。
 
 5.在手机上点击右下角的圆形图标，第一次会弹出一个网络连接请求的对话框，点确定即可，这时圆形图标变绿，提示“服务启动成功”。
+
+## 参考
+
+Nginx
+
+http://nginx.org/en/linux_packages.html
+
+Xray
+
+https://github.com/XTLS/Xray-install
+
+https://github.com/v2fly/fhs-install-v2ray/wiki
+
+acme.sh
+
+https://github.com/acmesh-official/acme.sh
+
+配置文件
+
+https://github.com/lxhao61/integrated-examples
