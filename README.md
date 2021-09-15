@@ -44,7 +44,7 @@ chown -R nobody:nogroup /etc/ssl/private/</pre>
 
 <details><summary>过程图</summary>
 
-![屏幕截图 2021-09-14 152117](https://user-images.githubusercontent.com/88967758/133214340-d3a7f546-8020-4321-8fc5-c036599569c1.jpg)</details>
+![133214340-d3a7f546-8020-4321-8fc5-c036599569c1](https://user-images.githubusercontent.com/88967758/133394457-c0c90fe3-2848-4bd3-8f96-a9cb75638cd7.jpg)</details>
 
 5.下载Nginx和Xray的配置文件
 
