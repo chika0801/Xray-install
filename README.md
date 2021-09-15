@@ -109,7 +109,7 @@ PS2.SSL证书是每90天自动更新，更新时需要使用80端口，因此在
 
 ## 安卓系统手机科学上网的方法
 
-1.在电脑上下载v2rayNG 打开链接 https://github.com/2dust/v2rayNg/releases 找到名为v2rayNG_1.6.20_arm64-v8a.apk的文件并下载（通常是选择最新版本），通过数据线连接手机和电脑，将下载的文件复制到你的手机内。
+1.在电脑上下载v2rayNG 打开链接 https://github.com/2dust/v2rayNg/releases 点击最新版本栏里的“▸ Assets”，找到名为v2rayNG_1.x.x_arm64-v8a.apk的文件并下载，通过数据线连接手机和电脑，将下载的文件复制到你的手机内。
 
 2.在你的手机中打开文件管理APP，找到你刚才复制进来的apk文件，并安装它。
 
