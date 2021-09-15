@@ -100,7 +100,7 @@ systemctl stop nginx && systemctl stop xray && systemctl start nginx && systemct
 systemctl status nginx && systemctl status xray
 ```
 
-<details><summary>成功的示意图</summary>
+<details><summary>启动成功的示意图</summary>
 
 ![4](https://user-images.githubusercontent.com/88967758/133461438-0c2a8f1d-166e-4f2b-a962-da8558678fa4.jpg)</details>
 
