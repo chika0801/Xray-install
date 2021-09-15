@@ -10,7 +10,11 @@
 - [Debian 10](https://blog.hicasper.com/post/135.html)
 - [Debian 11](https://github.com/bohanyang/debi)
 
-使用Xshell 7连接你的VPS
+开始安装
+
+- 使用Xshell 7连接你的VPS
+- 请从步骤1-7依次操作
+- 如果你有SSL证书，或者重装系统，备份了SSL证书，将公钥文件改名为fullchain.pem，将私钥文件改名为privkey.pem，使用WinSCP连接你的VPS，将它们上传到/etc/ssl/private/目录，执行`chown -R nobody:nogroup /etc/ssl/private/`命令，跳过步骤4
 
 1.安装curl wget
 
