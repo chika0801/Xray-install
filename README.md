@@ -58,7 +58,7 @@ VLESS-gRPC-TLS
 
 6.重启Nginx和Xray
 
-<pre>systemctl restart nginx && systemctl restart xray</pre>
+<pre>systemctl stop nginx && systemctl stop xray && systemctl start nginx && systemctl start xray</pre>
 
 <details><summary>查看Nginx和Xray状态</summary>
 
