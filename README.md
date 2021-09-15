@@ -8,7 +8,7 @@
 准备系统
 
 - Debian 10
-- Debian 11
+- [Debian 11](https://github.com/bohanyang/debi)
 
 使用Xshell 7连接你的VPS
 
