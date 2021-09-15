@@ -66,7 +66,7 @@ acme.sh --install-cert -d chika.example.com --ecc \
 
 chown -R nobody:nogroup /etc/ssl/private/</pre>
 
-<details><summary>过程图</summary>
+<details><summary>申请成功的示意图</summary>
 
 ![133214340-d3a7f546-8020-4321-8fc5-c036599569c1](https://user-images.githubusercontent.com/88967758/133394457-c0c90fe3-2848-4bd3-8f96-a9cb75638cd7.jpg)</details>
 
