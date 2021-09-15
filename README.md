@@ -100,7 +100,7 @@ acme.sh --renew -d chika.example.com --force --ecc
 ```
 </details>
 
-## Windows系统电脑电脑科学上网的方法
+## Windows系统电脑科学上网的方法
 
 1.下载和设置v2rayN
 
