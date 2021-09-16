@@ -5,14 +5,15 @@
 - [Xshell 7 免费版](https://www.netsarang.com/en/free-for-home-school/)
 - [WinSCP](https://winscp.net/eng/download.php)
 
-准备系统（新手不建议开始就网络重装系统，请去你VPS网站上操作，重装系统为Deian10或11）
+准备系统（新手不建议开始就[网络重装系统](https://blog.hicasper.com/post/135.html)，请去你VPS网站上操作，重装系统为Deian10或11）
 
-- [Debian 10](https://blog.hicasper.com/post/135.html)
-- [Debian 11](https://github.com/bohanyang/debi)
+- Debian 10
+- Debian 11
 
 开始安装
 
 - 使用Xshell 7连接你的VPS
+- 使用root用户登陆
 - 请从步骤1-7依次操作
 - 如果你有SSL证书，或者重装系统，备份了SSL证书，将公钥文件改名为fullchain.pem，将私钥文件改名为privkey.pem，使用WinSCP连接你的VPS，将它们上传到/etc/ssl/private/目录，执行`chown -R nobody:nogroup /etc/ssl/private/`命令，跳过步骤4
 
