@@ -9,8 +9,8 @@
 
 - Debian 10
 - Debian 11
-- Ubutu 18.04
-- Ubutu 20.04
+- Ubuntu 18.04
+- Ubuntu 20.04
 
 开始安装
 
