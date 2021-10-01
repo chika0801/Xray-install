@@ -51,9 +51,9 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 
 ![2](https://user-images.githubusercontent.com/88967758/133460630-687d8860-7f98-4611-ad7d-dd11ba021388.jpg)</details>
 
-4.申请免费的SSL证书（每行命令依次执行）
+4.申请免费的SSL证书
 
-- 你先要购买一个域名，然后添加一个子域名，将它指向你VPS的IP。因为DNS解析需要一点时间，建议设置好了等5分钟，再执行下面的命令。你可以通过ping你的域名，查看IP是否为你VPS的IP，判断域名解析是否成功。注意：将chika.example.com替换成你的子域名。
+- 你先要购买一个域名，然后添加一个子域名，将它指向你VPS的IP。因为DNS解析需要一点时间，建议设置好了等5分钟，再执行下面的命令（每行命令依次执行）。你可以通过ping你设置的子域名，查看返回的IP是否正确。注意：将chika.example.com替换成你的子域名。
 
 <pre>apt install -y socat
 
