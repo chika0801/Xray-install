@@ -5,7 +5,7 @@
 - [Xshell 7 免费版](https://www.netsarang.com/en/free-for-home-school/)
 - [WinSCP](https://winscp.net/eng/download.php)
 
-准备系统（新手不建议开始就[网络重装系统](https://github.com/bohanyang/debi)，请去你VPS网站上操作，重装系统为Deian10或11）
+准备系统（新手不建议开始就[网络重装系统](https://github.com/bohanyang/debi)，请去你VPS网站上操作，建议重装系统为Deian10或11）
 
 - Debian 10
 - Debian 11
