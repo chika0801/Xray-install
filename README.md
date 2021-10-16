@@ -17,41 +17,15 @@
 - 使用Xshell 7连接你的VPS
 - 使用root用户登陆
 - 请从步骤1-7依次操作
-- 如果你已有SSL证书，将公钥文件改名为fullchain.pem，将私钥文件改名为privkey.pem，使用WinSCP连接你的VPS，将它们上传到/etc/ssl/private/目录，执行`chown -R nobody:nogroup /etc/ssl/private/`命令，跳过步骤4
+- 如果你已有SSL证书，将公钥文件改名为fullchain.pem，将私钥文件改名为privkey.pem，使用WinSCP连接你的VPS，将它们上传到/etc/ssl/private/目录，执行`chown -R nobody:nogroup /etc/ssl/private/`命令，跳过步骤1
 
-1.安装curl wget
+0.安装curl wget
 
 ```
 apt update -y && apt install -y curl wget
 ```
 
-2.安装Nginx
-
-- Debian 10/11
-```
-apt install -y gnupg2 ca-certificates lsb-release debian-archive-keyring && curl https://nginx.org/keys/nginx_signing.key | gpg --dearmor > /usr/share/keyrings/nginx-archive-keyring.gpg && printf "deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] https://nginx.org/packages/mainline/debian `lsb_release -cs` nginx" > /etc/apt/sources.list.d/nginx.list && printf "Package: *\nPin: origin nginx.org\nPin: release o=nginx\nPin-Priority: 900" > /etc/apt/preferences.d/99nginx && apt update -y && apt install -y nginx
-```
-
-- Ubuntu 18.04/20.04
-```
-apt install -y gnupg2 ca-certificates lsb-release ubuntu-keyring && curl https://nginx.org/keys/nginx_signing.key | gpg --dearmor > /usr/share/keyrings/nginx-archive-keyring.gpg && printf "deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] https://nginx.org/packages/mainline/ubuntu `lsb_release -cs` nginx" > /etc/apt/sources.list.d/nginx.list && printf "Package: *\nPin: origin nginx.org\nPin: release o=nginx\nPin-Priority: 900" > /etc/apt/preferences.d/99nginx && apt update -y && apt install -y nginx
-```
-
-<details><summary>安装成功的示意图</summary>
-
-![1](https://user-images.githubusercontent.com/88967758/133460525-7f71faae-cd70-46fd-aaa2-8c04a10c895e.jpg)</details>
-
-3.安装Xray
-
-```
-bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install
-```
-
-<details><summary>安装成功的示意图</summary>
-
-![2](https://user-images.githubusercontent.com/88967758/133460630-687d8860-7f98-4611-ad7d-dd11ba021388.jpg)</details>
-
-4.申请免费的SSL证书
+1.申请免费的SSL证书
 
 - 你先要购买一个域名，然后添加一个子域名，将子域名指向你VPS的IP。因为DNS解析需要一点时间，建议设置好了等5分钟，再执行下面的命令（每行命令依次执行）。你可以通过ping你的子域名，查看返回的IP是否正确。注意：将chika.example.com替换成你的子域名。
 
@@ -79,7 +53,33 @@ chown -R nobody:nogroup /etc/ssl/private/</pre>
 
 ![133214340-d3a7f546-8020-4321-8fc5-c036599569c1](https://user-images.githubusercontent.com/88967758/133394457-c0c90fe3-2848-4bd3-8f96-a9cb75638cd7.jpg)</details>
 
-5.下载Nginx和Xray的配置文件
+2.安装Nginx
+
+- Debian 10/11
+```
+apt install -y gnupg2 ca-certificates lsb-release debian-archive-keyring && curl https://nginx.org/keys/nginx_signing.key | gpg --dearmor > /usr/share/keyrings/nginx-archive-keyring.gpg && printf "deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] https://nginx.org/packages/mainline/debian `lsb_release -cs` nginx" > /etc/apt/sources.list.d/nginx.list && printf "Package: *\nPin: origin nginx.org\nPin: release o=nginx\nPin-Priority: 900" > /etc/apt/preferences.d/99nginx && apt update -y && apt install -y nginx
+```
+
+- Ubuntu 18.04/20.04
+```
+apt install -y gnupg2 ca-certificates lsb-release ubuntu-keyring && curl https://nginx.org/keys/nginx_signing.key | gpg --dearmor > /usr/share/keyrings/nginx-archive-keyring.gpg && printf "deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] https://nginx.org/packages/mainline/ubuntu `lsb_release -cs` nginx" > /etc/apt/sources.list.d/nginx.list && printf "Package: *\nPin: origin nginx.org\nPin: release o=nginx\nPin-Priority: 900" > /etc/apt/preferences.d/99nginx && apt update -y && apt install -y nginx
+```
+
+<details><summary>安装成功的示意图</summary>
+
+![1](https://user-images.githubusercontent.com/88967758/133460525-7f71faae-cd70-46fd-aaa2-8c04a10c895e.jpg)</details>
+
+3.安装Xray
+
+```
+bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install
+```
+
+<details><summary>安装成功的示意图</summary>
+
+![2](https://user-images.githubusercontent.com/88967758/133460630-687d8860-7f98-4611-ad7d-dd11ba021388.jpg)</details>
+
+4.下载Nginx和Xray的配置文件（二选一）
 
 - [VLESS-TCP-XTLS](https://github.com/chika0801/Xray-examples/tree/main/VLESS-TCP-XTLS)（推荐使用）
 
@@ -97,13 +97,13 @@ wget -O /etc/nginx/nginx.conf https://raw.githubusercontent.com/chika0801/Xray-e
 
 ![3](https://user-images.githubusercontent.com/88967758/133460802-0e4ee7b7-2202-4fdf-93fc-f863f3be743d.jpg)</details>
 
-6.重启Nginx和Xray
+5.重启Nginx和Xray
 
 ```
 systemctl stop nginx && systemctl stop xray && systemctl start nginx && systemctl start xray
 ```
 
-7.查看Nginx和Xray状态
+6.查看Nginx和Xray状态
 
 ```
 systemctl status nginx && systemctl status xray
