@@ -131,8 +131,8 @@ acme.sh --renew -d chika.example.com --force --ecc
 [下载链接](https://github.com/2dust/v2rayN/releases/download/4.20/v2rayN-Core.zip)
 解压后运行v2rayN.exe。
 
-- 点击“设置 — 参数设置 — v2rayN设置”，将Core类型改为“Xray_core”，确定。
-- 点击“设置 — 路由设置 — 基础功能 — 一键导入基础规则 — 确定”。
+- 点击“设置 — 参数设置 — v2rayN设置”，勾选“更新Core时忽略Geo文件”，将“Core类型”改为“Xray_core”，确定。
+- 点击“设置 — 路由设置 — 将“域名解析策略”改为“AsIs”，取消勾选“启用路由高级功能”，将“域名匹配算法”改为“mph”，点击“基础功能” — “一键导入基础规则” — 确定 — 确定。
 - 右键点击屏幕右下角的v2rayN图标，点击“系统代理 — 自动配置系统代理”。
 
 2.在v2rayN中添加服务器
