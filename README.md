@@ -119,6 +119,13 @@ systemctl status nginx && systemctl status xray
 
 - Xray配置文件路径`/usr/local/etc/xray/config.json` Nginx配置文件路径`/etc/nginx/nginx.conf` geosite.dat和geoip.dat文件目录`/usr/local/share/xray`
 
+<details><summary>自动更新geosite.dat和geoip.dat文件命令</summary>
+
+```
+printf "* 7 * * * /root/update_geodata.sh\n" > /root/update_geodata && crontab /root/update_geodata && printf "curl -sSLo /usr/local/share/xray/geosite.dat https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat\ncurl -sSLo /usr/local/share/xray/geoip.dat https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat\nsleep 2\nsystemctl restart xray\n" > /root/update_geodata.sh && chmod +x /root/update_geodata.sh
+```
+</details>
+
 - 修改服务器配置文件的方法：使用WinSCP连接你的VPS，进入/usr/local/etc/xray/目录，双击config.json文件编辑，找到"id": "chika"，修改后并保存，然后重启Nginx和Xray，使其生效。
 
 - SSL证书是每90天自动更新，更新时需要使用80端口，因此在Nginx的配置文件中，没有监听80端口。申请免费证书，每周限制5次，超过次数会报错，[具体限制规则](https://letsencrypt.org/zh-cn/docs/rate-limits/)
