@@ -111,7 +111,7 @@ systemctl status nginx && systemctl status xray
 
 <details><summary>启动成功的示意图</summary>
 
-![4](https://user-images.githubusercontent.com/88967758/133461438-0c2a8f1d-166e-4f2b-a962-da8558678fa4.jpg)</details>
+![4](https://user-images.githubusercontent.com/88967758/142763378-1c3092e0-7c1b-45e9-a830-012e17c67b70.jpg)</details>
 
 - 修改服务器配置文件的方法：使用WinSCP连接你的VPS，进入/usr/local/etc/xray/目录，双击config.json文件编辑，找到"id": "chika"，修改后并保存，然后重启Nginx和Xray，使其生效。
 
@@ -177,3 +177,4 @@ acme.sh --renew -d chika.example.com --force --ecc
 [acme.sh](https://github.com/acmesh-official/acme.sh)
 
 [配置文件](https://github.com/lxhao61/integrated-examples)
+
