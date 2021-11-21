@@ -72,7 +72,7 @@ apt install -y gnupg2 ca-certificates lsb-release ubuntu-keyring && curl https:/
 3.安装Xray
 
 ```
-bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install
+bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install --version 1.5.0
 ```
 
 <details><summary>安装成功的示意图</summary>
