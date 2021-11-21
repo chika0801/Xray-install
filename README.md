@@ -115,6 +115,10 @@ systemctl status nginx && systemctl status xray
 
 ![4](https://user-images.githubusercontent.com/88967758/142763378-1c3092e0-7c1b-45e9-a830-012e17c67b70.jpg)</details>
 
+7.其它
+
+- Xray配置文件路径`/usr/local/etc/xray/config.json` Nginx配置文件路径`/etc/nginx/nginx.conf` geosite.dat和geoip.dat文件目录`/usr/local/share/xray`
+
 - 修改服务器配置文件的方法：使用WinSCP连接你的VPS，进入/usr/local/etc/xray/目录，双击config.json文件编辑，找到"id": "chika"，修改后并保存，然后重启Nginx和Xray，使其生效。
 
 - SSL证书是每90天自动更新，更新时需要使用80端口，因此在Nginx的配置文件中，没有监听80端口。申请免费证书，每周限制5次，超过次数会报错，[具体限制规则](https://letsencrypt.org/zh-cn/docs/rate-limits/)
