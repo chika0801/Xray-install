@@ -99,6 +99,8 @@ wget -O /etc/nginx/nginx.conf https://raw.githubusercontent.com/chika0801/Xray-e
 
 ![3](https://user-images.githubusercontent.com/88967758/133460802-0e4ee7b7-2202-4fdf-93fc-f863f3be743d.jpg)</details>
 
+- 若更换了配置文件，需要重启Nginx和Xray，使其生效。
+
 5.重启Nginx和Xray
 
 ```
