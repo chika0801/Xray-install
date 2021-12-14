@@ -49,10 +49,6 @@ acme.sh --install-cert -d chika.example.com --ecc \
 
 chown -R nobody:nogroup /etc/ssl/private/</pre>
 
-<details><summary>申请成功的示意图</summary>
-
-![133214340-d3a7f546-8020-4321-8fc5-c036599569c1](https://user-images.githubusercontent.com/88967758/133394457-c0c90fe3-2848-4bd3-8f96-a9cb75638cd7.jpg)</details>
-
 - 备份已申请的SSL证书：使用WinSCP连接你的VPS，进入/etc/ssl/private/目录，下载公钥文件fullchain.pem和私钥文件privkey.pem
 
 2.安装Nginx
@@ -67,19 +63,11 @@ apt install -y gnupg2 ca-certificates lsb-release debian-archive-keyring && curl
 apt install -y gnupg2 ca-certificates lsb-release ubuntu-keyring && curl https://nginx.org/keys/nginx_signing.key | gpg --dearmor > /usr/share/keyrings/nginx-archive-keyring.gpg && printf "deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] https://nginx.org/packages/mainline/ubuntu `lsb_release -cs` nginx\n" > /etc/apt/sources.list.d/nginx.list && printf "Package: *\nPin: origin nginx.org\nPin: release o=nginx\nPin-Priority: 900\n" > /etc/apt/preferences.d/99nginx && apt update -y && apt install -y nginx && mkdir -p /etc/systemd/system/nginx.service.d && printf "[Service]\nExecStartPost=/bin/sleep 0.1\n" > /etc/systemd/system/nginx.service.d/override.conf
 ```
 
-<details><summary>安装成功的示意图</summary>
-
-![1](https://user-images.githubusercontent.com/88967758/133460525-7f71faae-cd70-46fd-aaa2-8c04a10c895e.jpg)</details>
-
 3.安装Xray
 
 ```
 bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install --version 1.5.0
 ```
-
-<details><summary>安装成功的示意图</summary>
-
-![2](https://user-images.githubusercontent.com/88967758/133460630-687d8860-7f98-4611-ad7d-dd11ba021388.jpg)</details>
 
 4.1下载Nginx和Xray的配置文件（二选一）
 
@@ -115,10 +103,6 @@ systemctl stop nginx && systemctl stop xray && systemctl start nginx && systemct
 systemctl status nginx && systemctl status xray
 ```
 
-<details><summary>启动成功的示意图</summary>
-
-![4](https://user-images.githubusercontent.com/88967758/142763378-1c3092e0-7c1b-45e9-a830-012e17c67b70.jpg)</details>
-
 7.其它
 
 - Xray配置文件路径`/usr/local/etc/xray/config.json` Nginx配置文件路径`/etc/nginx/nginx.conf` geosite.dat和geoip.dat文件目录`/usr/local/share/xray`
@@ -150,7 +134,6 @@ acme.sh --renew -d chika.example.com --force --ecc
 - 点击 设置 — 参数设置 — v2rayN设置，勾选“更新Core时忽略Geo文件”，将“Core类型”改为“Xray_core”，确定。
 - 点击 设置 — 路由设置，将“域名解析策略”改为“IPIfNonMatch”，取消勾选“启用路由高级功能”，将“域名匹配算法”改为“mph”，点击“基础功能”，点击“一键导入基础规则”，确定，确定。
 - 右键点击屏幕右下角的v2rayN图标![v](https://user-images.githubusercontent.com/88967758/145947484-7b835e42-1445-4910-b435-051f1a82949e.jpg)，点击“系统代理 — 自动配置系统代理”。
-
 
 2.在v2rayN中添加服务器
 
