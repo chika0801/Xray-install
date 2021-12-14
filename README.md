@@ -81,7 +81,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 
 ![2](https://user-images.githubusercontent.com/88967758/133460630-687d8860-7f98-4611-ad7d-dd11ba021388.jpg)</details>
 
-4.下载Nginx和Xray的配置文件（二选一）
+4.1下载Nginx和Xray的配置文件（二选一）
 
 - [VLESS-TCP-XTLS](https://github.com/chika0801/Xray-examples/tree/main/VLESS-TCP-XTLS)（推荐使用）
 
@@ -93,6 +93,12 @@ curl -Lo /etc/nginx/nginx.conf https://raw.githubusercontent.com/chika0801/Xray-
 
 ```
 curl -Lo /etc/nginx/nginx.conf https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-gRPC-TLS/nginx.conf && curl -Lo /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-gRPC-TLS/config_server_dns_routing_enhance.json
+```
+
+4.2下载路由规则文件加强版
+
+```
+curl -Lo /usr/local/share/xray/geosite.dat https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat && curl -Lo /usr/local/share/xray/geoip.dat https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat
 ```
 
 - 若更换了配置文件，需要重启Nginx和Xray，使其生效。
