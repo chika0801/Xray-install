@@ -19,10 +19,10 @@
 - 请从步骤1-7依次操作
 - 如果你已有SSL证书，将公钥文件改名为fullchain.pem，将私钥文件改名为privkey.pem，使用WinSCP连接你的VPS，将它们上传到/etc/ssl/private/目录，执行`chown -R nobody:nogroup /etc/ssl/private/`命令，跳过步骤1
 
-0.安装curl wget
+0.安装curl
 
 ```
-apt update -y && apt install -y curl wget
+apt update -y && apt install -y curl
 ```
 
 1.申请免费的SSL证书
@@ -86,13 +86,13 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 - [VLESS-TCP-XTLS](https://github.com/chika0801/Xray-examples/tree/main/VLESS-TCP-XTLS)（推荐使用）
 
 ```
-wget -O /etc/nginx/nginx.conf https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-XTLS/nginx.conf && wget -O /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-XTLS/config_server_dns_routing_enhance.json
+curl -sSLo /etc/nginx/nginx.conf https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-XTLS/nginx.conf && curl -sSLo /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-XTLS/config_server_dns_routing_enhance.json
 ```
 
 - [VLESS-gRPC-TLS](https://github.com/chika0801/Xray-examples/tree/main/VLESS-gRPC-TLS)
 
 ```
-wget -O /etc/nginx/nginx.conf https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-gRPC-TLS/nginx.conf && wget -O /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-gRPC-TLS/config_server_dns_routing_enhance.json
+curl -sSLo /etc/nginx/nginx.conf https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-gRPC-TLS/nginx.conf && curl -sSLo /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-gRPC-TLS/config_server_dns_routing_enhance.json
 ```
 
 <details><summary>下载成功的示意图</summary>
@@ -143,11 +143,12 @@ acme.sh --renew -d chika.example.com --force --ecc
 
 1.下载和设置v2rayN
 
-[打开链接](https://github.com/2dust/v2rayN/releases) 点击最新版本栏里的“▸ Assets”，找到名为v2rayN-Core.zip的文件并下载。
+[打开链接](https://github.com/2dust/v2rayN/releases) 点击最新版本栏里的“▸ Assets `4`”，找到名为`v2rayN-Core.zip`的链接并下载。把压缩包解压，找到`v2rayN-Core`文件夹里的`v2rayN.exe`并双击运行。
 
 - 点击 设置 — 参数设置 — v2rayN设置，勾选“更新Core时忽略Geo文件”，将“Core类型”改为“Xray_core”，确定。
 - 点击 设置 — 路由设置，将“域名解析策略”改为“IPIfNonMatch”，取消勾选“启用路由高级功能”，将“域名匹配算法”改为“mph”，点击“基础功能”，点击“一键导入基础规则”，确定，确定。
-- 右键点击屏幕右下角的v2rayN图标，点击“系统代理 — 自动配置系统代理”。
+- 右键点击屏幕右下角的v2rayN图标![v](https://user-images.githubusercontent.com/88967758/145947484-7b835e42-1445-4910-b435-051f1a82949e.jpg)，点击“系统代理 — 自动配置系统代理”。
+
 
 2.在v2rayN中添加服务器
 
@@ -193,4 +194,3 @@ acme.sh --renew -d chika.example.com --force --ecc
 [acme.sh](https://github.com/acmesh-official/acme.sh)
 
 [配置文件](https://github.com/lxhao61/integrated-examples)
-
