@@ -85,7 +85,7 @@ curl -Lo /etc/nginx/nginx.conf https://raw.githubusercontent.com/chika0801/Xray-
 
 - 若更换了配置文件，需要重启Nginx和Xray，使其生效。
 
-4.2下载路由规则文件加强版
+4.2下载[路由规则文件加强版](https://github.com/Loyalsoldier/v2ray-rules-dat)
 
 ```
 curl -Lo /usr/local/share/xray/geosite.dat https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat && curl -Lo /usr/local/share/xray/geoip.dat https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat
