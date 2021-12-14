@@ -86,18 +86,14 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 - [VLESS-TCP-XTLS](https://github.com/chika0801/Xray-examples/tree/main/VLESS-TCP-XTLS)（推荐使用）
 
 ```
-curl -sSLo /etc/nginx/nginx.conf https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-XTLS/nginx.conf && curl -sSLo /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-XTLS/config_server_dns_routing_enhance.json
+curl -Lo /etc/nginx/nginx.conf https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-XTLS/nginx.conf && curl -Lo /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-XTLS/config_server_dns_routing_enhance.json
 ```
 
 - [VLESS-gRPC-TLS](https://github.com/chika0801/Xray-examples/tree/main/VLESS-gRPC-TLS)
 
 ```
-curl -sSLo /etc/nginx/nginx.conf https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-gRPC-TLS/nginx.conf && curl -sSLo /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-gRPC-TLS/config_server_dns_routing_enhance.json
+curl -Lo /etc/nginx/nginx.conf https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-gRPC-TLS/nginx.conf && curl -Lo /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-gRPC-TLS/config_server_dns_routing_enhance.json
 ```
-
-<details><summary>下载成功的示意图</summary>
-
-![3](https://user-images.githubusercontent.com/88967758/133460802-0e4ee7b7-2202-4fdf-93fc-f863f3be743d.jpg)</details>
 
 - 若更换了配置文件，需要重启Nginx和Xray，使其生效。
 
