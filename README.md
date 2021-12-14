@@ -95,13 +95,13 @@ curl -Lo /etc/nginx/nginx.conf https://raw.githubusercontent.com/chika0801/Xray-
 curl -Lo /etc/nginx/nginx.conf https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-gRPC-TLS/nginx.conf && curl -Lo /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-gRPC-TLS/config_server_dns_routing_enhance.json
 ```
 
+- 若更换了配置文件，需要重启Nginx和Xray，使其生效。
+
 4.2下载路由规则文件加强版
 
 ```
 curl -Lo /usr/local/share/xray/geosite.dat https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat && curl -Lo /usr/local/share/xray/geoip.dat https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat
 ```
-
-- 若更换了配置文件，需要重启Nginx和Xray，使其生效。
 
 5.重启Nginx和Xray
 
