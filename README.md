@@ -17,7 +17,7 @@
 - 使用Xshell 7连接你的VPS
 - 使用root用户登陆
 - 请从步骤0开始按顺序操作
-- 如果你已有SSL证书，将公钥文件改名为fullchain.pem，将私钥文件改名为privkey.pem，使用WinSCP连接你的VPS，将它们上传到/etc/ssl/private/目录，执行`chown -R nobody:nogroup /etc/ssl/private/`命令，跳过步骤1
+- 如果你已有SSL证书，将公钥文件改名为fullchain.pem，将私钥文件改名为privkey.pem，使用WinSCP连接你的VPS，将它们上传到/etc/ssl/private/目录，执行`chown -R nobody:nogroup /etc/ssl/private/`[命令](https://github.com/v2fly/fhs-install-v2ray/wiki/Insufficient-permissions-when-using-certificates)，跳过步骤1
 
 0.安装curl
 
@@ -51,7 +51,7 @@ chown -R nobody:nogroup /etc/ssl/private/</pre>
 
 - 备份已申请的SSL证书：使用WinSCP连接你的VPS，进入/etc/ssl/private/目录，下载公钥文件fullchain.pem和私钥文件privkey.pem
 
-2.安装Nginx
+2.[安装Nginx](http://nginx.org/en/linux_packages.html)
 
 - Debian 10/11
 ```
@@ -63,7 +63,7 @@ apt install -y gnupg2 ca-certificates lsb-release debian-archive-keyring && curl
 apt install -y gnupg2 ca-certificates lsb-release ubuntu-keyring && curl https://nginx.org/keys/nginx_signing.key | gpg --dearmor > /usr/share/keyrings/nginx-archive-keyring.gpg && printf "deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] https://nginx.org/packages/mainline/ubuntu `lsb_release -cs` nginx\n" > /etc/apt/sources.list.d/nginx.list && printf "Package: *\nPin: origin nginx.org\nPin: release o=nginx\nPin-Priority: 900\n" > /etc/apt/preferences.d/99nginx && apt update -y && apt install -y nginx && mkdir -p /etc/systemd/system/nginx.service.d && printf "[Service]\nExecStartPost=/bin/sleep 0.1\n" > /etc/systemd/system/nginx.service.d/override.conf
 ```
 
-3.安装Xray
+3.[安装Xray](https://github.com/XTLS/Xray-install)
 
 ```
 bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install --version 1.5.0
