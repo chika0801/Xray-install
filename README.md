@@ -69,7 +69,7 @@ apt install -y gnupg2 ca-certificates lsb-release ubuntu-keyring && curl https:/
 bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install --version 1.5.0
 ```
 
-4.1下载Nginx和Xray的[配置文件](https://github.com/chika0801/Xray-examples)（二选一）
+4.1下载Nginx和Xray的配置文件（二选一）
 
 - [VLESS-TCP-XTLS](https://github.com/chika0801/Xray-examples/tree/main/VLESS-TCP-XTLS)（推荐使用）
 
