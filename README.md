@@ -25,7 +25,7 @@
 apt update -y && apt install -y curl
 ```
 
-1.[申请免费的SSL证书](https://github.com/acmesh-official/acme.sh)
+1.申请[免费的SSL证书](https://github.com/acmesh-official/acme.sh)
 
 - 你先要购买一个域名，然后添加一个子域名，将子域名指向你VPS的IP。因为DNS解析需要一点时间，建议设置好了等5分钟，再执行下面的命令（每行命令依次执行）。你可以通过ping你的子域名，查看返回的IP是否正确。注意：将chika.example.com替换成你的子域名。
 
@@ -51,7 +51,7 @@ chown -R nobody:nogroup /etc/ssl/private/</pre>
 
 - 备份已申请的SSL证书：使用WinSCP连接你的VPS，进入/etc/ssl/private/目录，下载公钥文件fullchain.pem和私钥文件privkey.pem
 
-2.[安装Nginx](http://nginx.org/en/linux_packages.html)
+2.安装[Nginx](http://nginx.org/en/linux_packages.html)
 
 - Debian 10/11
 ```
@@ -63,7 +63,7 @@ apt install -y gnupg2 ca-certificates lsb-release debian-archive-keyring && curl
 apt install -y gnupg2 ca-certificates lsb-release ubuntu-keyring && curl https://nginx.org/keys/nginx_signing.key | gpg --dearmor > /usr/share/keyrings/nginx-archive-keyring.gpg && printf "deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] https://nginx.org/packages/mainline/ubuntu `lsb_release -cs` nginx\n" > /etc/apt/sources.list.d/nginx.list && printf "Package: *\nPin: origin nginx.org\nPin: release o=nginx\nPin-Priority: 900\n" > /etc/apt/preferences.d/99nginx && apt update -y && apt install -y nginx && mkdir -p /etc/systemd/system/nginx.service.d && printf "[Service]\nExecStartPost=/bin/sleep 0.1\n" > /etc/systemd/system/nginx.service.d/override.conf
 ```
 
-3.[安装Xray](https://github.com/XTLS/Xray-install)
+3.安装[Xray](https://github.com/XTLS/Xray-core/releases)
 
 ```
 bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install --version 1.5.0
