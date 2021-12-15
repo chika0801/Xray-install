@@ -154,7 +154,7 @@ acme.sh --renew -d chika.example.com --force --ecc
 - 点击“Update GeoSite — 是否下载? — 是”。
 - 点击“Update GeoIP — 是否下载? — 是”。
 
-## 安卓系统客户端配置指南
+## Android系统客户端配置指南
 
 1.在电脑上下载v2rayNG
 
