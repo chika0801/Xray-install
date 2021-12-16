@@ -149,7 +149,7 @@ acme.sh --renew -d chika.example.com --force --ecc
 
 ![VLESS-gRPC](https://user-images.githubusercontent.com/88967758/132800221-1e67083c-6d38-4f00-8f24-38ae688f3d09.jpg)</details>
 
-点击“检查更新
+3.点击“检查更新
 - 点击“Xray-Core — 是否下载? — 是”。
 - 点击“Update GeoSite — 是否下载? — 是”。
 - 点击“Update GeoIP — 是否下载? — 是”。
