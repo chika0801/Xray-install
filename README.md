@@ -1,4 +1,4 @@
-## Xray手动安装教程
+## Xray + VLESS-TCP-XTLS/VLESS-gRPC-TLS 手动安装教程
 
 准备软件
 
