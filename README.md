@@ -153,7 +153,7 @@ systemctl status nginx && systemctl status xray
 
 5.点击左上角`≡` —— Geo 资源文件，点击右上角`+`，分别选择geoip.dat和geosite.dat。
 
-6.在电脑上双击屏幕右下角的v2rayN图标，打开v2rayN的主界面，选择要使用的服务器，点击“分享”。
+6.在电脑上点击右下角的v2rayN图标，选择要使用的服务器，点击“分享”。
 
 7.返回v2rayNG主界面，点击右上角的“+”，点击“扫描二维码”，用手机扫描屏幕上的二维码。
 
