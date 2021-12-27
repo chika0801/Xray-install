@@ -151,13 +151,13 @@ systemctl status nginx && systemctl status xray
 
 4.进入v2rayNG，点击左上角`≡` —— 设置，“域名策略”改为“IPIfNonMatch”，“预定义规则”改为“绕过局域网及大陆地址”。
 
-5.返回v2rayNG主界面，点击左上角`≡` — Geo 资源文件，点击右上角`+`，分别选择geoip.dat和geosite.dat。
+5.点击 Geo 资源文件，点击右上角`+`，分别选择geoip.dat和geosite.dat。
 
 6.在电脑上双击屏幕右下角的v2rayN图标，打开v2rayN的主界面，选择要使用的服务器，点击“分享”。
 
 7.返回v2rayNG主界面，点击右上角的“+”，点击“扫描二维码”，用手机扫描屏幕上的二维码。
 
-8.返回v2rayNG主界面，点击右下角的灰色`V`字母图标。
+8.点击右下角的灰色`V`字母图标。
 
 ## 注意事项
 
