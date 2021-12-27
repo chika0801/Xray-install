@@ -2,8 +2,8 @@
 
 准备软件
 
-- [Xshell 7 免费版](https://www.netsarang.com/en/free-for-home-school/)
-- [WinSCP](https://winscp.net/eng/download.php)
+- [Xshell 7 免费版](https://www.xshell.com/zh/free-for-home-school/)
+- [WinSCP](https://winscp.net/eng/docs/lang:chs)
 
 重装系统（新手不建议开始就[网络重装系统](https://github.com/bohanyang/debi)，请去你的VPS网站上操作，建议重装系统为Deian10或11）
 
