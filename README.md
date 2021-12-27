@@ -143,17 +143,21 @@ systemctl status nginx && systemctl status xray
 
 ## Android系统客户端配置指南
 
-1.在电脑上下载v2rayNG
+1.在电脑上下载[v2rayNG](https://github.com/2dust/v2rayNg/releases)，如v2rayNG_1.x.x_arm64-v8a.apk。
 
-[打开链接](https://github.com/2dust/v2rayNg/releases) 点击最新版本栏里的“▸ Assets”，找到名为v2rayNG_1.x.x_arm64-v8a.apk的文件并下载，通过数据线连接手机和电脑，将下载的文件复制到你的手机内。
+2.在电脑上下载路由规则文件加强版，[geoip.dat](https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat)和[geosite.dat](https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat)。
 
-2.在你的手机中打开文件管理APP，找到你刚才复制进来的apk文件，并安装它。
+3.把v2rayNG_1.x.x_arm64-v8a.apk，geoip.dat，geosite.dat，用数据线复制到手机，在手机上安装v2rayNG。
 
-3.在手机上进入v2rayNG，点击左上角的“≡”打开菜单，点击“设置”，“域名策略”改为“IPIfNonMatch”，“预定义规则”改为“绕过局域网及大陆地址”。
+4.进入v2rayNG，点击左上角的`≡` —— 设置，“域名策略”改为“IPIfNonMatch”，“预定义规则”改为“绕过局域网及大陆地址”。
 
-4.返回v2rayNG主界面，点击右上角的“+”，点击“扫描二维码”。在电脑上双击屏幕右下角的v2rayN图标，打开v2rayN的主界面，点击选中要使用的服务器整行，点击“分享”，用手机扫描屏幕上的二维码。
+5.返回v2rayNG主界面，点击左上角`≡` — Geo 资源文件，点击右上角`+`，分别选择geoip.dat和geosite.dat。
 
-5.在手机上点击右下角的圆形图标，第一次会弹出一个网络连接请求的对话框，点确定即可，这时圆形图标变绿，提示“服务启动成功”。
+6.在电脑上双击屏幕右下角的v2rayN图标，打开v2rayN的主界面，选择要使用的服务器，点击“分享”。
+
+7.返回v2rayNG主界面，点击右上角的“+”，点击“扫描二维码”，用手机扫描屏幕上的二维码。
+
+8.返回v2rayNG主界面，点击右下角的灰色`V`字母图标。
 
 ## 注意事项
 
