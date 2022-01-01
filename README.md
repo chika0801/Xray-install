@@ -151,7 +151,7 @@ systemctl status nginx && systemctl status xray
 
 3.把v2rayNG_1.x.x_arm64-v8a.apk，geoip.dat，geosite.dat，用数据线复制到手机，在手机上安装v2rayNG。
 
-4.进入v2rayNG，点击左上角`≡` —— 设置，“域名策略”改为“IPIfNonMatch”，“预定义规则”改为“绕过局域网及大陆地址”。
+4.进入v2rayNG，点击左上角`≡` —— 设置，勾选“启用本地DNS”，“域名策略”改为“IPIfNonMatch”，“预定义规则”改为“绕过局域网及大陆地址”。
 
 5.点击左上角`≡` —— Geo 资源文件，点击右上角`+`，分别选择geoip.dat和geosite.dat。
 
