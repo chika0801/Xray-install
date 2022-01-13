@@ -113,9 +113,7 @@ systemctl status nginx && systemctl status xray
 
 ## Windows系统客户端配置指南
 
-1.下载v2rayN和Xray
-
-[打开链接1](https://github.com/2dust/v2rayN/releases)， 点击最新版本栏里的“▸ Assets”，找到名为v2rayN.zip的链接并下载。
+1.[打开链接1](https://github.com/2dust/v2rayN/releases)， 点击最新版本栏里的“▸ Assets”，找到名为v2rayN.zip的链接并下载。
 [打开链接2](https://github.com/XTLS/Xray-core/releases) ，点击最新版本栏里的“▸ Assets”，找到名为Xray-windows-64.zip的链接并下载。
 把2个压缩包解压，复制xray.exe到v2rayN文件夹里面，运行v2rayN.exe。
 
@@ -123,17 +121,13 @@ systemctl status nginx && systemctl status xray
 - 点击 设置 — 路由设置，将“域名解析策略”改为“IPIfNonMatch”，取消勾选“启用路由高级功能”，将“域名匹配算法”改为“mph”，点击“基础功能”，点击“一键导入基础规则”，确定，确定。
 - 右键点击屏幕右下角的v2rayN图标，点击“系统代理 — 自动配置系统代理”。
 
-2.在v2rayN中添加服务器
+2.点击“服务器 — 添加[VLESS]服务器”，按下图所示填写，地址填写你的子域名(例如chika.example.com)
 
 <details><summary>VLESS-TCP-XTLS</summary>
-
-点击“服务器 — 添加[VLESS]服务器”，按下图所示填写，地址填写你的子域名(例如chika.example.com)
 
 ![VLESS-TCP-XTLS](https://user-images.githubusercontent.com/88967758/132801053-cc8b3aee-5da8-45d5-9e23-115f3b766e52.jpg)</details>
 
 <details><summary>VLESS-gRPC-TLS</summary>
-
-点击“服务器 — 添加[VLESS]服务器”，按下图所示填写，地址填写你的子域名(例如chika.example.com)
 
 ![VLESS-gRPC](https://user-images.githubusercontent.com/88967758/132800221-1e67083c-6d38-4f00-8f24-38ae688f3d09.jpg)</details>
 
