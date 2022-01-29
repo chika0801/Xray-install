@@ -123,13 +123,9 @@ systemctl status nginx && systemctl status xray
 
 2.点击“服务器 — 添加[VLESS]服务器”，按下图所示填写，地址填写你的子域名(例如chika.example.com)
 
-<details><summary>VLESS-TCP-XTLS</summary>
+[VLESS-TCP-XTLS](https://github.com/chika0801/Xray-examples/blob/main/VLESS-TCP-XTLS/README.md#%E5%AE%A2%E6%88%B7%E7%AB%AFv2rayn%E9%85%8D%E7%BD%AE%E6%96%B9%E5%BC%8F)
 
-![VLESS-TCP-XTLS](https://user-images.githubusercontent.com/88967758/132801053-cc8b3aee-5da8-45d5-9e23-115f3b766e52.jpg)</details>
-
-<details><summary>VLESS-gRPC-TLS</summary>
-
-![VLESS-gRPC](https://user-images.githubusercontent.com/88967758/132800221-1e67083c-6d38-4f00-8f24-38ae688f3d09.jpg)</details>
+[VLESS-gRPC-TLS](https://github.com/chika0801/Xray-examples/tree/main/VLESS-gRPC-TLS#%E5%AE%A2%E6%88%B7%E7%AB%AFv2rayn%E9%85%8D%E7%BD%AE%E6%96%B9%E5%BC%8F)
 
 - 点击服务器列表中刚才新增的服务器，按回车键载入配置。
 
