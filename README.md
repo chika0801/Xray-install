@@ -42,9 +42,9 @@ acme.sh --issue -d chika.example.com --standalone --keylength ec-384
 
 acme.sh --install-cert -d chika.example.com --ecc \
 
---fullchain-file /etc/ssl/private/fullchain.pem \
+--fullchain-file /etc/ssl/private/fullchaincert.cer \
 
---key-file /etc/ssl/private/privkey.pem
+--key-file /etc/ssl/private/certkey.key
 
 chown -R nobody:nogroup /etc/ssl/private/</pre>
 
