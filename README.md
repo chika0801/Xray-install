@@ -16,7 +16,7 @@
 
 - 使用Xshell 7连接你的VPS
 - 使用root用户登陆
-- 如果你已有SSL证书，将公钥文件改名为fullchain.pem，将私钥文件改名为privkey.pem，使用WinSCP连接你的VPS，将它们上传到/etc/ssl/private/目录，执行`chown -R nobody:nogroup /etc/ssl/private/`命令，跳过步骤1
+- 如果你已有SSL证书，将公钥文件改名为fullchaincert.cer，将私钥文件改名为certkey.key，使用WinSCP连接你的VPS，将它们上传到/etc/ssl/private/目录，执行`chown -R nobody:nogroup /etc/ssl/private/`命令，跳过步骤1
 
 0.安装curl（可选）
 
@@ -48,7 +48,7 @@ acme.sh --install-cert -d chika.example.com --ecc \
 
 chown -R nobody:nogroup /etc/ssl/private/</pre>
 
-- 备份已申请的SSL证书：使用WinSCP连接你的VPS，进入/etc/ssl/private/目录，下载fullchaincert.cer和certkey.key
+- 备份已申请的SSL证书：使用WinSCP连接你的VPS，进入/etc/ssl/private/目录，下载fullchaincert.cer和certkey.key文件
 
 2.安装[Nginx](http://nginx.org/en/linux_packages.html)
 
