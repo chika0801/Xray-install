@@ -48,7 +48,7 @@ acme.sh --install-cert -d chika.example.com --ecc \
 
 chown -R nobody:nogroup /etc/ssl/private/</pre>
 
-- 备份已申请的SSL证书：使用WinSCP连接你的VPS，进入/etc/ssl/private/目录，下载公钥文件fullchain.pem和私钥文件privkey.pem
+- 备份已申请的SSL证书：使用WinSCP连接你的VPS，进入/etc/ssl/private/目录，下载fullchaincert和certkey.key
 
 2.安装[Nginx](http://nginx.org/en/linux_packages.html)
 
