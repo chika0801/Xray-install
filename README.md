@@ -116,7 +116,7 @@ printf "0 7 * * * /root/update_geodata.sh\n" > /root/update_geodata && crontab /
 
 - SSL证书是每90天自动更新，更新时需要使用80端口，因此在Nginx的配置文件中，没有监听80端口。申请免费证书，每周限制5次，超过次数会报错，[具体限制规则](https://letsencrypt.org/zh-cn/docs/rate-limits/)
 
-## Windows系统客户端配置指南
+## v2rayN客户端配置指南
 
 1.[打开链接1](https://github.com/2dust/v2rayN/releases)， 点击最新版本栏里的“▸ Assets”，找到名为v2rayN.zip的链接并下载。
 [打开链接2](https://github.com/XTLS/Xray-core/releases) ，点击最新版本栏里的“▸ Assets”，找到名为Xray-windows-64.zip的链接并下载。
@@ -138,7 +138,7 @@ printf "0 7 * * * /root/update_geodata.sh\n" > /root/update_geodata && crontab /
 - 点击“Update GeoSite — 是否下载? — 是”。
 - 点击“Update GeoIP — 是否下载? — 是”。
 
-## Android系统客户端配置指南
+## v2rayNG系统客户端配置指南
 
 1.在电脑上下载[v2rayNG](https://github.com/2dust/v2rayNg/releases)，如v2rayNG_1.x.x_arm64-v8a.apk。
 
