@@ -138,7 +138,7 @@ printf "0 7 * * * /root/update_geodata.sh\n" > /root/update_geodata && crontab /
 - 点击“Update GeoSite — 是否下载? — 是”。
 - 点击“Update GeoIP — 是否下载? — 是”。
 
-## v2rayNG系统客户端配置指南
+## v2rayNG客户端配置指南
 
 1.在电脑上下载[v2rayNG](https://github.com/2dust/v2rayNg/releases)，如v2rayNG_1.x.x_arm64-v8a.apk。
 
