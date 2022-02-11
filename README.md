@@ -26,7 +26,8 @@ apt update -y && apt install -y curl
 
 1.申请[免费的SSL证书](https://github.com/acmesh-official/acme.sh)
 
-- 你先要购买一个域名，然后添加一个子域名，将子域名指向你VPS的IP。因为DNS解析需要一点时间，建议设置好了等5分钟，再执行下面的命令（每行命令依次执行）。你可以通过ping你的子域名，查看返回的IP是否正确。注意：将chika.example.com替换成你的子域名。
+- 你先要购买一个域名，然后添加一个子域名，将子域名指向你VPS的IP。等待约5-10分钟，让DNS解析生效。你可以通过ping你的子域名，查看返回的IP是否正确。确认DNS解析生效后，再执行下面的命令（每行命令依次执行）。
+- 注意：将chika.example.com替换成你的子域名。
 
 <pre>apt install -y socat
 
