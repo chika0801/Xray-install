@@ -26,8 +26,8 @@ apt update -y && apt install -y curl
 
 1.申请[免费的SSL证书](https://github.com/acmesh-official/acme.sh)
 
-- 你先要购买一个域名，然后添加一个子域名，将子域名指向你VPS的IP。等待5-10分钟，让DNS解析生效。你可以通过ping你的子域名，查看返回的IP是否正确。确认DNS解析生效后，再执行下面的命令（每行命令依次执行）。
-- 注意：将chika.example.com替换成你的子域名。
+- 你先要购买一个域名，然后添加一个子域名，将子域名指向你VPS的IP。等待5-10分钟，让DNS解析生效。你可以通过ping你的子域名，查看返回的IP是否正确。确认DNS解析生效后，再执行下面的命令（每行命令依次执行）
+- 注意：将chika.example.com替换成你的子域名
 
 <pre>apt install -y socat
 
@@ -50,7 +50,7 @@ acme.sh --install-cert -d chika.example.com --ecc \
 chown -R nobody:nogroup /etc/ssl/private/</pre>
 
 - 备份已申请的SSL证书：使用WinSCP连接你的VPS，进入/etc/ssl/private/目录，下载fullchaincert.cer和certkey.key文件
-- 如果提示xxx.xxx.xxx:Verify error:CAA record for xxx.xxx.xxx prevents issuance，表示你VPS的IP被拉黑了，建议你更换VPS商家
+- 如果提示xxx.xxx.xxx:Verify error:CAA record for xxx.xxx.xxx prevents issuance，表示你VPS的IP被拉黑了，建议更换VPS商家
 - SSL证书是每90天自动更新，更新时需要使用80端口，因此在Nginx的配置文件中，没有监听80端口。申请免费证书，每周限制5次，超过次数会报错，[具体限制规则](https://letsencrypt.org/zh-cn/docs/rate-limits/)
 
 2.安装[Nginx](http://nginx.org/en/linux_packages.html)
@@ -114,13 +114,13 @@ printf "0 7 * * * /root/update_geodata.sh\n" > /root/update_geodata && crontab /
 8.其它
 
 - Xray配置文件路径`/usr/local/etc/xray/config.json` Nginx配置文件路径`/etc/nginx/nginx.conf` 路由规则文件目录`/usr/local/share/xray`
-- 修改服务器配置文件的方法：使用WinSCP连接你的VPS，进入/usr/local/etc/xray/目录，双击config.json文件编辑，找到`"id": ""`，修改后并保存，然后重启Nginx和Xray，使其生效。
+- 修改服务器配置文件的方法：使用WinSCP连接你的VPS，进入/usr/local/etc/xray/目录，双击config.json文件编辑，找到`"id": ""`，修改后并保存，然后重启Nginx和Xray，使其生效
 
 ## v2rayN配置指南
 
 1.[打开链接1](https://github.com/2dust/v2rayN/releases)， 点击最新版本栏里的“▸ Assets”，找到名为v2rayN.zip的链接并下载。
 [打开链接2](https://github.com/XTLS/Xray-core/releases) ，点击最新版本栏里的“▸ Assets”，找到名为Xray-windows-64.zip的链接并下载。
-把2个压缩包解压，复制xray.exe到v2rayN文件夹里面，运行v2rayN.exe。
+把2个压缩包解压，复制xray.exe到v2rayN文件夹里面，运行v2rayN.exe
 
 - 点击 设置 — 参数设置 — Core:DNS设置，1.1.1.1。v2rayN设置，勾选“更新Core时忽略Geo文件”，将“Core类型”改为“Xray_core”，确定。
 - 点击 设置 — 路由设置，将“域名解析策略”改为“IPIfNonMatch”，取消勾选“启用路由高级功能”，将“域名匹配算法”改为“mph”，点击“基础功能”，点击“一键导入基础规则”，确定，确定。
@@ -141,24 +141,24 @@ printf "0 7 * * * /root/update_geodata.sh\n" > /root/update_geodata && crontab /
 
 ## v2rayNG配置指南
 
-1.在电脑上下载[v2rayNG](https://github.com/2dust/v2rayNg/releases)，如v2rayNG_1.x.x_arm64-v8a.apk。
+1.在电脑上下载[v2rayNG](https://github.com/2dust/v2rayNg/releases)，如v2rayNG_1.x.x_arm64-v8a.apk
 
-2.在电脑上下载路由规则文件加强版，[geoip.dat](https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat)和[geosite.dat](https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat)。
+2.在电脑上下载路由规则文件加强版，[geoip.dat](https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat)和[geosite.dat](https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat)
 
-3.把v2rayNG_1.x.x_arm64-v8a.apk，geoip.dat，geosite.dat，用数据线复制到手机，在手机上安装v2rayNG。
+3.把v2rayNG_1.x.x_arm64-v8a.apk，geoip.dat，geosite.dat，用数据线复制到手机，在手机上安装v2rayNG
 
-4.进入v2rayNG，点击左上角`≡` —— 设置，勾选“启用本地DNS”，“域名策略”改为“IPIfNonMatch”，“预定义规则”改为“绕过局域网及大陆地址而后代理”。
+4.进入v2rayNG，点击左上角`≡` —— 设置，勾选“启用本地DNS”，“域名策略”改为“IPIfNonMatch”，“预定义规则”改为“绕过局域网及大陆地址而后代理”
 
-5.点击左上角`≡` —— Geo 资源文件，点击右上角`+`，分别选择geoip.dat和geosite.dat。
+5.点击左上角`≡` —— Geo 资源文件，点击右上角`+`，分别选择geoip.dat和geosite.dat
 
-6.在电脑上打开v2rayN，选择要使用的服务器，点击“分享”。
+6.在电脑上打开v2rayN，选择要使用的服务器，点击“分享”
 
-7.点击右上角`+` —— 扫描二维码，扫描刚才的二维码。
+7.点击右上角`+` —— 扫描二维码，扫描刚才的二维码
 
-8.点击右下角的灰色`V`字母图标。
+8.点击右下角的灰色`V`字母图标
 
 ## 注意事项
 
-1.[为什么要禁止VPS访问CN域名和IP](https://github.com/XTLS/Xray-core/discussions/593#discussioncomment-845165)。
+1.[为什么要禁止VPS访问CN域名和IP](https://github.com/XTLS/Xray-core/discussions/593#discussioncomment-845165)
 
-2.若使用其它客户端，需设置好CN域名和IP直连，否则将在VPS端被阻止。
+2.若使用其它客户端，需设置好CN域名和IP直连，否则将在VPS端被阻止
