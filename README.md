@@ -50,7 +50,7 @@ acme.sh --install-cert -d chika.example.com --ecc \
 chown -R nobody:nogroup /etc/ssl/private/</pre>
 
 - 备份已申请的SSL证书：使用WinSCP连接你的VPS，进入/etc/ssl/private/目录，下载fullchaincert.cer和certkey.key文件
-- 如果提示vps.example.com:Verify error:CAA record for vps.example.com prevents issuance，建议更换子域名vps，解析生效后重试
+- 如果提示abc.example.com:Verify error:CAA record for abc.example.com prevents issuance，建议更换子域名abc为其它，解析生效后重试
 - SSL证书是每90天自动更新，更新时需要使用80端口，因此在Nginx的配置文件中，没有监听80端口。申请免费证书，每周限制5次，超过次数会报错，[具体限制规则](https://letsencrypt.org/zh-cn/docs/rate-limits/)
 
 2.安装[Nginx](http://nginx.org/en/linux_packages.html)
