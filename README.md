@@ -123,39 +123,39 @@ printf "0 7 * * * /root/update_geodata.sh\n" > /root/update_geodata && crontab /
 - 点击 设置 — 路由设置，将“域名解析策略”改为“IPIfNonMatch”，取消勾选“启用路由高级功能”，将“域名匹配算法”改为“mph”，点击“基础功能”，点击“一键导入基础规则”，确定，确定。
 - 右键点击屏幕右下角的v2rayN图标，点击“系统代理 — 自动配置系统代理”。
 
-2.点击“服务器 — 添加[VLESS]服务器”，按下图所示填写，地址填写你的子域名(例如chika.example.com)
+2.点击“服务器 — 添加[VLESS]服务器”，按下图所示填写，地址填写你的子域名(例如chika.example.com)。
 
 [VLESS-TCP-XTLS](https://github.com/chika0801/Xray-examples/blob/main/VLESS-TCP-XTLS/README.md#%E5%AE%A2%E6%88%B7%E7%AB%AFv2rayn%E9%85%8D%E7%BD%AE%E6%96%B9%E5%BC%8F)
 
 [VLESS-gRPC-TLS](https://github.com/chika0801/Xray-examples/tree/main/VLESS-gRPC-TLS#%E5%AE%A2%E6%88%B7%E7%AB%AFv2rayn%E9%85%8D%E7%BD%AE%E6%96%B9%E5%BC%8F)
 
-- 点击服务器列表中刚才新增的服务器，按回车键载入配置
+- 点击服务器列表中刚才新增的服务器，按回车键载入配置。
 
-3.点击“检查更新
+3.点击“检查更新。
 
-- 点击“Update GeoSite — 是否下载? — 是”
-- 点击“Update GeoIP — 是否下载? — 是”
+- 点击“Update GeoSite — 是否下载? — 是”。
+- 点击“Update GeoIP — 是否下载? — 是”。
 
 ## v2rayNG配置指南
 
-1.在电脑上下载[v2rayNG](https://github.com/2dust/v2rayNg/releases)，如v2rayNG_1.x.x_arm64-v8a.apk
+1.在电脑上下载[v2rayNG](https://github.com/2dust/v2rayNg/releases)，如v2rayNG_1.x.x_arm64-v8a.apk。
 
-2.在电脑上下载路由规则文件加强版，[geoip.dat](https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat)和[geosite.dat](https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat)
+2.在电脑上下载路由规则文件加强版，[geoip.dat](https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat)和[geosite.dat](https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat)。
 
-3.把v2rayNG_1.x.x_arm64-v8a.apk，geoip.dat，geosite.dat，用数据线复制到手机，在手机上安装v2rayNG
+3.把v2rayNG_1.x.x_arm64-v8a.apk，geoip.dat，geosite.dat，用数据线复制到手机，在手机上安装v2rayNG。
 
-4.进入v2rayNG，点击左上角`≡` —— 设置，勾选“启用本地DNS”，“域名策略”改为“IPIfNonMatch”，“预定义规则”改为“绕过局域网及大陆地址而后代理”
+4.进入v2rayNG，点击左上角`≡` —— 设置，勾选“启用本地DNS”，“域名策略”改为“IPIfNonMatch”，“预定义规则”改为“绕过局域网及大陆地址而后代理”。
 
-5.点击左上角`≡` —— Geo 资源文件，点击右上角`+`，分别选择geoip.dat和geosite.dat
+5.点击左上角`≡` —— Geo 资源文件，点击右上角`+`，分别选择geoip.dat和geosite.dat。
 
-6.在电脑上打开v2rayN，选择要使用的服务器，点击“分享”
+6.在电脑上打开v2rayN，选择要使用的服务器，点击“分享”。
 
-7.点击右上角`+` —— 扫描二维码，扫描刚才的二维码
+7.点击右上角`+` —— 扫描二维码，扫描刚才的二维码。
 
-8.点击右下角的灰色`V`字母图标
+8.点击右下角的灰色`V`字母图标。
 
 ## 注意事项
 
-1.[为什么要禁止VPS访问CN域名和IP](https://github.com/XTLS/Xray-core/discussions/593#discussioncomment-845165)
+1.[为什么要禁止VPS访问CN域名和IP](https://github.com/XTLS/Xray-core/discussions/593#discussioncomment-845165)。
 
-2.若使用其它客户端，需设置好CN域名和IP直连，否则将在VPS端被阻止
+2.若使用其它客户端，需设置好CN域名和IP直连，否则将在VPS端被阻止。
