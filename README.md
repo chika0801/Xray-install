@@ -50,6 +50,7 @@ acme.sh --install-cert -d chika.example.com --ecc \
 chown -R nobody:nogroup /etc/ssl/private/</pre>
 
 - 备份已申请的SSL证书：使用WinSCP连接你的VPS，进入/etc/ssl/private/目录，下载fullchaincert.cer和certkey.key文件
+- 如果提示xxx.xxx.xxx:Verify error:CAA record for xxx.xxx.xxx prevents issuance，表示你VPS的IP被拉黑了，建议你更换VPS商家
 
 2.安装[Nginx](http://nginx.org/en/linux_packages.html)
 
