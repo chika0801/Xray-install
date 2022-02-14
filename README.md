@@ -135,6 +135,7 @@ printf "0 7 * * * /root/update_geodata.sh\n" > /root/update_geodata && crontab /
 - 点击服务器列表中刚才新增的服务器，按回车键载入配置。
 
 3.点击“检查更新
+
 - 点击“Update GeoSite — 是否下载? — 是”。
 - 点击“Update GeoIP — 是否下载? — 是”。
 
