@@ -82,7 +82,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 curl -Lo /etc/nginx/nginx.conf https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-XTLS/nginx.conf && curl -Lo /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-XTLS/config_server.json
 ```
 
-- [Trojan-TCP-XTLS](https://github.com/chika0801/Xray-examples/tree/main/Trojan-TCP-XTLS)（推荐使用）
+- [Trojan-TCP-XTLS](https://github.com/chika0801/Xray-examples/tree/main/Trojan-TCP-XTLS)
 
 ```
 curl -Lo /etc/nginx/nginx.conf https://raw.githubusercontent.com/chika0801/Xray-examples/main/Trojan-TCP-XTLS/nginx.conf && curl -Lo /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika0801/Xray-examples/main/Trojan-TCP-XTLS/config_server.json
