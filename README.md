@@ -51,10 +51,10 @@ acme.sh --install-cert -d chika.example.com --ecc \
 
 --key-file /etc/ssl/private/certkey.key
 
-chown -R nobody:nogroup /etc/ssl/private/</pre>
+chown -R nobody:nogroup /etc/ssl/private</pre>
 
-- 备份已申请的SSL证书：使用WinSCP连接你的VPS，进入/etc/ssl/private/目录，下载fullchaincert.cer和certkey.key文件
-- SSL证书是每60天自动更新，更新时需要使用80端口，因此在Nginx的配置文件中，没有监听80端口。申请免费证书，每周限制5次，超过次数会报错，[具体限制规则](https://letsencrypt.org/zh-cn/docs/rate-limits/)
+- 备份已申请的SSL证书：使用WinSCP连接你的VPS，进入/etc/ssl/private目录，下载fullchaincert.cer和certkey.key文件
+- SSL证书有效期是90天，每60天自动更新，更新时需要使用80端口，因此在Nginx的配置文件中，没有监听80端口。[速率限制](https://letsencrypt.org/zh-cn/docs/rate-limits/)，每7天内限制5次，超过次数会报错，
 
 2.安装[Nginx](http://nginx.org/en/linux_packages.html)
 
@@ -115,7 +115,7 @@ printf "0 7 * * * /root/update_geodata.sh\n" > /root/update_geodata && crontab /
 8.其它
 
 - Xray配置文件路径`/usr/local/etc/xray/config.json` Nginx配置文件路径`/etc/nginx/nginx.conf` 路由规则文件目录`/usr/local/share/xray`
-- 修改服务器配置文件的方法：使用WinSCP连接你的VPS，进入/usr/local/etc/xray/目录，双击config.json文件编辑，找到`"id": ""`，修改后并保存，然后重启Nginx和Xray，使其生效
+- 修改服务器配置文件的方法：使用WinSCP连接你的VPS，进入/usr/local/etc/xray目录，双击config.json文件编辑，找到`"id": ""`，修改后并保存，然后重启Nginx和Xray，使其生效
 - 若更换了配置文件，需要重启Nginx和Xray，使其生效
 
 ## v2rayN配置指南
