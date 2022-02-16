@@ -1,4 +1,4 @@
-## Xray + VLESS-TCP-XTLS/Trojan-TCP-XTLS/VLESS-gRPC-TLS 手动安装教程
+## Xray 手动安装教程
 
 准备软件
 
