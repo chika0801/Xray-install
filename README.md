@@ -16,10 +16,10 @@
 
 - 使用Xshell 7连接你的VPS
 - 使用root用户登陆
-- 如果你已有SSL证书，将证书文件改名为fullchaincert.cer，将密钥文件改名为certkey.key，使用WinSCP连接你的VPS，将它们上传到/etc/ssl/private目录，执行下面的命令，跳过步骤1
+- 如果你已有SSL证书，将证书文件改名为fullchaincert.cer，将密钥文件改名为certkey.key，使用WinSCP连接你的VPS，将它们上传到/etc/ssl/private/目录，执行下面的命令，跳过步骤1
 
 ```
-chown -R nobody:nogroup /etc/ssl/private
+chown -R nobody:nogroup /etc/ssl/private/
 ```
 
 0.安装curl（可选）
@@ -51,9 +51,9 @@ acme.sh --install-cert -d chika.example.com --ecc \
 
 --key-file /etc/ssl/private/certkey.key
 
-chown -R nobody:nogroup /etc/ssl/private</pre>
+chown -R nobody:nogroup /etc/ssl/private/</pre>
 
-- 备份已申请的SSL证书：使用WinSCP连接你的VPS，进入/etc/ssl/private目录，下载fullchaincert.cer和certkey.key文件
+- 备份已申请的SSL证书：使用WinSCP连接你的VPS，进入/etc/ssl/private/目录，下载fullchaincert.cer和certkey.key文件
 - SSL证书有效期是90天，每60天自动更新，更新时需要使用80端口，因此在Nginx的配置文件中，没有监听80端口。[速率限制](https://letsencrypt.org/zh-cn/docs/rate-limits/)，每168小时内限制5次，超过次数会报错，
 
 2.安装[Nginx](http://nginx.org/en/linux_packages.html)
