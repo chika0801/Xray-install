@@ -43,7 +43,7 @@ acme.sh --upgrade --auto-upgrade
 
 acme.sh --set-default-ca --server letsencrypt
 
-acme.sh --issue -d chika.example.com --standalone --keylength ec-384
+acme.sh --issue -d chika.example.com --standalone --keylength ec-256
 
 acme.sh --install-cert -d chika.example.com --ecc \
 
