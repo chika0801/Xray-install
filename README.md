@@ -39,6 +39,8 @@ curl https://get.acme.sh | sh
 
 alias acme.sh=~/.acme.sh/acme.sh
 
+acme.sh --upgrade --auto-upgrade
+
 acme.sh --set-default-ca --server letsencrypt
 
 acme.sh --issue -d chika.example.com --standalone --keylength ec-384
