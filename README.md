@@ -16,8 +16,10 @@
 
 - 使用Xshell 7连接你的VPS
 - 使用root用户登陆
+- 默认环境是全新的系统
+- 默认系统未安装防火墙
+- 默认80、443端口未被占用
 - 如果你之前用acme申请了SSL证书，将证书文件改名为fullchain.cer，将密钥文件改名为private.key，使用WinSCP连接你的VPS，将它们上传到/etc/ssl/private/目录，执行下面的命令，跳过步骤1
-
 ```
 chown -R nobody:nogroup /etc/ssl/private/
 ```
