@@ -160,6 +160,8 @@ systemctl status nginx && systemctl status xray
 
 7.点击左上角`≡` —— `Geo 资源文件`，点击右上角`云朵`图标，会自动更新geoip.dat和geosite.dat文件。
 
+8.推荐使用分应用代理，根据你的需要，选择被代理的App，重新关开一次服务，使其生效。
+
 ## 注意事项
 
 1.[为什么要禁止VPS访问CN域名和IP](https://github.com/XTLS/Xray-core/discussions/593#discussioncomment-845165)。
