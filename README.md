@@ -156,7 +156,7 @@ systemctl status nginx && systemctl status xray
 
 6.在v2rayNG主界面，点击右上角`+` —— 扫描二维码，扫描电脑上的二维码。
 
-7.在v2rayNG主界面，点击右下角的灰色`V`字母图标，变绿后提示启动服务成功，点击左下角`已连接，点击测试链接`，可以测试延时。
+7.在v2rayNG主界面，点击右下角的灰色`V`字母图标，变绿后提示启动服务成功。
 
 8.在v2rayNG主界面，点击左上角`≡` —— Geo 资源文件，点击右上角`云朵`图标，会自动更新geoip.dat和geosite.dat文件。
 
