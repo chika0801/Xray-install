@@ -123,7 +123,7 @@ systemctl status nginx && systemctl status xray
 
 ## v2rayN配置指南（以4.36版本为例）
 
-1.[打开链接1](https://github.com/2dust/v2rayN/releases/tag/4.36)，找到名为v2rayN.zip的链接并下载。[打开链接2](https://github.com/XTLS/Xray-core/releases) ，找到最新版本，在“▸ Assets”栏里，找到名为Xray-windows-64.zip的链接并下载。把2个压缩包解压，复制xray.exe到v2rayN文件夹里面，运行v2rayN.exe。
+1.[下载v2rayN](https://github.com/2dust/v2rayN/releases/tag/4.36)，找到名为v2rayN.zip的链接并下载。[下载Xray-core](https://github.com/XTLS/Xray-core/releases) ，找到最新版本，在“▸ Assets”栏里，找到名为Xray-windows-64.zip的链接并下载。把2个压缩包解压，复制xray.exe到v2rayN文件夹里面，运行v2rayN.exe。
 
 - 点击 设置 — 参数设置 — Core:DNS设置，1.1.1.1。v2rayN设置，勾选“更新Core时忽略Geo文件”，将“Core类型”改为“Xray_core”，确定。
 - 点击 设置 — 路由设置，将“域名解析策略”改为“IPIfNonMatch”，取消勾选“启用路由高级功能”，将“域名匹配算法”改为“mph”，点击“基础功能”，点击“一键导入基础规则”，确定，确定。
