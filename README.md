@@ -146,21 +146,19 @@ systemctl status nginx && systemctl status xray
 
 ## v2rayNG配置指南
 
-1.在电脑上下载[v2rayNG](https://github.com/2dust/v2rayNg/releases)，如v2rayNG_1.x.x_arm64-v8a.apk。
+1.用电脑下载最新版本的[v2rayNG](https://github.com/2dust/v2rayNg/releases)，通常是下载结尾为_arm64-v8a的apk文件。
 
-2.在电脑上下载路由规则文件加强版，[geoip.dat](https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat)和[geosite.dat](https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat)。
-
-3.把v2rayNG_1.x.x_arm64-v8a.apk，geoip.dat，geosite.dat，用数据线复制到手机，在手机上安装v2rayNG。
+2.把下载的apk文件用数据线复制到手机，在手机上安装。
 
 4.进入v2rayNG，点击左上角`≡` —— 设置，勾选“启用本地DNS”，“域名策略”改为“IPIfNonMatch”，“预定义规则”改为“绕过局域网及大陆地址而后代理”。
 
-5.点击左上角`≡` —— Geo 资源文件，点击右上角`+`，分别选择geoip.dat和geosite.dat。
+5.在电脑上打开v2rayN，点击要使用的服务器，点击“分享”。
 
-6.在电脑上打开v2rayN，选择要使用的服务器，点击“分享”。
+6.回到v2rayNG主界面，点击右上角`+` —— 扫描二维码，扫描电脑上的二维码。
 
-7.点击右上角`+` —— 扫描二维码，扫描刚才的二维码。
+7.在v2rayNG主界面，点击右下角的灰色`V`字母图标，变绿后提示启动服务成功，点击左下角`已连接，点击测试链接`，可以测试延时。
 
-8.点击右下角的灰色`V`字母图标。
+8.在v2rayNG主界面，点击左上角`≡` —— Geo 资源文件，点击右上角`云朵`图标，会自动更新geoip.dat和geosite.dat文件。
 
 ## 注意事项
 
