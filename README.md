@@ -121,7 +121,7 @@ systemctl status nginx && systemctl status xray
 - 修改服务器配置文件的方法：使用WinSCP连接你的VPS，进入/usr/local/etc/xray/目录，双击config.json文件编辑，找到`"id": ""`，修改后并保存，然后重启Nginx和Xray，使其生效
 - 若更换了配置文件，需要重启Nginx和Xray，使其生效
 
-## v2rayN入门配置指南（以4.36版本为例）
+## v2rayN配置指南（以4.36版本为例）
 
 1.[打开链接1](https://github.com/2dust/v2rayN/releases/tag/4.36)，找到名为v2rayN.zip的链接并下载。[打开链接2](https://github.com/XTLS/Xray-core/releases) ，找到最新版本，在“▸ Assets”栏里，找到名为Xray-windows-64.zip的链接并下载。把2个压缩包解压，复制xray.exe到v2rayN文件夹里面，运行v2rayN.exe。
 
@@ -144,7 +144,7 @@ systemctl status nginx && systemctl status xray
 - 点击“Update GeoSite — 是否下载? — 是”。
 - 点击“Update GeoIP — 是否下载? — 是”。
 
-## v2rayNG入门配置指南
+## v2rayNG配置指南
 
 1.用电脑下载最新版本的[v2rayNG](https://github.com/2dust/v2rayNg/releases)，通常是下载结尾为_arm64-v8a的apk文件。
 
