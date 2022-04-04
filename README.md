@@ -148,7 +148,7 @@ systemctl status nginx && systemctl status xray
 
 1.用电脑下载最新版本的[v2rayNG](https://github.com/2dust/v2rayNg/releases)，通常是下载结尾为_arm64-v8a的apk文件。
 
-2.把下载的apk文件用数据线复制到手机，在手机上安装。
+2.把下载的apk文件用数据线复制到手机，在手机上安装v2rayNG。
 
 3.在电脑上打开v2rayN，点击要使用的服务器，点击“分享”。
 
