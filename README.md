@@ -121,15 +121,15 @@ systemctl status nginx && systemctl status xray
 - 修改服务器配置文件的方法：使用WinSCP连接你的VPS，进入/usr/local/etc/xray/目录，双击config.json文件编辑，找到`"id": ""`，修改后并保存，然后重启Nginx和Xray，使其生效
 - 若更换了配置文件，需要重启Nginx和Xray，使其生效
 
-## v2rayN配置指南（以4.36版本为例）
+## v2rayN配置指南（以5.16版本为例）
 
-1.[下载v2rayN](https://github.com/2dust/v2rayN/releases/tag/4.36)，找到名为v2rayN.zip的链接并下载。[下载Xray-core](https://github.com/XTLS/Xray-core/releases) ，找到最新版本，在“▸ Assets”栏里，找到名为Xray-windows-64.zip的链接并下载。把2个压缩包解压，复制xray.exe到v2rayN文件夹里面，运行v2rayN.exe。
+1.[下载v2rayN](https://github.com/2dust/v2rayN/releases/tag/5.16)，找到名为v2rayN.zip的链接并下载。[下载Xray-core](https://github.com/XTLS/Xray-core/releases) ，找到最新版本，在“▸ Assets”栏里，找到名为Xray-windows-64.zip的链接并下载。把2个压缩包解压，复制xray.exe到v2rayN文件夹里面，运行v2rayN.exe。
 
-- 点击 设置 — 参数设置 — Core:DNS设置，1.1.1.1。v2rayN设置，勾选“更新Core时忽略Geo文件”，将“Core类型”改为“Xray_core”，确定。
-- 点击 设置 — 路由设置，将“域名解析策略”改为“IPIfNonMatch”，取消勾选“启用路由高级功能”，将“域名匹配算法”改为“mph”，点击“基础功能”，点击“一键导入基础规则”，确定，确定。
+- 点击 设置 — 参数设置 Core:DNS设置，填入1.1.1.1。v2rayN设置，勾选“开机自动启动”，“更新Core时忽略Geo文件”。Core类型设置，检查 各类型为“Xray”，确定。
+- 点击 设置 — 路由设置 检查“域名解析策略”为“IPIfNonMatch”，取消勾选“启用路由高级功能”，将“域名匹配算法”改为“mph”，点击“基础功能”，点击“一键导入基础规则”，确定，确定。
 - 右键点击屏幕右下角的v2rayN图标，点击“系统代理 — 自动配置系统代理”。
 
-2.点击“服务器 — 添加[VLESS]服务器”，按下图所示填写，地址填写你的子域名(例如chika.example.com)。
+2.点击 服务器 — 添加[VLESS]服务器 按下图所示填写，地址填写你的子域名(例如chika.example.com)。
 
 [VLESS-TCP-XTLS](https://github.com/chika0801/Xray-examples/tree/main/VLESS-TCP-XTLS#readme)
 
@@ -139,10 +139,7 @@ systemctl status nginx && systemctl status xray
 
 - 点击服务器列表中刚才新增的服务器，按回车键载入配置。
 
-3.点击“检查更新。
-
-- 点击“Update GeoSite — 是否下载? — 是”。
-- 点击“Update GeoIP — 是否下载? — 是”。
+3.点击 检查更新 — Update Geo files 在信息栏确认有提示“下载 GeoFile: geoip 成功”，“下载 GeoFile: geoip 成功”。
 
 ## v2rayNG配置指南
 
