@@ -139,7 +139,7 @@ systemctl status nginx && systemctl status xray
 
 - 点击服务器列表中刚才新增的服务器，**按回车键载入配置**。
 
-3.点击 **检查更新 — Update Geo files** 在信息栏确认有提示“下载 GeoFile: geoip 成功”，“下载 GeoFile: geoip 成功”，**按回车键重新载入配置，使其生效**。
+3.点击 **检查更新 — Update Geo files** 在信息栏确认有提示“下载 GeoFile: geoip 成功”，“下载 GeoFile: geoip 成功”，再次点击服务器列表中刚才新增的服务器，**按回车键重新载入配置，确认生效**。
 
 ## v2rayNG配置指南
 
