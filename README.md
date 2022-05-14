@@ -19,7 +19,7 @@
 - 默认环境是全新的系统
 - 默认系统未安装防火墙
 - 默认80、443端口未被占用
-- 如果你之前用acme申请了SSL证书，将证书文件改名为fullchain.cer，将密钥文件改名为private.key，使用WinSCP连接你的VPS，将它们上传到/etc/ssl/private/目录，执行下面的命令，跳过步骤1
+- 如果你之前用acme申请了SSL证书，将证书文件改名为fullchain.cer，将密钥文件改名为private.key，使用WinSCP连接你的VPS，将它们上传到/etc/ssl/private/目录，执行下面的命令，跳过步骤1。
 ```
 chown -R nobody:nogroup /etc/ssl/private/
 ```
@@ -55,8 +55,8 @@ acme.sh --install-cert -d chika.example.com --ecc \
 
 chown -R nobody:nogroup /etc/ssl/private/</pre>
 
-- 备份已申请的SSL证书：使用WinSCP连接你的VPS，进入/etc/ssl/private/目录，下载证书文件fullchain.cer和密钥文件private.key
-- SSL证书有效期是90天，每隔60几天会自动更新。[速率限制](https://letsencrypt.org/zh-cn/docs/rate-limits/)，超过次数会报错，
+- 备份已申请的SSL证书：使用WinSCP连接你的VPS，进入/etc/ssl/private/目录，下载证书文件fullchain.cer和密钥文件private.key。
+- SSL证书有效期是90天，每隔60几天会自动更新。[速率限制](https://letsencrypt.org/zh-cn/docs/rate-limits/)，超过次数会报错。
 
 2.安装[Nginx](http://nginx.org/en/linux_packages.html)
 
@@ -117,9 +117,9 @@ systemctl status nginx && systemctl status xray
 
 7.其它
 
-- Nginx配置文件路径`/etc/nginx/nginx.conf` Xray配置文件路径`/usr/local/etc/xray/config.json` 路由规则文件目录`/usr/local/share/xray/`
-- 修改服务器配置文件的方法：使用WinSCP连接你的VPS，进入/usr/local/etc/xray/目录，双击config.json文件编辑，找到`"id": ""`，修改后并保存，然后重启Nginx和Xray，使其生效
-- 若更换了配置文件，需要重启Nginx和Xray，使其生效
+- Nginx配置文件路径`/etc/nginx/nginx.conf`，Xray配置文件路径`/usr/local/etc/xray/config.json`，路由规则文件目录`/usr/local/share/xray/`。
+- 修改服务器配置文件的方法：使用WinSCP连接你的VPS，进入/usr/local/etc/xray/目录，双击config.json文件编辑，找到`"id": ""`，修改后并保存，然后重启Nginx和Xray，使其生效。
+- 若更换了配置文件，需要重启Nginx和Xray，使其生效。
 
 ## v2rayN配置指南（以5.16版本为例）
 
