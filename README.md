@@ -12,8 +12,6 @@
 - Ubuntu 18.04
 - Ubuntu 20.04
 
-[Shadowsocks-2022](https://github.com/chika0801/Xray-examples/tree/main/Shadowsocks-2022-TCP)手动安装教程
-
 开始安装
 
 - 使用Xshell 7连接你的VPS
@@ -25,6 +23,8 @@
 ```
 chown -R nobody:nogroup /etc/ssl/private/
 ```
+
+
 
 #### 1.用[acme](https://github.com/acmesh-official/acme.sh)申请SSL证书
 
@@ -116,6 +116,8 @@ systemctl status nginx && systemctl status xray
 - Nginx配置文件路径`/etc/nginx/nginx.conf`，Xray配置文件路径`/usr/local/etc/xray/config.json`，路由规则文件目录`/usr/local/share/xray/`。
 - 修改服务器配置文件的方法：使用WinSCP连接你的VPS，进入/usr/local/etc/xray/目录，双击config.json文件，找到`"id": "",`，在`""`中间修改，Ctrl+S保存，重启Nginx和Xray。
 - 若更换了配置文件，需要重启Nginx和Xray。
+
+
 
 ## v2rayN配置指南
 
