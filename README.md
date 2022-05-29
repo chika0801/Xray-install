@@ -138,8 +138,7 @@ systemctl status nginx && systemctl status xray
 [VLESS-gRPC-TLS](https://github.com/chika0801/Xray-examples/tree/main/VLESS-gRPC-TLS#readme)
 
 - 点击服务器列表中刚才新增的服务器，**按回车键**设为活动服务器。
-
-3.点击 **检查更新 — Update Geo files** 在信息栏确认有提示“下载 GeoFile: geoip 成功”，“下载 GeoFile: geoip 成功”，再次**按回车键**设为活动服务器，使其生效。
+- 点击 **检查更新 — Update Geo files** 在信息栏确认有提示“下载 GeoFile: geoip 成功”，“下载 GeoFile: geoip 成功”，再次**按回车键**设为活动服务器，使其生效。
 
 ## v2rayNG配置指南
 
