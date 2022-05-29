@@ -131,7 +131,9 @@ systemctl status nginx && systemctl status xray
 2.点击 **服务器 — 添加[VLESS]服务器** 按下图所示填写，地址填写你的子域名(例如chika.example.com)。
 
 [VLESS-TCP-XTLS](https://github.com/chika0801/Xray-examples/tree/main/VLESS-TCP-XTLS#readme)
+
 [Trojan-TCP-XTLS](https://github.com/chika0801/Xray-examples/tree/main/Trojan-TCP-XTLS#readme)
+
 [VLESS-gRPC-TLS](https://github.com/chika0801/Xray-examples/tree/main/VLESS-gRPC-TLS#readme)
 
 - 点击服务器列表中刚才新增的服务器，**按回车键**设为活动服务器。
