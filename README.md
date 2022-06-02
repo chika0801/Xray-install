@@ -76,19 +76,11 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 4.1下载Nginx和Xray的配置文件（任选其一）
 
 - [VLESS-TCP-XTLS](https://github.com/chika0801/Xray-examples/tree/main/VLESS-TCP-XTLS)（推荐使用）
-
 ```
 curl -Lo /etc/nginx/nginx.conf https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-XTLS/nginx.conf && curl -Lo /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-XTLS/config_server.json
 ```
 
-- [Trojan-TCP-XTLS](https://github.com/chika0801/Xray-examples/tree/main/Trojan-TCP-XTLS)
-
-```
-curl -Lo /etc/nginx/nginx.conf https://raw.githubusercontent.com/chika0801/Xray-examples/main/Trojan-TCP-XTLS/nginx.conf && curl -Lo /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika0801/Xray-examples/main/Trojan-TCP-XTLS/config_server.json
-```
-
 - [VLESS-gRPC-TLS](https://github.com/chika0801/Xray-examples/tree/main/VLESS-gRPC-TLS)
-
 ```
 curl -Lo /etc/nginx/nginx.conf https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-gRPC-TLS/nginx.conf && curl -Lo /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-gRPC-TLS/config_server.json
 ```
@@ -129,8 +121,6 @@ systemctl status nginx && systemctl status xray
 2.点击 **服务器 — 添加[VLESS]服务器** 按下图所示填写，地址填写你的子域名(例如chika.example.com)。
 
 [VLESS-TCP-XTLS](https://github.com/chika0801/Xray-examples/tree/main/VLESS-TCP-XTLS#readme)
-
-[Trojan-TCP-XTLS](https://github.com/chika0801/Xray-examples/tree/main/Trojan-TCP-XTLS#readme)
 
 [VLESS-gRPC-TLS](https://github.com/chika0801/Xray-examples/tree/main/VLESS-gRPC-TLS#readme)
 
