@@ -81,9 +81,9 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 curl -Lo /etc/nginx/nginx.conf https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-XTLS/nginx.conf && curl -Lo /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-XTLS/config_server.json
 ```
 
-- [VLESS-gRPC-TLS](https://github.com/chika0801/Xray-examples/tree/main/VLESS-gRPC-TLS)
+- [VLESS-TCP-TLS+VMess-Websocket-TLS+Trojan-TCP-TLS](https://github.com/chika0801/Xray-examples/tree/main/VLESS-TCP-TLS%2BVMess-Websocket-TLS%2BTrojan-TCP-TLS)
 ```
-curl -Lo /etc/nginx/nginx.conf https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-gRPC-TLS/nginx.conf && curl -Lo /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-gRPC-TLS/config_server.json
+curl -Lo /etc/nginx/nginx.conf https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-TLS%2BVMess-Websocket-TLS%2BTrojan-TCP-TLS/nginx.conf && curl -Lo /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-TLS%2BVMess-Websocket-TLS%2BTrojan-TCP-TLS/config_server.json
 ```
 
 4.2下载[路由规则文件加强版](https://github.com/Loyalsoldier/v2ray-rules-dat)
@@ -123,7 +123,7 @@ systemctl status nginx && systemctl status xray
 
 [VLESS-TCP-XTLS](https://github.com/chika0801/Xray-examples/tree/main/VLESS-TCP-XTLS#readme)
 
-[VLESS-gRPC-TLS](https://github.com/chika0801/Xray-examples/tree/main/VLESS-gRPC-TLS#readme)
+[VLESS-TCP-TLS+VMess-Websocket-TLS+Trojan-TCP-TLS](https://github.com/chika0801/Xray-examples/tree/main/VLESS-TCP-TLS%2BVMess-Websocket-TLS%2BTrojan-TCP-TLS#readme)
 
 - 点击 **检查更新 — Update Geo files** 在信息栏确认有提示“下载 GeoFile: geoip 成功”，“下载 GeoFile: geoip 成功”。
 - 点击服务器列表中刚才新增的服务器，**按回车键**设为活动服务器。
