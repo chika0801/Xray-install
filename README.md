@@ -71,7 +71,7 @@ apt install -y gnupg2 ca-certificates lsb-release ubuntu-keyring && curl https:/
 3.安装[Xray](https://github.com/XTLS/Xray-core/releases)
 
 ```
-bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install --version 1.5.8
+bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install --beta
 ```
 
 4.1下载Nginx和Xray的配置文件（任选其一）
