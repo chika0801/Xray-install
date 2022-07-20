@@ -76,7 +76,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 
 4.1下载Nginx和Xray的配置文件（任选其一）
 
-- [VLESS-TCP-TLS](https://github.com/chika0801/Xray-examples/tree/main/VLESS-TCP-XTLS)
+- [VLESS-TCP-TLS](https://github.com/chika0801/Xray-examples/tree/main/VLESS-TCP-TLS)
 ```
 curl -Lo /etc/nginx/nginx.conf https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-TLS/nginx.conf && curl -Lo /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-TLS/config_server.json
 ```
