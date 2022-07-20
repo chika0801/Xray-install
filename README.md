@@ -76,9 +76,9 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 
 4.1下载Nginx和Xray的配置文件（任选其一）
 
-- [VLESS-TCP-XTLS](https://github.com/chika0801/Xray-examples/tree/main/VLESS-TCP-XTLS)（推荐使用）
+- [VLESS-TCP-TLS](https://github.com/chika0801/Xray-examples/tree/main/VLESS-TCP-XTLS)
 ```
-curl -Lo /etc/nginx/nginx.conf https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-XTLS/nginx.conf && curl -Lo /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-XTLS/config_server.json
+curl -Lo /etc/nginx/nginx.conf https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-TLS/nginx.conf && curl -Lo /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-TLS/config_server.json
 ```
 
 - [VLESS-TCP-TLS+VMess-Websocket-TLS+Trojan-TCP-TLS](https://github.com/chika0801/Xray-examples/tree/main/VLESS-TCP-TLS%2BVMess-Websocket-TLS%2BTrojan-TCP-TLS)
@@ -121,7 +121,7 @@ systemctl status nginx && systemctl status xray
 
 2.点击 **服务器 — 添加[VLESS]服务器** 按下图所示填写，地址填写你的子域名(例如chika.example.com)。
 
-[VLESS-TCP-XTLS](https://github.com/chika0801/Xray-examples/tree/main/VLESS-TCP-XTLS#readme)
+[VLESS-TCP-TLS](https://github.com/chika0801/Xray-examples/tree/main/VLESS-TCP-TLS#readme)
 
 [VLESS-TCP-TLS+VMess-Websocket-TLS+Trojan-TCP-TLS](https://github.com/chika0801/Xray-examples/tree/main/VLESS-TCP-TLS%2BVMess-Websocket-TLS%2BTrojan-TCP-TLS#readme)
 
