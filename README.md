@@ -2,7 +2,7 @@
 
 准备软件
 
-- [Xshell 7 免费版](https://www.xshell.com/zh/free-for-home-school/)
+- [Xshell 7 免费版](https://www.xshell.com/zh/free-for-home-school)
 - [WinSCP](https://winscp.net/eng/docs/lang:chs)
 
 重装系统
