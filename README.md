@@ -23,6 +23,7 @@
 0.已有SSL证书
 
 - 如果你之前用acme申请了SSL证书，将证书文件改名为fullchain.cer，将密钥文件改名为private.key，使用WinSCP连接你的VPS，将它们上传到/etc/ssl/private/目录，执行下面的命令，跳过步骤1。
+
 ```
 chown -R nobody:nogroup /etc/ssl/private/
 ```
@@ -32,25 +33,45 @@ chown -R nobody:nogroup /etc/ssl/private/
 - 你先要购买一个域名，然后添加一个子域名，将子域名指向你VPS的IP。等待5-10分钟，让DNS解析生效。你可以通过ping你的子域名，查看返回的IP是否正确。确认DNS解析生效后，再执行下面的命令（每行命令依次执行）。
 - 注意：将chika.example.com替换成你的子域名。
 
-<pre>apt install -y socat
+```
+apt install -y socat
+```
 
+```
 curl https://get.acme.sh | sh
+```
 
+```
 alias acme.sh=~/.acme.sh/acme.sh
+```
 
+```
 acme.sh --upgrade --auto-upgrade
+```
 
+```
 acme.sh --set-default-ca --server letsencrypt
+```
 
+```
 acme.sh --issue -d chika.example.com --standalone --keylength ec-256
+```
 
+```
 acme.sh --install-cert -d chika.example.com --ecc \
+```
 
+```
 --fullchain-file /etc/ssl/private/fullchain.cer \
+```
 
+```
 --key-file /etc/ssl/private/private.key
+```
 
-chown -R nobody:nogroup /etc/ssl/private/</pre>
+```
+chown -R nobody:nogroup /etc/ssl/private/
+```
 
 - 备份已申请的SSL证书：使用WinSCP连接你的VPS，进入/etc/ssl/private/目录，下载证书文件fullchain.cer和密钥文件private.key。
 - SSL证书有效期是90天，每隔60几天会自动更新。[速率限制](https://letsencrypt.org/zh-cn/docs/rate-limits/)，超过次数会报错。
@@ -58,12 +79,14 @@ chown -R nobody:nogroup /etc/ssl/private/</pre>
 2.安装[Nginx](http://nginx.org/en/linux_packages.html)
 
 - Debian 10/11
+
 ```
 apt install -y gnupg2 ca-certificates lsb-release debian-archive-keyring && curl https://nginx.org/keys/nginx_signing.key | gpg --dearmor > /usr/share/keyrings/nginx-archive-keyring.gpg && printf "deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] https://nginx.org/packages/mainline/debian `lsb_release -cs` nginx" > /etc/apt/sources.list.d/nginx.list && printf "Package: *\nPin: origin nginx.org\nPin: release o=nginx\nPin-Priority: 900" > /etc/apt/preferences.d/99nginx && apt update -y && apt install -y nginx && mkdir -p /etc/systemd/system/nginx.service.d && printf "[Service]\nExecStartPost=/bin/sleep 0.1" > /etc/systemd/system/nginx.service.d/override.conf
 
 ```
 
 - Ubuntu 18.04/20.04
+
 ```
 apt install -y gnupg2 ca-certificates lsb-release ubuntu-keyring && curl https://nginx.org/keys/nginx_signing.key | gpg --dearmor > /usr/share/keyrings/nginx-archive-keyring.gpg && printf "deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] https://nginx.org/packages/mainline/ubuntu `lsb_release -cs` nginx" > /etc/apt/sources.list.d/nginx.list && printf "Package: *\nPin: origin nginx.org\nPin: release o=nginx\nPin-Priority: 900" > /etc/apt/preferences.d/99nginx && apt update -y && apt install -y nginx && mkdir -p /etc/systemd/system/nginx.service.d && printf "[Service]\nExecStartPost=/bin/sleep 0.1" > /etc/systemd/system/nginx.service.d/override.conf
 ```
@@ -77,11 +100,13 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 4.1下载Nginx和Xray的配置文件（任选其一）
 
 - [VLESS-TCP-TLS](https://github.com/chika0801/Xray-examples/tree/main/VLESS-TCP-TLS)
+
 ```
 curl -Lo /etc/nginx/nginx.conf https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-TLS/nginx.conf && curl -Lo /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-TLS/config_server.json
 ```
 
 - [VLESS-TCP-TLS+VMess-Websocket-TLS+Trojan-TCP-TLS](https://github.com/chika0801/Xray-examples/tree/main/VLESS-TCP-TLS%2BVMess-Websocket-TLS%2BTrojan-TCP-TLS)
+
 ```
 curl -Lo /etc/nginx/nginx.conf https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-TLS%2BVMess-Websocket-TLS%2BTrojan-TCP-TLS/nginx.conf && curl -Lo /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-TLS%2BVMess-Websocket-TLS%2BTrojan-TCP-TLS/config_server.json
 ```
