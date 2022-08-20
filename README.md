@@ -97,18 +97,12 @@ apt install -y gnupg2 ca-certificates lsb-release ubuntu-keyring && curl https:/
 bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install --beta
 ```
 
-4.1下载Nginx和Xray的配置文件（任选其一）
+4.1下载Nginx和Xray的配置件
 
 - [VLESS-TCP-TLS](https://github.com/chika0801/Xray-examples/tree/main/VLESS-TCP-TLS)
 
 ```
 curl -Lo /etc/nginx/nginx.conf https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-TLS/nginx.conf && curl -Lo /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-TLS/config_server.json
-```
-
-- [VLESS-TCP-TLS+VMess-Websocket-TLS+Trojan-TCP-TLS](https://github.com/chika0801/Xray-examples/tree/main/VLESS-TCP-TLS%2BVMess-Websocket-TLS%2BTrojan-TCP-TLS)
-
-```
-curl -Lo /etc/nginx/nginx.conf https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-TLS%2BVMess-Websocket-TLS%2BTrojan-TCP-TLS/nginx.conf && curl -Lo /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-TLS%2BVMess-Websocket-TLS%2BTrojan-TCP-TLS/config_server.json
 ```
 
 4.2下载[路由规则文件加强版](https://github.com/Loyalsoldier/v2ray-rules-dat)
@@ -147,8 +141,6 @@ systemctl status nginx && systemctl status xray
 2.点击 **服务器 — 添加[VLESS]服务器** 按下图所示填写，地址填写你的子域名(例如chika.example.com)。
 
 [VLESS-TCP-TLS](https://github.com/chika0801/Xray-examples/tree/main/VLESS-TCP-TLS#readme)
-
-[VLESS-TCP-TLS+VMess-Websocket-TLS+Trojan-TCP-TLS](https://github.com/chika0801/Xray-examples/tree/main/VLESS-TCP-TLS%2BVMess-Websocket-TLS%2BTrojan-TCP-TLS#readme)
 
 - 点击 **检查更新 — Update Geo files** 在信息栏确认有提示“下载 GeoFile: geoip 成功”，“下载 GeoFile: geoip 成功”。
 - 点击服务器列表中刚才新增的服务器，**按回车键**设为活动服务器。
