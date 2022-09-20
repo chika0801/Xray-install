@@ -135,7 +135,7 @@ systemctl status nginx && systemctl status xray
 
 1.[下载v2rayN](https://github.com/2dust/v2rayN/releases)，找到最新版本，在“▸ Assets”栏里，找到名为v2rayN-Core.zip的链接并下载。把压缩包解压，双击v2rayN.exe启动。
 
-- 点击 **设置 — 参数设置** Core:DNS设置，填入1.1.1.1，将“Outbound Freedom domainStrategy”改为“AsIs”。v2rayN设置，勾选“开机自动启动”，“更新Core时忽略Geo文件”。Core类型设置，检查各类型为“Xray”，确定。
+- 点击 **设置 — 参数设置** Core:DNS设置，填入1.1.1.1，将“Outbound Freedom domainStrategy”改为“AsIs”。v2rayN设置，勾选“开机自动启动”，“更新Core时忽略Geo文件”，“检查Pre-Release更新”。Core类型设置，检查各类型为“Xray”，确定。
 - 点击 **设置 — 路由设置** 检查“域名解析策略”为“IPIfNonMatch”，取消勾选“启用路由高级功能”，将“域名匹配算法”改为“mph”，点击“基础功能”，点击“一键导入基础规则”，确定，确定。
 
 2.点击 **服务器 — 添加[VLESS]服务器** 按下图所示填写，地址填写你的子域名(例如chika.example.com)。
