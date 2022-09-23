@@ -1,4 +1,4 @@
-## Xray手动安装教程
+# Xray手动安装教程
 
 准备软件
 
@@ -28,7 +28,7 @@
 chown -R nobody:nogroup /etc/ssl/private/
 ```
 
-1.用[acme](https://github.com/acmesh-official/acme.sh)申请SSL证书
+#### 1.用[acme](https://github.com/acmesh-official/acme.sh)申请SSL证书
 
 - 你先要购买一个域名，然后添加一个子域名，将子域名指向你VPS的IP。等待5-10分钟，让DNS解析生效。你可以通过ping你的子域名，查看返回的IP是否正确。确认DNS解析生效后，再执行下面的命令（每行命令依次执行）。
 - 注意：将chika.example.com替换成你的子域名。
@@ -97,7 +97,7 @@ apt install -y gnupg2 ca-certificates lsb-release ubuntu-keyring && curl https:/
 bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install --beta
 ```
 
-4.下载Nginx和Xray的配置件
+4.下载Nginx和Xray的[配置文件](https://github.com/chika0801/Xray-examples)
 
 - [VLESS-TCP-TLS](https://github.com/chika0801/Xray-examples/tree/main/VLESS-TCP-TLS)
 
