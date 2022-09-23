@@ -97,18 +97,12 @@ apt install -y gnupg2 ca-certificates lsb-release ubuntu-keyring && curl https:/
 bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install --beta
 ```
 
-4.1下载Nginx和Xray的配置件
+4.下载Nginx和Xray的配置件
 
 - [VLESS-TCP-TLS](https://github.com/chika0801/Xray-examples/tree/main/VLESS-TCP-TLS)
 
 ```
 curl -Lo /etc/nginx/nginx.conf https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-TLS/nginx.conf && curl -Lo /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-TLS/config_server.json
-```
-
-4.2下载[路由规则文件加强版](https://github.com/Loyalsoldier/v2ray-rules-dat)
-
-```
-curl -Lo /usr/local/share/xray/geosite.dat https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat && curl -Lo /usr/local/share/xray/geoip.dat https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat
 ```
 
 5.重启Nginx和Xray
