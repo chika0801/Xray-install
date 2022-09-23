@@ -34,6 +34,7 @@ chown -R nobody:nogroup /etc/ssl/private/
 - 注意：将chika.example.com替换成你的子域名。
 
 <details>
+<summary>点击查看详细步骤</summary> 
 
 ```
 apt install -y socat
