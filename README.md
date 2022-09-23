@@ -33,6 +33,8 @@ chown -R nobody:nogroup /etc/ssl/private/
 - 你先要购买一个域名，然后添加一个子域名，将子域名指向你VPS的IP。等待5-10分钟，让DNS解析生效。你可以通过ping你的子域名，查看返回的IP是否正确。确认DNS解析生效后，再执行下面的命令（每行命令依次执行）。
 - 注意：将chika.example.com替换成你的子域名。
 
+<details>
+
 ```
 apt install -y socat
 ```
@@ -72,6 +74,8 @@ acme.sh --install-cert -d chika.example.com --ecc \
 ```
 chown -R nobody:nogroup /etc/ssl/private/
 ```
+
+</details>
 
 - 备份已申请的SSL证书：使用WinSCP连接你的VPS，进入/etc/ssl/private/目录，下载证书文件fullchain.cer和密钥文件private.key。
 - SSL证书有效期是90天，每隔60几天会自动更新。[速率限制](https://letsencrypt.org/zh-cn/docs/rate-limits/)，超过次数会报错。
