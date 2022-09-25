@@ -126,8 +126,8 @@ systemctl status nginx && systemctl status xray
 - Nginx配置文件路径`/etc/nginx/nginx.conf`，Xray配置文件路径`/usr/local/etc/xray/config.json`，路由规则文件目录`/usr/local/share/xray/`。
 - 修改服务器配置文件的方法：使用WinSCP连接你的VPS，进入/usr/local/etc/xray/目录，双击config.json文件，找到`"id": "",`，在`""`中间修改，Ctrl+S保存，重启Nginx和Xray。
 - 若更换了配置文件，需要重启Nginx和Xray。
-
-
+- 查看日志 `journalctl -u xray --output cat -e`
+- 实时日志 `journalctl -u xray --output cat -f`
 
 ## v2rayN配置指南
 
