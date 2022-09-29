@@ -115,11 +115,14 @@ curl -Lo /etc/nginx/nginx.conf https://raw.githubusercontent.com/chika0801/Xray-
 systemctl stop nginx && systemctl stop xray && systemctl start nginx && systemctl start xray
 ```
 
-6.查看Nginx和Xray状态
-
 ```
 systemctl status nginx && systemctl status xray
 ```
+
+6.日志
+
+- 查看日志 `journalctl -u xray --output cat -e`
+- 实时日志 `journalctl -u xray --output cat -f`
 
 7.其它
 
