@@ -25,6 +25,8 @@
 chown -R nobody:nogroup /etc/ssl/private/
 ```
 
+[参考来源](https://github.com/v2fly/fhs-install-v2ray/wiki/Insufficient-permissions-when-using-certificates-zh-Hans-CN)
+
 #### 1.用[acme](https://github.com/acmesh-official/acme.sh)申请SSL证书
 
 - 你先要购买一个域名，然后添加一个子域名，将子域名指向你VPS的IP。等待5-10分钟，让DNS解析生效。你可以通过ping你的子域名，查看返回的IP是否正确。确认DNS解析生效后，再执行下面的命令（每行命令依次执行）。
