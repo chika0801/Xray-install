@@ -76,7 +76,7 @@ chown -R nobody:nogroup /etc/ssl/private/
 
 </details>
 
-- 备份已申请的SSL证书：使用WinSCP登录你的VPS，进入/etc/ssl/private/目录，下载证书文件fullchain.cer和私钥文件private.key。
+- 备份已申请的SSL证书：使用WinSCP登录你的VPS，进入`/etc/ssl/private/`目录，下载证书文件`fullchain.cer`和私钥文件`private.key`。
 - SSL证书有效期是90天，每隔60几天会自动更新。[速率限制](https://letsencrypt.org/zh-cn/docs/rate-limits/)，超过次数会报错。
 
 2.安装[Nginx](http://nginx.org/en/linux_packages.html)
