@@ -14,7 +14,7 @@
 
 开始安装
 
-- 使用Xshell 7连接你的VPS
+- 使用Xshell 7登录你的VPS
 - 使用root用户登陆
 
 0.已有SSL证书
