@@ -25,7 +25,7 @@
 chown -R nobody:nogroup /etc/ssl/private/
 ```
 
-[参考来源](https://github.com/v2fly/fhs-install-v2ray/wiki/Insufficient-permissions-when-using-certificates-zh-Hans-CN)
+[使用证书时权限不足](https://github.com/v2fly/fhs-install-v2ray/wiki/Insufficient-permissions-when-using-certificates-zh-Hans-CN)
 
 #### 1.用[acme](https://github.com/acmesh-official/acme.sh)申请 SSL 证书
 
