@@ -19,11 +19,13 @@
 
 0. 已有SSL证书
 
-- 如果你之前用acme申请了SSL证书，将证书文件改名为`fullchain.cer`，将私钥文件改名为`private.key`，使用WinSCP登录你的VPS，将它们上传到`/etc/ssl/private/`目录，执行下面的命令，跳过步骤1。[使用证书时权限不足](https://github.com/v2fly/fhs-install-v2ray/wiki/Insufficient-permissions-when-using-certificates-zh-Hans-CN)
+- 如果你之前用acme申请了SSL证书，将证书文件改名为`fullchain.cer`，将私钥文件改名为`private.key`，使用WinSCP登录你的VPS，将它们上传到`/etc/ssl/private/`目录，执行下面的命令，跳过步骤1。
 
 ```
 chown -R nobody:nogroup /etc/ssl/private/
 ```
+
+- [使用证书时权限不足](https://github.com/v2fly/fhs-install-v2ray/wiki/Insufficient-permissions-when-using-certificates-zh-Hans-CN)
 
 #### 1.用[acme](https://github.com/acmesh-official/acme.sh)申请 SSL 证书
 
@@ -109,23 +111,21 @@ curl -Lo /etc/nginx/nginx.conf https://raw.githubusercontent.com/chika0801/Xray-
 5. 重启Nginx和Xray
 
 ```
-systemctl stop nginx && systemctl stop xray && systemctl start nginx && systemctl start xray
+systemctl restart nginx && systemctl restart xray
 ```
 
 ```
 systemctl status nginx && systemctl status xray
 ```
 
-6. 日志
-
+- Nginx配置 `/etc/nginx/nginx.conf`
+- Xray配置 `/usr/local/etc/xray/config.json`
+- 证书 ``/etc/ssl/private/fullchain.cer`
+- 私钥 `/etc/ssl/private/private.key`
 - 查看日志 `journalctl -u xray --output cat -e`
 - 实时日志 `journalctl -u xray --output cat -f`
-
-7. 其它
-
-- Nginx配置文件路径`/etc/nginx/nginx.conf`，Xray配置文件路径`/usr/local/etc/xray/config.json`，路由规则文件目录`/usr/local/share/xray/`。
-- 修改服务器配置文件的方法：使用WinSCP登录你的VPS，进入/usr/local/etc/xray/目录，双击config.json文件，找到`"id": "",`，在`""`中间修改，Ctrl+S保存，重启Nginx和Xray。
-- 若更换了配置文件，需要重启Nginx和Xray。
+- 路由规则文件目录 `/usr/local/share/xray/`
+- 如果修改了配置文件，需要重启Nginx和Xray
 
 ## v2rayN配置指南
 
