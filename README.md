@@ -1,4 +1,4 @@
-## Xray手动安装教程
+## [Xray](https://xtls.github.io/Xray-docs-next/)手动安装教程
 
 准备软件
 
