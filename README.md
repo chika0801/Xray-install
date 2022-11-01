@@ -118,8 +118,7 @@ systemctl restart nginx && systemctl restart xray
 systemctl status nginx && systemctl status xray
 ```
 
-- Nginx配置 `/etc/nginx/nginx.conf`
-- Xray配置 `/usr/local/etc/xray/config.json`
+- 配置 `/usr/local/etc/xray/config.json`
 - 证书 `/etc/ssl/private/fullchain.cer`
 - 私钥 `/etc/ssl/private/private.key`
 - 查看日志 `journalctl -u xray --output cat -e`
