@@ -28,7 +28,7 @@ chown -R nobody:nogroup /etc/ssl/private/
 #### 1. 用[acme](https://github.com/acmesh-official/acme.sh)申请 SSL 证书
 
 - 你先要购买一个域名，然后添加一个子域名，将子域名指向你VPS的IP。等待5-10分钟，让DNS解析生效。你可以通过ping你的子域名，查看返回的IP是否正确。确认DNS解析生效后，再执行下面的命令（每行命令依次执行）。
-- 注意：将chika.example.com替换成你的子域名。
+- 注意：将`chika.example.com`替换成你的子域名。
 
 <details><summary>点击查看详细步骤</summary> 
 
@@ -76,8 +76,6 @@ chown -R nobody:nogroup /etc/ssl/private/
 
 - 备份已申请的SSL证书：使用WinSCP登录你的VPS，进入`/etc/ssl/private/`目录，下载证书文件`fullchain.cer`和私钥文件`private.key`。
 - SSL证书有效期是90天，每隔60几天会自动更新。[速率限制](https://letsencrypt.org/zh-cn/docs/rate-limits/)，超过次数会报错。
-
-[什么是 SSL 证书](https://www.kaspersky.com.cn/resource-center/definitions/what-is-a-ssl-certificate)
 
 2. 安装[Nginx](http://nginx.org/en/linux_packages.html)
 
