@@ -131,7 +131,7 @@ systemctl status nginx && systemctl status xray
 
 2. 点击 **设置 — 路由设置** 取消勾选“启用路由高级功能”，点击“基础功能”，点击“一键导入基础规则”，确定，确定。
 
-3. 点击 **服务器 — 添加[VLESS]服务器** 按下图所示填写，地址填写你的子域名(例如chika.example.com)。
+3. 点击 **服务器 — 添加[VLESS]服务器** 按下图所示填写，地址填写你的子域名。
 
 [VLESS-TCP-TLS](https://github.com/chika0801/Xray-examples/tree/main/VLESS-TCP-TLS#readme)
 
