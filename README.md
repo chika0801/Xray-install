@@ -124,8 +124,7 @@ systemctl status nginx && systemctl status xray
 - 私钥 `/etc/ssl/private/private.key`
 - 查看日志 `journalctl -u xray --output cat -e`
 - 实时日志 `journalctl -u xray --output cat -f`
-- 路由规则文件目录 `/usr/local/share/xray/`
-- 如果修改了配置文件，需要重启Nginx和Xray
+- 路由规则文件 `/usr/local/share/xray/`
 
 ## v2rayN配置指南
 
