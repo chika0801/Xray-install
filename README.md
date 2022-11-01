@@ -100,7 +100,7 @@ apt install -y gnupg2 ca-certificates lsb-release ubuntu-keyring && curl https:/
 bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install --beta
 ```
 
-4. 下载Nginx和Xray的[配置文件](https://github.com/chika0801/Xray-examples)
+4. 下载[配置](https://github.com/chika0801/Xray-examples)
 
 - [VLESS-TCP-TLS](https://github.com/chika0801/Xray-examples/tree/main/VLESS-TCP-TLS)
 
@@ -108,7 +108,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 curl -Lo /etc/nginx/nginx.conf https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-TLS/nginx.conf && curl -Lo /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-TLS/config_server.json
 ```
 
-5. 重启Nginx和Xray
+5. 启动程序
 
 ```
 systemctl restart nginx && systemctl restart xray
