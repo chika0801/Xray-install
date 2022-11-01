@@ -127,7 +127,7 @@ systemctl status nginx && systemctl status xray
 
 ## v2rayN配置指南
 
-1. 下载[v2rayN](https://github.com/2dust/v2rayN/releases)，找到最新版本，在“▸ Assets”栏里，找到名为v2rayN-Core.zip的链接并下载。把压缩包解压，双击v2rayN.exe启动。
+1. 点击[v2rayN]进入下载页面(https://github.com/2dust/v2rayN/releases)，找到最新版本，在“▸ Assets”栏里，找到名为v2rayN-Core.zip的链接并下载。把压缩包解压，双击v2rayN.exe启动。
 
 2. 点击 **设置 — 路由设置** 取消勾选“启用路由高级功能”，点击“基础功能”，点击“一键导入基础规则”，确定，确定。
 
