@@ -131,9 +131,21 @@ systemctl status nginx && systemctl status xray
 
 2. 点击 **设置 — 路由设置** 取消勾选“启用路由高级功能”，点击“基础功能”，点击“一键导入基础规则”，确定，确定。
 
-3. 点击 **服务器 — 添加[VLESS]服务器** 按下图所示填写，地址填写你的子域名。
+3. 点击 **服务器 — 添加[VLESS]服务器**
 
-[VLESS-TCP-XTLS-Vision](https://github.com/chika0801/Xray-examples/tree/main/VLESS-TCP-XTLS-Vision#v2rayn%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97)
+地址(address) `你的子域名`
+<br/>
+端口(prot) `16387`
+<br/>
+用户ID(id) `chika`
+<br/>
+流控(flow) `xtls-rprx-vision`
+<br/>
+传输协议(network) `tcp`
+<br/>
+传输层安全(tls) `tls`
+<br/>
+SNI `留空`
 
 4. 点击 **检查更新 — Update Geo files** 在信息栏确认有提示“下载 GeoFile: geoip 成功”，“下载 GeoFile: geoip 成功”。
 
