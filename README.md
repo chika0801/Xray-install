@@ -135,7 +135,7 @@ systemctl status nginx && systemctl status xray
 
 地址(address) `VPS的IP`
 <br/>
-端口(prot) `16387`
+端口(prot) `443`
 <br/>
 用户ID(id) `chika`
 <br/>
