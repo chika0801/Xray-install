@@ -133,7 +133,7 @@ systemctl status nginx && systemctl status xray
 
 3. 点击 **服务器 — 添加[VLESS]服务器** 按下图所示填写，地址填写你的子域名。
 
-[VLESS-TCP-TLS](https://github.com/chika0801/Xray-examples/tree/main/VLESS-TCP-TLS#readme)
+[VLESS-TCP-XTLS-Vision](https://github.com/chika0801/Xray-examples/tree/main/VLESS-TCP-XTLS-Vision#v2rayn%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97)
 
 4. 点击 **检查更新 — Update Geo files** 在信息栏确认有提示“下载 GeoFile: geoip 成功”，“下载 GeoFile: geoip 成功”。
 
