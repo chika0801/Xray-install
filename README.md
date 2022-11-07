@@ -133,19 +133,16 @@ systemctl status nginx && systemctl status xray
 
 3. 点击 **服务器 — 添加[VLESS]服务器**
 
-地址(address) `VPS的IP`
-<br/>
-端口(prot) `443`
-<br/>
-用户ID(id) `chika`
-<br/>
-流控(flow) `xtls-rprx-vision`
-<br/>
-传输协议(network) `tcp`
-<br/>
-传输层安全(tls) `tls`
-<br/>
-SNI `证书中包含的域名`
+| 选项 | 值 |
+| :--- | :--- |
+| 地址(address) | VPS的IP |
+| 端口(prot) | 443 |
+| 用户ID(id) | chika |
+| 流控(flow) | xtls-rprx-vision |
+| 传输协议(network) | tcp |
+| 传输层安全(tls) | tls |
+| SNI | 证书中包含的域名 |
+| uTLS | chrome |
 
 4. 点击 **检查更新 — Update Geo files** 在信息栏确认有提示“下载 GeoFile: geoip 成功”，“下载 GeoFile: geoip 成功”。
 
