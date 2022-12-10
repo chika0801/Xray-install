@@ -102,10 +102,10 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 
 4. 下载[配置](https://github.com/chika0801/Xray-examples)
 
-- [VLESS-TCP-XTLS-Vision](https://github.com/chika0801/Xray-examples/tree/main/VLESS-TCP-XTLS-Vision) with fallbacks function
+- [VLESS-TCP-XTLS](https://github.com/chika0801/Xray-examples/tree/main/VLESS-TCP-XTLS)
 
 ```
-curl -Lo /etc/nginx/nginx.conf https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-XTLS/nginx.conf && curl -Lo /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-XTLS-Vision/config_server_fallbacks.json
+curl -Lo /etc/nginx/nginx.conf https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-XTLS/nginx.conf && curl -Lo /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-XTLS/config_server.json
 ```
 
 5. 启动程序
