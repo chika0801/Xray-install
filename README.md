@@ -137,6 +137,16 @@ systemctl status nginx && systemctl status xray
 
 ![VLESS-TCP-XTLS](https://user-images.githubusercontent.com/88967758/180816805-dbad51e9-a119-4ebd-a479-e6b0510abc6e.jpg)
 
+| 方式一 |  |
+| :--- | :--- |
+| 地址(address) | VPS的IP |
+| SNI | 证书中包含的域名 |
+
+| 方式二 |  |
+| :--- | :--- |
+| 地址(address) | 证书中包含的域名 |
+| SNI | 留空 |
+
 4. 点击 **检查更新 — Update Geo files** 在信息栏确认有提示“下载 GeoFile: geoip 成功”，“下载 GeoFile: geoip 成功”。
 
 5. 点击服务器列表中刚才新增的服务器，**按回车键**设为活动服务器。
