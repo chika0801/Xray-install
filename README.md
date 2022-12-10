@@ -123,8 +123,6 @@ systemctl status nginx && systemctl status xray
 | 程序 | /usr/local/bin/xray |
 | 配置 | /usr/local/etc/xray/config.json |
 | 检查 | xray -test -config /usr/local/etc/xray/config.json |
-| 证书 | /etc/ssl/private/fullchain.cer |
-| 私钥 | /etc/ssl/private/private.key |
 | 路由规则文件 | /usr/local/share/xray/ |
 | 查看日志 | journalctl -u xray --output cat -e |
 | 实时日志 | journalctl -u xray --output cat -f |
