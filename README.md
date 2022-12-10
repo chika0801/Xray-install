@@ -135,8 +135,6 @@ systemctl status nginx && systemctl status xray
 
 3. 点击 **服务器 — 添加[VLESS]服务器**
 
-![VLESS-TCP-XTLS](https://user-images.githubusercontent.com/88967758/180816805-dbad51e9-a119-4ebd-a479-e6b0510abc6e.jpg)
-
 | 方式一 |  |
 | :--- | :--- |
 | 地址(address) | VPS的IP |
@@ -146,6 +144,8 @@ systemctl status nginx && systemctl status xray
 | :--- | :--- |
 | 地址(address) | 证书中包含的域名 |
 | SNI | 留空 |
+
+![VLESS-TCP-XTLS](https://user-images.githubusercontent.com/88967758/180816805-dbad51e9-a119-4ebd-a479-e6b0510abc6e.jpg)
 
 4. 点击 **检查更新 — Update Geo files** 在信息栏确认有提示“下载 GeoFile: geoip 成功”，“下载 GeoFile: geoip 成功”。
 
