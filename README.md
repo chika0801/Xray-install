@@ -1,4 +1,4 @@
-## [Xray](https://xtls.github.io/Xray-docs-next/) 手动安装教程
+## [Xray](https://xtls.github.io/Xray-docs-next/) VLESS-TCP-XTLS-Vision 手动安装教程
 
 准备软件
 
@@ -79,28 +79,13 @@ chown -R nobody:nogroup /etc/ssl/private/
 - 备份已申请的SSL证书：使用WinSCP登录你的VPS，进入`/etc/ssl/private`目录，下载证书文件`fullchain.cer`和私钥文件`private.key`。
 - SSL证书有效期是90天，每隔60几天会自动更新。[速率限制](https://letsencrypt.org/zh-cn/docs/rate-limits/)，超过次数会报错。
 
-2. 安装[Nginx](http://nginx.org/en/linux_packages.html)
-
-- Debian 10/11
-
-```
-apt install -y gnupg2 ca-certificates lsb-release debian-archive-keyring && curl https://nginx.org/keys/nginx_signing.key | gpg --dearmor > /usr/share/keyrings/nginx-archive-keyring.gpg && printf "deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] https://nginx.org/packages/mainline/debian `lsb_release -cs` nginx" > /etc/apt/sources.list.d/nginx.list && printf "Package: *\nPin: origin nginx.org\nPin: release o=nginx\nPin-Priority: 900" > /etc/apt/preferences.d/99nginx && apt update -y && apt install -y nginx && mkdir -p /etc/systemd/system/nginx.service.d && printf "[Service]\nExecStartPost=/bin/sleep 0.1" > /etc/systemd/system/nginx.service.d/override.conf
-
-```
-
-- Ubuntu 18.04/20.04
-
-```
-apt install -y gnupg2 ca-certificates lsb-release ubuntu-keyring && curl https://nginx.org/keys/nginx_signing.key | gpg --dearmor > /usr/share/keyrings/nginx-archive-keyring.gpg && printf "deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] https://nginx.org/packages/mainline/ubuntu `lsb_release -cs` nginx" > /etc/apt/sources.list.d/nginx.list && printf "Package: *\nPin: origin nginx.org\nPin: release o=nginx\nPin-Priority: 900" > /etc/apt/preferences.d/99nginx && apt update -y && apt install -y nginx && mkdir -p /etc/systemd/system/nginx.service.d && printf "[Service]\nExecStartPost=/bin/sleep 0.1" > /etc/systemd/system/nginx.service.d/override.conf
-```
-
-3. 安装[Xray](https://github.com/XTLS/Xray-core/releases)
+1. 安装[Xray](https://github.com/XTLS/Xray-core/releases)
 
 ```
 bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install --beta
 ```
 
-4. 下载[配置](https://github.com/chika0801/Xray-examples)
+2. 下载[配置](https://github.com/chika0801/Xray-examples)
 
 - [VLESS-TCP-XTLS](https://github.com/chika0801/Xray-examples/tree/main/VLESS-TCP-XTLS)
 
@@ -108,14 +93,14 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 curl -Lo /etc/nginx/nginx.conf https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-XTLS/nginx.conf && curl -Lo /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-XTLS/config_server.json
 ```
 
-5. 启动程序
+3. 启动程序
 
 ```
-systemctl restart nginx && systemctl restart xray
+systemctl restart xray
 ```
 
 ```
-systemctl status nginx && systemctl status xray
+systemctl status xray
 ```
 
 | 项目 | |
