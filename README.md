@@ -1,4 +1,4 @@
-## [Xray](https://xtls.github.io/Xray-docs-next/) VLESS-TCP-XTLS-Vision 手动安装教程
+## [Xray](https://xtls.github.io/Xray-docs-next/) [VLESS-TCP-XTLS-Vision](https://github.com/chika0801/Xray-examples/tree/main/VLESS-TCP-XTLS-Vision) 手动安装教程
 
 准备软件
 
