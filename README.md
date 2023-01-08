@@ -130,7 +130,7 @@ systemctl status xray
 | 地址(address) | VPS的IP |
 | SNI | 证书中包含的域名 |
 
-![2](https://user-images.githubusercontent.com/88967758/200235011-84299a14-7a5c-409b-a7c6-0ad42ba2c672.jpg)
+![2](https://user-images.githubusercontent.com/88967758/211181138-8b74daea-1551-47b5-843c-59f7d1582f09.jpg)
 
 4. 点击 **检查更新 — Update Geo files** 在信息栏确认有提示“下载 GeoFile: geoip 成功”，“下载 GeoFile: geoip 成功”。
 
