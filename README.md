@@ -112,7 +112,7 @@ systemctl status xray
 
 ## v2rayN 5.x 配置指南
 
-1. 点击 [v2rayN 5.39](https://github.com/2dust/v2rayN/releases/tag/5.39) 进入下载页面。找到名为**v2rayN-Core.zip**的链接并下载。把压缩包解压，启动v2rayN.exe。
+1. 点击 [v2rayN 5.39](https://github.com/2dust/v2rayN/releases/tag/5.39) 进入下载网页。找到名为**v2rayN-Core.zip**的链接并下载。把压缩包解压，启动v2rayN.exe。
 
 2. 点击 **设置 — 路由设置** 取消勾选“启用路由高级功能”，点击“基础功能”，点击“一键导入基础规则”，确定，确定。
 
