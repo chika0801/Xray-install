@@ -109,31 +109,3 @@ systemctl status xray
 | 路由规则文件 | /usr/local/share/xray/ |
 | 查看日志 | journalctl -u xray --output cat -e |
 | 实时日志 | journalctl -u xray --output cat -f |
-
-## v2rayN 5.x 配置指南
-
-1. 点击 [v2rayN 5.39](https://github.com/2dust/v2rayN/releases/tag/5.39) 进入下载网页。找到名为 **v2rayN-Core.zip** 的链接并下载。把压缩包解压，启动 **v2rayN.exe**。
-
-2. 点击 **设置 — 路由设置** 取消勾选“启用路由高级功能”，点击“基础功能”，点击“一键导入基础规则”，确定，确定。
-
-3. 点击 **服务器 — 添加[VLESS]服务器**
-
-| 方式一 |  |
-| :--- | :--- |
-| 地址(address) | 证书中包含的域名 |
-| SNI | 留空 |
-
-![1](https://user-images.githubusercontent.com/88967758/211181098-12bd4740-b740-41bd-9b36-e1abb2b5280f.jpg)
-
-| 方式二 |  |
-| :--- | :--- |
-| 地址(address) | VPS的IP |
-| SNI | 证书中包含的域名 |
-
-![2](https://user-images.githubusercontent.com/88967758/211181138-8b74daea-1551-47b5-843c-59f7d1582f09.jpg)
-
-4. 点击 **检查更新 — Update Geo files** 在信息栏确认有提示“下载 GeoFile: geoip 成功”，“下载 GeoFile: geoip 成功”。
-
-5. 点击服务器列表中刚才新增的服务器，**按回车键**设为活动服务器。
-
-6. 右键点击屏幕右下角的v2rayN图标，点击 **系统代理 — 自动配置系统代理**。
