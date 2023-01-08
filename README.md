@@ -118,11 +118,12 @@ systemctl status xray
 
 3. 点击 **服务器 — 添加[VLESS]服务器**
 
-
 | 方式一 |  |
 | :--- | :--- |
 | 地址(address) | 证书中包含的域名 |
 | SNI | 留空 |
+
+![1](https://user-images.githubusercontent.com/88967758/211181098-12bd4740-b740-41bd-9b36-e1abb2b5280f.jpg)
 
 | 方式二 |  |
 | :--- | :--- |
