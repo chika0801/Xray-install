@@ -79,18 +79,16 @@ chown -R nobody:nogroup /etc/ssl/private/
 - 备份已申请的SSL证书：使用WinSCP登录你的VPS，进入`/etc/ssl/private`目录，下载证书文件`fullchain.cer`和私钥文件`private.key`。
 - SSL证书有效期是90天，每隔60几天会自动更新。[速率限制](https://letsencrypt.org/zh-cn/docs/rate-limits/)，超过次数会报错。
 
-1. 安装[Xray](https://github.com/XTLS/Xray-core/releases)
+1. 安装程序
 
 ```
 bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install --beta
 ```
 
-2. 下载[配置](https://github.com/chika0801/Xray-examples)
-
-- [VLESS-TCP-XTLS](https://github.com/chika0801/Xray-examples/tree/main/VLESS-TCP-XTLS)
+2. 下载配置
 
 ```
-curl -Lo /etc/nginx/nginx.conf https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-XTLS/nginx.conf && curl -Lo /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-XTLS/config_server.json
+curl -Lo /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-XTLS-Vision/config_server.json
 ```
 
 3. 启动程序
