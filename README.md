@@ -17,7 +17,7 @@
 - 使用Xshell登录你的VPS
 - 使用root用户登陆
 
-已有 SSL 证书
+已有SSL证书
 
 - 如果你之前用acme申请了SSL证书，将证书文件改名为`fullchain.cer`，将私钥文件改名为`private.key`，使用WinSCP登录你的VPS，将它们上传到`/etc/ssl/private`目录，执行下面的命令。
 
@@ -27,7 +27,7 @@ chown -R nobody:nogroup /etc/ssl/private
 
 - [使用证书时权限不足](https://github.com/v2fly/fhs-install-v2ray/wiki/Insufficient-permissions-when-using-certificates-zh-Hans-CN)
 
-#### 用[acme](https://github.com/acmesh-official/acme.sh)申请 SSL 证书
+#### 用[acme](https://github.com/acmesh-official/acme.sh)申请SSL证书
 
 - 你先要购买一个域名，然后添加一个子域名，将子域名指向你VPS的IP。等待5-10分钟，让DNS解析生效。你可以通过ping你的子域名，查看返回的IP是否正确。确认DNS解析生效后，再执行下面的命令（每行命令依次执行）。
 - 注意：将`chika.example.com`替换成你的子域名。
