@@ -1,4 +1,4 @@
-## Xray VLESS-TCP-XTLS-Vision 带有回落 (fallbacks) 手动安装教程
+## Xray VLESS-TCP-XTLS-Vision 带有回落 (fallbacks) 手动安装指南
 
 已有SSL证书
 
