@@ -112,3 +112,16 @@ systemctl status xray && systemctl status nginx
 `服务器` ——> `添加[VLESS服务器]`
 
 ![1](https://user-images.githubusercontent.com/88967758/212540248-043ab1ed-af87-4e48-87b7-895018f4a52d.jpg)
+
+## v2rayNG 配置指南
+
+| 选项 | 值 |
+| :--- | :--- |
+| 地址(address) | chika.example.com |
+| 端口(prot) | 443 |
+| 用户ID(id) | chika |
+| 流控(flow) | xtls-rprx-vision |
+| 传输协议(network) | tcp |
+| 传输层安全(tls) | tls |
+| SNI | 留空 |
+| uTLS | chrome |
