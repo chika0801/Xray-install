@@ -91,7 +91,7 @@ curl -Lo /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika
 4. 启动程序
 
 ```
-systemctl restart xray && systemctl restart nginx
+systemctl daemon-reload && systemctl restart xray && systemctl restart nginx
 ```
 
 ```
