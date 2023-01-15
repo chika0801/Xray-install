@@ -16,11 +16,11 @@
 
 - 使用Xshell登录你的VPS
 - 使用root用户登陆
-- 远程目录为/root
+- 登录后默认目录/root
 
 已有 SSL 证书
 
-- 如果你之前用acme申请了SSL证书，将证书文件改名为`fullchain.cer`，将私钥文件改名为`private.key`，使用WinSCP登录你的VPS，将它们上传到`/etc/ssl/private`目录，执行下面的命令，跳过步骤1。
+- 如果你之前用acme申请了SSL证书，将证书文件改名为`fullchain.cer`，将私钥文件改名为`private.key`，使用WinSCP登录你的VPS，将它们上传到`/etc/ssl/private`目录，执行下面的命令。
 
 ```
 chown -R nobody:nogroup /etc/ssl/private
@@ -28,7 +28,7 @@ chown -R nobody:nogroup /etc/ssl/private
 
 - [使用证书时权限不足](https://github.com/v2fly/fhs-install-v2ray/wiki/Insufficient-permissions-when-using-certificates-zh-Hans-CN)
 
-#### 用[ACME](https://github.com/acmesh-official/acme.sh)申请 SSL 证书
+#### 用[acme](https://github.com/acmesh-official/acme.sh)申请 SSL 证书
 
 - 你先要购买一个域名，然后添加一个子域名，将子域名指向你VPS的IP。等待5-10分钟，让DNS解析生效。你可以通过ping你的子域名，查看返回的IP是否正确。确认DNS解析生效后，再执行下面的命令（每行命令依次执行）。
 - 注意：将`chika.example.com`替换成你的子域名。
@@ -86,20 +86,34 @@ chown -R nobody:nogroup /etc/ssl/private/
 bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install --beta
 ```
 
-2. 下载配置
+2. 安装Nginx
+
+- Debian 10/11
+
+```
+apt install -y gnupg2 ca-certificates lsb-release debian-archive-keyring && curl https://nginx.org/keys/nginx_signing.key | gpg --dearmor > /usr/share/keyrings/nginx-archive-keyring.gpg && printf "deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] https://nginx.org/packages/mainline/debian `lsb_release -cs` nginx" > /etc/apt/sources.list.d/nginx.list && printf "Package: *\nPin: origin nginx.org\nPin: release o=nginx\nPin-Priority: 900" > /etc/apt/preferences.d/99nginx && apt update -y && apt install -y nginx && mkdir -p /etc/systemd/system/nginx.service.d && printf "[Service]\nExecStartPost=/bin/sleep 0.1" > /etc/systemd/system/nginx.service.d/override.conf
+```
+
+- Ubuntu 18.04/20.04
+
+```
+apt install -y gnupg2 ca-certificates lsb-release ubuntu-keyring && curl https://nginx.org/keys/nginx_signing.key | gpg --dearmor > /usr/share/keyrings/nginx-archive-keyring.gpg && printf "deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] https://nginx.org/packages/mainline/ubuntu `lsb_release -cs` nginx" > /etc/apt/sources.list.d/nginx.list && printf "Package: *\nPin: origin nginx.org\nPin: release o=nginx\nPin-Priority: 900" > /etc/apt/preferences.d/99nginx && apt update -y && apt install -y nginx && mkdir -p /etc/systemd/system/nginx.service.d && printf "[Service]\nExecStartPost=/bin/sleep 0.1" > /etc/systemd/system/nginx.service.d/override.conf
+```
+
+3. 下载配置
 
 ```
 curl -Lo /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-XTLS-Vision/config_server.json
 ```
 
-3. 启动程序
+4. 启动程序
 
 ```
-systemctl restart xray
+systemctl restart xray && systemctl restart nginx
 ```
 
 ```
-systemctl status xray
+systemctl status xray && systemctl status nginx
 ```
 
 | 项目 | |
