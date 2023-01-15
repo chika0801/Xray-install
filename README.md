@@ -5,15 +5,10 @@
 - [Xshell](https://www.xshell.com/zh/free-for-home-school)
 - [WinSCP](https://winscp.net/eng/docs/lang:chs)
 
-重装系统
-
-- Debian 10
-- Debian 11
-- Ubuntu 18.04
-- Ubuntu 20.04
-
 准备工作
 
+- Debian 10/11
+- Ubuntu 18.04/20.04
 - 使用root用户登陆
 
 已有SSL证书
