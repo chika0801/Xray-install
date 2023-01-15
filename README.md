@@ -1,16 +1,5 @@
 ## Xray VLESS-TCP-XTLS-Vision 带有回落 (fallbacks) 手动安装教程
 
-准备软件
-
-- [Xshell](https://www.xshell.com/zh/free-for-home-school)
-- [WinSCP](https://winscp.net/eng/docs/lang:chs)
-
-准备工作
-
-- Debian 10/11
-- Ubuntu 18.04/20.04
-- 使用root用户登陆
-
 已有SSL证书
 
 - 如果你之前用acme申请了SSL证书，将证书文件改名为`fullchain.cer`，将私钥文件改名为`private.key`，使用WinSCP登录你的VPS，将它们上传到`/etc/ssl/private`目录，执行下面的命令。
