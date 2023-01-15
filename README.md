@@ -16,7 +16,6 @@
 
 - 使用Xshell登录你的VPS
 - 使用root用户登陆
-- 登录后默认目录/root
 
 已有 SSL 证书
 
