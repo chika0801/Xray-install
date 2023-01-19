@@ -107,6 +107,13 @@ systemctl status xray && systemctl status nginx
 | 查看日志 | journalctl -u xray --output cat -e |
 | 实时日志 | journalctl -u xray --output cat -f |
 
+
+## v2rayN 6.x 配置指南
+
+`服务器` ——> `添加[VLESS服务器]`
+
+![1](https://user-images.githubusercontent.com/88967758/213372857-49306ebe-f2fc-4426-91df-fd54e096456a.jpg)
+
 ## v2rayN 5.x 配置指南
 
 `服务器` ——> `添加[VLESS服务器]`
