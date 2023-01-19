@@ -126,6 +126,8 @@ systemctl status xray && systemctl status nginx
 
 ## v2rayNG 配置指南
 
+<details><summary>点击查看</summary><br>
+
 | 选项 | 值 |
 | :--- | :--- |
 | 地址(address) | chika.example.com |
@@ -136,3 +138,5 @@ systemctl status xray && systemctl status nginx
 | 传输层安全(tls) | tls |
 | SNI | 留空 |
 | uTLS | chrome |
+
+</details>
