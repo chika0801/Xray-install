@@ -1,4 +1,4 @@
-## [Xray](https://github.com/XTLS/Xray-core/releases) [XTLS Vision](https://github.com/XTLS/Xray-core/discussions/1295) 带有回落 (fallbacks) 手动安装指南
+## [Xray](https://github.com/XTLS/Xray-core/releases) [XTLS Vision](https://github.com/XTLS/Xray-core/discussions/1295) 带有回落 (fallbacks) 安装指南
 
 已有SSL证书
 
