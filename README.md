@@ -113,7 +113,6 @@ systemctl status xray && systemctl status nginx
 | 查看日志 | journalctl -u xray --output cat -e |
 | 实时日志 | journalctl -u xray --output cat -f |
 
-
 ## v2rayN 6.x 配置指南
 
 <details><summary>点击查看</summary><br>
