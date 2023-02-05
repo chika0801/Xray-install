@@ -116,9 +116,13 @@ systemctl status xray && systemctl status nginx
 
 ## v2rayN 6.x 配置指南
 
+<details><summary>点击查看</summary><br>
+
 `服务器` ——> `添加[VLESS服务器]`
 
 ![1](https://user-images.githubusercontent.com/88967758/213372857-49306ebe-f2fc-4426-91df-fd54e096456a.jpg)
+
+</details>
 
 ## v2rayN 5.x 配置指南
 
