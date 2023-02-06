@@ -1,6 +1,6 @@
 ## [Xray](https://github.com/XTLS/Xray-core/releases) [XTLS Vision](https://github.com/XTLS/Xray-core/discussions/1295) 带有回落 (fallbacks) 安装指南
 
-已有SSL证书
+**已有SSL证书**
 
 - 如果你之前用acme申请了SSL证书，将证书文件改名为`fullchain.cer`，将私钥文件改名为`private.key`，使用WinSCP登录你的VPS，将它们上传到`/etc/ssl/private`目录，执行下面的命令。
 
