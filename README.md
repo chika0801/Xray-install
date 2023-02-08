@@ -2,7 +2,7 @@
 
 **已有SSL证书**
 
-- 将证书文件改名为`fullchain.cer`，将私钥文件改名为`private.key`，建议使用WinSCP登录你的VPS，将它们上传到`/etc/ssl/private`目录，执行下面的命令。
+- 将证书文件改名为`fullchain.cer`，将私钥文件改名为`private.key`，将它们上传到`/etc/ssl/private`目录，执行下面的命令。
 
 ```
 chown -R nobody:nogroup /etc/ssl/private
@@ -60,7 +60,7 @@ chown -R nobody:nogroup /etc/ssl/private
 
 </details>
 
-- 备份已申请的SSL证书：建议使用WinSCP登录你的VPS，进入`/etc/ssl/private`目录，下载证书文件`fullchain.cer`和私钥文件`private.key`。
+- 备份已申请的SSL证书：进入`/etc/ssl/private`目录，下载证书文件`fullchain.cer`和私钥文件`private.key`。
 - SSL证书有效期是90天，acme每60天自动更新一次。
 
 1. 安装[Xray](https://github.com/XTLS/Xray-core/releases)
