@@ -157,7 +157,6 @@ systemctl status xray && systemctl status nginx
 | 选项 | 值 |
 | :--- | :--- |
 | 服务器节点类型 | V2Ray/Xray |
-| 别名（可选） |  |
 | V2Ray/XRay 协议 | VLESS |
 | 服务器地址 | chika.example.com |
 | 端口 | 443 |
