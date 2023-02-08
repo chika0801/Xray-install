@@ -186,13 +186,12 @@ systemctl status xray && systemctl status nginx
 | :--- | :--- |
 | 节点备注 |  |
 | 类型 | Xray |
-| 协议名称 | VLESS |
+| 传输协议 | VLESS |
 | 地址 | chika.example.com |
 | 端口 | 443 |
-| 加密 | none |
+| 加密方式 | none |
 | ID | chika |
 | TLS | 勾上 |
-| XTLS | 不勾 |
 | flow | xtls-rprx-vision |
 | alpn | 默认 |
 | 域名 | 留空 |
