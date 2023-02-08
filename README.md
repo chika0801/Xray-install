@@ -184,7 +184,6 @@ systemctl status xray && systemctl status nginx
 
 | 选项 | 值 |
 | :--- | :--- |
-| 节点备注 |  |
 | 类型 | Xray |
 | 传输协议 | VLESS |
 | 地址（支持域名） | chika.example.com |
