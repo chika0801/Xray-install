@@ -54,7 +54,7 @@ acme.sh --install-cert -d chika.example.com --ecc \
 ```
 
 ```
-chown -R nobody:nogroup /etc/ssl/private/
+chown -R nobody:nogroup /etc/ssl/private
 ```
 
 </details>
