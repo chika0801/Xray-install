@@ -60,7 +60,9 @@ chown -R nobody:nogroup /etc/ssl/private
 </details>
 
 - 备份已申请的SSL证书：使用WinSCP登录你的VPS，进入`/etc/ssl/private`目录，下载证书文件`fullchain.cer`和私钥文件`private.key`。
-- SSL证书有效期是90天，每隔60几天会自动更新。[速率限制](https://letsencrypt.org/zh-cn/docs/rate-limits/)，超过次数会报错。
+- SSL证书有效期是90天，每隔60几天会自动更新。
+- acme使用standalone模式申请/更新证书时会监听80端口，如果80端口被占用会导致失败。
+- Let's Encrypt [速率限制](https://letsencrypt.org/zh-cn/docs/rate-limits/)。
 
 1. 安装[Xray](https://github.com/XTLS/Xray-core/releases)
 
