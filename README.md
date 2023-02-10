@@ -92,7 +92,7 @@ curl -Lo /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika
 4. 下载[路由规则文件加强版](https://github.com/Loyalsoldier/v2ray-rules-dat)
 
 ```
-curl -Lo /usr/local/share/xray/geosite.dat https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat && curl -Lo /usr/local/share/xray/geoip.dat https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat
+curl -Lo /usr/local/share/xray/geoip.dat https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat && curl -Lo /usr/local/share/xray/geosite.dat https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat
 ```
 
 5. 启动程序
