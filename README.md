@@ -98,7 +98,11 @@ curl -Lo /usr/local/share/xray/geoip.dat https://github.com/Loyalsoldier/v2ray-r
 5. 启动程序
 
 ```
-systemctl daemon-reload && systemctl restart xray && systemctl restart nginx
+systemctl daemon-reload
+```
+
+```
+systemctl restart xray && systemctl restart nginx
 ```
 
 ```
