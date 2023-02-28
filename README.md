@@ -1,4 +1,4 @@
-## [Xray](https://github.com/XTLS/Xray-core/releases) [XTLS Vision](https://github.com/XTLS/Xray-core/discussions/1295) 安装指南
+## [XTLS Vision](https://github.com/XTLS/Xray-core/discussions/1295) 安装指南
 
 **已有SSL证书**
 
