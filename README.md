@@ -111,8 +111,8 @@ systemctl status xray && systemctl status nginx
 | 配置 | /usr/local/etc/xray/config.json |
 | 检查 | xray -test -config /usr/local/etc/xray/config.json |
 | 路由规则文件 | /usr/local/share/xray/ |
-| 查看日志 | journalctl -u xray --output cat -e |
-| 实时日志 | journalctl -u xray --output cat -f |
+| 查看日志 | `journalctl -u xray --output cat -e` |
+| 实时日志 | `journalctl -u xray --output cat -f` |
 
 ## v2rayN 6.x 配置指南
 
