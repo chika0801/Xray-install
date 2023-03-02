@@ -22,18 +22,6 @@ go mod download
 CGO_ENABLED=0 go build -o xray -trimpath -ldflags "-s -w -buildid=" ./main
 ```
 
-```
-bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install --beta
-```
-
-```
-systemctl stop xray
-cp xray /usr/local/bin
-systemctl start xray
-cd ..
-rm -rf go Xray-core
-```
-
 **windows-amd64**
 
 ```
