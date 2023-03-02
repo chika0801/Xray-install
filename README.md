@@ -2,7 +2,7 @@
 
 **已有SSL证书**
 
-- 将证书文件改名为`fullchain.cer`，将私钥文件改名为`private.key`，将它们上传到`/etc/ssl/private`目录，执行下面的命令。
+- 将证书文件改名为 **fullchain.cer**，将私钥文件改名为 **private.key**，将它们上传到 **/etc/ssl/private** 目录，执行下面的命令。
 
 ```
 chown -R nobody:nogroup /etc/ssl/private
@@ -12,7 +12,7 @@ chown -R nobody:nogroup /etc/ssl/private
 
 #### 用[acme](https://github.com/acmesh-official/acme.sh)申请SSL证书
 
-- 你先要购买一个域名，然后添加一个子域名，将子域名指向你VPS的IP。等待5-10分钟，让DNS解析生效。你可以通过ping你的子域名，查看返回的IP是否正确。确认DNS解析生效后，再执行下面的命令（每行命令依次执行）。将`chika.example.com`替换成你的子域名。
+- 你先要购买一个域名，然后添加一个子域名，将子域名指向你VPS的IP。等待5-10分钟，让DNS解析生效。你可以通过ping你的子域名，查看返回的IP是否正确。确认DNS解析生效后，再执行下面的命令（每行命令依次执行）。将chika.example.com替换成你的子域名。
 - acme使用standalone模式申请/更新证书时会监听80端口，如果80端口被占用会导致失败。
 - Let's Encrypt [速率限制](https://letsencrypt.org/zh-cn/docs/rate-limits/)。
 
@@ -60,7 +60,7 @@ chown -R nobody:nogroup /etc/ssl/private
 
 </details>
 
-- 备份已申请的SSL证书：进入`/etc/ssl/private`目录，下载证书文件`fullchain.cer`和私钥文件`private.key`。
+- 备份已申请的SSL证书：进入 **/etc/ssl/private** 目录，下载证书文件 **fullchain.cer** 和私钥文件 **private.key**。
 - SSL证书有效期是90天，acme每60天自动更新一次。
 
 1. 安装[Xray](https://github.com/XTLS/Xray-core/releases)
@@ -103,8 +103,8 @@ systemctl restart xray && systemctl restart nginx && sleep 0.2 && systemctl stat
 
 | 项目 | |
 | :--- | :--- |
-| 程序 | /usr/local/bin/xray |
-| 配置 | /usr/local/etc/xray/config.json |
+| 程序 | **/usr/local/bin/xray** |
+| 配置 | **/usr/local/etc/xray/config.json** |
 | 检查 | `xray -test -config /usr/local/etc/xray/config.json` |
 | 查看日志 | `journalctl -u xray --output cat -e` |
 | 实时日志 | `journalctl -u xray --output cat -f` |
@@ -113,7 +113,7 @@ systemctl restart xray && systemctl restart nginx && sleep 0.2 && systemctl stat
 
 <details><summary>点击查看</summary><br>
 
-`服务器` ——> `添加[VLESS服务器]`
+服务器 ——> 添加[VLESS服务器]
 
 ![1](https://user-images.githubusercontent.com/88967758/213372857-49306ebe-f2fc-4426-91df-fd54e096456a.jpg)
 
@@ -123,7 +123,7 @@ systemctl restart xray && systemctl restart nginx && sleep 0.2 && systemctl stat
 
 <details><summary>点击查看</summary><br>
 
-`服务器` ——> `添加[VLESS服务器]`
+服务器 ——> 添加[VLESS服务器]
 
 ![1](https://user-images.githubusercontent.com/88967758/212540248-043ab1ed-af87-4e48-87b7-895018f4a52d.jpg)
 
