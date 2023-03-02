@@ -86,7 +86,7 @@ apt install -y gnupg2 ca-certificates lsb-release ubuntu-keyring && curl https:/
 3. 下载[配置](https://github.com/chika0801/Xray-examples/tree/main/VLESS-TCP-XTLS-Vision)
 
 ```
-curl -Lo /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-XTLS-Vision/config_server.json && curl -Lo /etc/nginx/nginx.conf https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-TCP-XTLS-Vision/nginx.conf
+curl -Lo /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-XTLS-Vision/config_server.json && curl -Lo /etc/nginx/nginx.conf https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-XTLS-Vision/nginx.conf
 ```
 
 4. 下载[路由规则文件加强版](https://github.com/Loyalsoldier/v2ray-rules-dat)
