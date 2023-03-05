@@ -16,7 +16,7 @@ chown -R nobody:nogroup /etc/ssl/private
 - acme使用standalone模式申请/更新证书时会监听80端口，如果80端口被占用会导致失败。
 - Let's Encrypt [速率限制](https://letsencrypt.org/zh-cn/docs/rate-limits/)。
 
-<details><summary>点击查看详细步骤</summary> 
+<details><summary>点击查看详细步骤</summary><br>
 
 ```
 apt install -y socat
