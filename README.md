@@ -51,7 +51,11 @@ acme.sh --install-cert -d chika.example.com --ecc \
 ```
 
 ```
---key-file /etc/ssl/private/private.key
+--key-file /etc/ssl/private/private.key \
+```
+
+```
+--reloadcmd "service xray force-reload"
 ```
 
 ```
