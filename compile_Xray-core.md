@@ -18,11 +18,11 @@ go mod download
 **linux-amd64**
 
 ```
-go build -o xray -trimpath -ldflags "-s -w -buildid=" ./main
+go build -v -o xray -trimpath -ldflags "-s -w -buildid=" ./main
 ```
 
 **windows-amd64**
 
 ```
-GOOS=windows GOARCH=amd64 go build -o xray.exe -trimpath -ldflags "-s -w -buildid=" ./main
+GOOS=windows GOARCH=amd64 go build -o -v xray.exe -trimpath -ldflags "-s -w -buildid=" ./main
 ```
