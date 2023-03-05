@@ -7,7 +7,6 @@ tar -C /usr/local -xzf go.tar.gz
 rm go.tar.gz
 echo -e 'export PATH=$PATH:/usr/local/go/bin' > /etc/profile.d/go.sh
 source /etc/profile.d/go.sh
-go version
 ```
 
 ```
@@ -19,11 +18,11 @@ go mod download
 **linux-amd64**
 
 ```
-CGO_ENABLED=0 go build -o xray -trimpath -ldflags "-s -w -buildid=" ./main
+go build -o xray -trimpath -ldflags "-s -w -buildid=" ./main
 ```
 
 **windows-amd64**
 
 ```
-GOOS=windows GOARCH=amd64 CGO_ENABLED=0 go build -o xray.exe -trimpath -ldflags "-s -w -buildid=" ./main
+GOOS=windows GOARCH=amd64 go build -o xray.exe -trimpath -ldflags "-s -w -buildid=" ./main
 ```
