@@ -10,6 +10,9 @@ source /etc/profile.d/go.sh
 
 ```
 apt install -y git
+```
+
+```
 git clone https://github.com/XTLS/Xray-core.git
 cd Xray-core
 go mod download -x
