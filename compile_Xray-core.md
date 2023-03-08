@@ -26,6 +26,7 @@ go build -v -o xray -trimpath -ldflags "-s -w -buildid=" ./main
 
 ```
 cp -f ./Xray-core/xray /usr/local/bin
+xray version
 systemctl restart xray && sleep 0.2 && systemctl status xray
 ```
 
