@@ -23,10 +23,10 @@ chown -R nobody:nogroup /etc/ssl/private
 chmod -R 0644 /etc/ssl/private/*
 ```
 
-- 每天7点自动检查/更新证书
+- 每个星期天上午7点自动检查/更新证书
 
 ```
-printf "0 7 * * * /root/update_certbot.sh\n" > update && crontab update && rm update
+printf "0 7 * * 0 /root/update_certbot.sh\n" > update && crontab update && rm update
 ```
 
 ```
