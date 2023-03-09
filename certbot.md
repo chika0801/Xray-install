@@ -13,8 +13,8 @@ certbot certonly --standalone --register-unsafely-without-email -d chika.example
 ```
 
 ```
-cp /etc/letsencrypt/archive/*/privkey*.pem /etc/ssl/private/private.key
 cp /etc/letsencrypt/archive/*/fullchain*.pem /etc/ssl/private/fullchain.cer
+cp /etc/letsencrypt/archive/*/privkey*.pem /etc/ssl/private/private.key
 chown -R nobody:nogroup /etc/ssl/private
 chmod -R 0644 /etc/ssl/private/*
 ```
