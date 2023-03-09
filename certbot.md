@@ -16,6 +16,8 @@ ln -s /snap/bin/certbot /usr/bin/certbot
 certbot certonly --standalone --register-unsafely-without-email -d chika.example.com
 ```
 
+- 将证书文件和私钥文件，复制到 /etc/ssl/private 目录，配合Xray服务端配置文件
+
 ```
 cp /etc/letsencrypt/archive/*/fullchain*.pem /etc/ssl/private/fullchain.cer
 cp /etc/letsencrypt/archive/*/privkey*.pem /etc/ssl/private/private.key
