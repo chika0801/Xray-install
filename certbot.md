@@ -35,7 +35,3 @@ EOF
 ```
 chmod +x update_certbot.sh
 ```
-
-```
-certbot renew --dry-run
-```
