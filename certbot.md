@@ -10,7 +10,7 @@ snap install --classic certbot
 ln -s /snap/bin/certbot /usr/bin/certbot
 ```
 
-- certbot使用standalone模式申请/更新证书时会监听80端口，如果80端口被占用会导致失败。
+- certbot使用standalone模式申请/更新证书时会监听80端口，如果80端口被占用会导致失败
 
 ```
 certbot certonly --standalone --register-unsafely-without-email -d chika.example.com
