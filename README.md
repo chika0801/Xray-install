@@ -10,7 +10,7 @@ chown -R nobody:nogroup /etc/ssl/private
 
 #### 用[acme](https://github.com/acmesh-official/acme.sh)申请SSL证书
 
-- 你先要购买一个域名，然后添加一个子域名，将子域名指向你VPS的IP。等待5-10分钟，让DNS解析生效。你可以通过ping你的子域名，查看返回的IP是否正确。确认DNS解析生效后，再执行下面的命令（每行命令依次执行）。将chika.example.com替换成你的子域名。
+- 你需要先购买一个域名，将主域名（或添加一个子域名），指向你VPS的IP。等待约2-5分钟，让DNS解析生效。你可以通过ping你设置的域名，查看返回的IP是否正确。确认DNS解析生效后，再执行下面的命令（每行命令依次执行）。将chika.example.com替换成你设置的域名。
 - acme使用standalone模式申请/更新证书时会监听80端口，如果80端口被占用会导致失败。
 - Let's Encrypt [速率限制](https://letsencrypt.org/zh-cn/docs/rate-limits/)。
 - 如果使用acme申请失败，请尝试使用[cerbot](https://github.com/chika0801/Xray-install/blob/main/certbot.md)。
