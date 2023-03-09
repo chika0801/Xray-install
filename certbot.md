@@ -33,8 +33,8 @@ printf "0 7 * * 0 /root/update_certbot.sh\n" > update && crontab update && rm up
 cat > /root/update_certbot.sh << EOF
 #!/usr/bin/env bash
 certbot renew --pre-hook "systemctl stop nginx" --post-hook "systemctl start nginx"
-cp /etc/letsencrypt/archive/*/privkey*.pem /etc/ssl/private/private.key
 cp /etc/letsencrypt/archive/*/fullchain*.pem /etc/ssl/private/fullchain.cer
+cp /etc/letsencrypt/archive/*/privkey*.pem /etc/ssl/private/private.key
 EOF
 ```
 
