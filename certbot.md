@@ -1,8 +1,7 @@
-```
-apt install -y snapd
-```
+- 安装certbot
 
 ```
+apt install -y snapd
 snap install core
 snap install --classic certbot
 ln -s /snap/bin/certbot /usr/bin/certbot
@@ -20,6 +19,8 @@ cp /etc/letsencrypt/archive/*/privkey*.pem /etc/ssl/private/private.key
 chown -R nobody:nogroup /etc/ssl/private
 chmod -R 0644 /etc/ssl/private/*
 ```
+
+- 每天7点自动检查/更新证书
 
 ```
 printf "0 7 * * * /root/update_certbot.sh\n" > update && crontab update && rm update
