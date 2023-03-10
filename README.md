@@ -137,7 +137,7 @@ systemctl restart xray && systemctl restart nginx && sleep 0.2 && systemctl stat
 
 <details><summary>点击查看</summary><br>
 
-| 选项 | 值 |
+| 名称 | 值 |
 | :--- | :--- |
 | 地址(address) | chika.example.com |
 | 端口(prot) | 443 |
@@ -154,7 +154,7 @@ systemctl restart xray && systemctl restart nginx && sleep 0.2 && systemctl stat
 
 <details><summary>点击查看</summary><br>
 
-| 选项 | 值 |
+| 名称 | 值 |
 | :--- | :--- |
 | 服务器节点类型 | V2Ray/Xray |
 | V2Ray/XRay 协议 | VLESS |
@@ -181,7 +181,7 @@ systemctl restart xray && systemctl restart nginx && sleep 0.2 && systemctl stat
 
 <details><summary>点击查看</summary><br>
 
-| 选项 | 值 |
+| 名称 | 值 |
 | :--- | :--- |
 | 类型 | Xray |
 | 传输协议 | VLESS |
