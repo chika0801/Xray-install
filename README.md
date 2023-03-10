@@ -65,7 +65,7 @@ chown -R nobody:nogroup /etc/ssl/private
 1. 安装[Xray](https://github.com/XTLS/Xray-core/releases)
 
 ```
-bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install
+bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install --beta
 ```
 
 2. 安装[Nginx](http://nginx.org/en/linux_packages.html)
