@@ -108,7 +108,7 @@ systemctl restart xray && systemctl restart nginx && sleep 0.2 && systemctl stat
 | 查看日志 | `journalctl -u xray --output cat -e` |
 | 实时日志 | `journalctl -u xray --output cat -f` |
 
-## v2rayN 6.x 配置指南
+## v2rayN - V6.17及以上版本 配置指南
 
 <details><summary>点击查看</summary><br>
 
