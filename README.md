@@ -112,17 +112,22 @@ systemctl restart xray && systemctl restart nginx && sleep 0.2 && systemctl stat
 
 <details><summary>点击查看</summary><br>
 
-服务器 ——> 添加[VLESS服务器]
+| 名称 | 值 |
+| :--- | :--- |
+| 地址 | chika.example.com |
+| 端口 | 443 |
+| 用户ID | chika |
+| 流控 | xtls-rprx-vision |
+| 传输层安全 | tls |
+| Fingerprint | chrome |
 
-![1](https://user-images.githubusercontent.com/88967758/213372857-49306ebe-f2fc-4426-91df-fd54e096456a.jpg)
+![1](https://user-images.githubusercontent.com/88967758/224359333-39fe1582-e98f-4f10-951e-3d54499bbe6d.png)
 
 </details>
 
 ## v2rayN 5.x 配置指南
 
 <details><summary>点击查看</summary><br>
-
-服务器 ——> 添加[VLESS服务器]
 
 ![1](https://user-images.githubusercontent.com/88967758/212540248-043ab1ed-af87-4e48-87b7-895018f4a52d.jpg)
 
