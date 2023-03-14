@@ -108,7 +108,9 @@ systemctl restart xray && systemctl restart nginx && sleep 0.2 && systemctl stat
 | 查看日志 | `journalctl -u xray --output cat -e` |
 | 实时日志 | `journalctl -u xray --output cat -f` |
 
-## v2rayN - V6.17及以上版本 配置示例
+## 客户端配置示例
+
+### v2rayN - V6.17及以上版本 配置示例
 
 <details><summary>点击查看</summary><br>
 
@@ -125,7 +127,24 @@ systemctl restart xray && systemctl restart nginx && sleep 0.2 && systemctl stat
 
 </details>
 
-## Shadowrocket 配置示例
+### v2rayNG 配置示例
+
+<details><summary>点击查看</summary><br>
+
+| 名称 | 值 |
+| :--- | :--- |
+| 地址(address) | chika.example.com |
+| 端口(prot) | 443 |
+| 用户ID(id) | chika |
+| 流控(flow) | xtls-rprx-vision |
+| 传输协议(network) | tcp |
+| 传输层安全(tls) | tls |
+| SNI | 留空 |
+| uTLS | chrome |
+
+</details>
+
+### Shadowrocket 配置示例
 
 <details><summary>点击查看</summary><br>
 
@@ -148,24 +167,7 @@ systemctl restart xray && systemctl restart nginx && sleep 0.2 && systemctl stat
 
 </details>
 
-## v2rayNG 配置示例
-
-<details><summary>点击查看</summary><br>
-
-| 名称 | 值 |
-| :--- | :--- |
-| 地址(address) | chika.example.com |
-| 端口(prot) | 443 |
-| 用户ID(id) | chika |
-| 流控(flow) | xtls-rprx-vision |
-| 传输协议(network) | tcp |
-| 传输层安全(tls) | tls |
-| SNI | 留空 |
-| uTLS | chrome |
-
-</details>
-
-## ShadowSocksR Plus+ 配置示例
+### ShadowSocksR Plus+ 配置示例
 
 <details><summary>点击查看</summary><br>
 
@@ -192,7 +194,7 @@ systemctl restart xray && systemctl restart nginx && sleep 0.2 && systemctl stat
 
 </details>
 
-## Pass Wall 配置示例
+### Pass Wall 配置示例
 
 <details><summary>点击查看</summary><br>
 
