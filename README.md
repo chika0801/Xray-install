@@ -138,8 +138,8 @@ systemctl restart xray && systemctl restart nginx && sleep 0.2 && systemctl stat
 | TLS | 选上 |
 | XTLS | xtls-rprx-vision |
 | 允许不安全 | 不选 |
-| ALPN | 留空 |
 | SNI | 留空 |
+| ALPN | 留空 |
 | 传输方式 | none |
 | 多路复用 | 不选 |
 | TCP 快速打开 | 不选 |
