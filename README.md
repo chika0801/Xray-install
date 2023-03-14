@@ -125,11 +125,26 @@ systemctl restart xray && systemctl restart nginx && sleep 0.2 && systemctl stat
 
 </details>
 
-## v2rayN 5.x 配置示例
+## Shadowrocket 配置示例
 
 <details><summary>点击查看</summary><br>
 
-![1](https://user-images.githubusercontent.com/88967758/212540248-043ab1ed-af87-4e48-87b7-895018f4a52d.jpg)
+| 选项 | 值 |
+| :--- | :--- |
+| 类型 | VLESS |
+| 地址 | chika.example.com |
+| 端口 | 443 |
+| UUID | chika |
+| TLS | 选上 |
+| XTLS | xtls-rprx-vision |
+| 允许不安全 | 不选 |
+| SNI | 留空 |
+| ALPN | 留空 |
+| 传输方式 | none |
+| 多路复用 | 不选 |
+| TCP 快速打开 | 不选 |
+| UDP转发 | 选上 |
+| 代理通过 | 留空 |
 
 </details>
 
