@@ -191,12 +191,12 @@ systemctl restart xray && systemctl restart nginx && sleep 0.2 && systemctl stat
 | ID | chika |
 | TLS | 勾上 |
 | flow | xtls-rprx-vision |
+| REALITY | 不勾 |
 | alpn | 默认 |
 | 域名 | 留空 |
 | 允许不安全连接 | 不勾 |
 | 指纹伪造 | chrome |
 | 传输协议 | TCP |
 | 伪装类型 | none |
-| Mux | 不勾 |
 
 </details>
