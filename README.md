@@ -4,6 +4,10 @@ Shadowrocket 2.2.25 的 Vision 对应的服务端是 Xray-core v1.7.5，与 [v1.
 
 - **若要用小火箭的 Vision，服务端及其它客户端暂时使用 v1.7.5，勿升级到 v1.8.0**
 
+```
+bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install --version 1.7.5
+```
+
 **已有SSL证书**
 
 - 将证书文件改名为 **fullchain.cer**，将私钥文件改名为 **private.key**，将它们上传到 **/etc/ssl/private** 目录，执行下面的命令。
