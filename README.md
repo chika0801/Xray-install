@@ -8,6 +8,8 @@
 chown -R nobody:nogroup /etc/ssl/private
 ```
 
+[使用证书时权限不足](https://github.com/v2fly/fhs-install-v2ray/wiki/Insufficient-permissions-when-using-certificates-zh-Hans-CN)
+
 #### 用[acme](https://github.com/acmesh-official/acme.sh)申请SSL证书
 
 - 你需要先购买一个域名，将主域名（或添加一个子域名），指向你VPS的IP。等待约2-5分钟，让DNS解析生效。可以通过ping你设置的域名，查看返回的IP是否正确。确认DNS解析生效后，再执行下面的命令（每行命令依次执行）。将chika.example.com替换成你设置的域名。
