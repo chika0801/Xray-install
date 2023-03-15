@@ -1,5 +1,9 @@
 ## [XTLS Vision](https://github.com/XTLS/Xray-core/discussions/1295) 安装指南
 
+Shadowrocket 2.2.25 的 Vision 对应的服务端是 Xray-core v1.7.5，与 [v1.8.0 不完全兼容](https://github.com/XTLS/Xray-core/issues/1755#issuecomment-1462355442)，建议：
+
+- **若要用小火箭的 Vision，服务端及其它客户端暂时使用 v1.7.5，勿升级到 v1.8.0**
+
 **已有SSL证书**
 
 - 将证书文件改名为 **fullchain.cer**，将私钥文件改名为 **private.key**，将它们上传到 **/etc/ssl/private** 目录，执行下面的命令。
