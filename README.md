@@ -119,3 +119,7 @@ systemctl restart xray && systemctl restart nginx && sleep 0.2 && systemctl stat
 | 实时日志 | `journalctl -u xray --output cat -f` |
 
 [**客户端配置示例**](https://github.com/chika0801/Xray-examples/tree/main/VLESS-XTLS-Vision)
+
+:star:**Stargazers over time**:star:
+
+[![Stargazers over time](https://starchart.cc/chika0801/Xray-install.svg)](https://starchart.cc/chika0801/Xray-install)
