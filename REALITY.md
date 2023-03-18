@@ -23,3 +23,9 @@ curl -Lo /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika
 ```
 systemctl restart xray && sleep 0.2 && systemctl status xray
 ```
+
+4. 参考客户端配置示例
+
+[VLESS-XTLS-uTLS-REALITY](https://github.com/chika0801/Xray-examples/tree/main/VLESS-XTLS-uTLS-REALITY)
+
+[VLESS-gRPC-uTLS-REALITY](https://github.com/chika0801/Xray-examples/tree/main/VLESS-gRPC-uTLS-REALITY)
