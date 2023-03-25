@@ -43,3 +43,9 @@ EOF
 ```
 chmod +x update_certbot.sh
 ```
+
+- 测试更新证书
+
+```
+certbot renew --dry-run --pre-hook "systemctl stop nginx" --post-hook "systemctl start nginx"
+```
