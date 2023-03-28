@@ -33,13 +33,7 @@ acme.sh --issue -d chika.example.com --standalone --keylength ec-256
 
 ```
 acme.sh --install-cert -d chika.example.com --ecc \
-```
-
-```
 --fullchain-file /etc/ssl/private/fullchain.cer \
-```
-
-```
 --key-file /etc/ssl/private/private.key
 ```
 
