@@ -45,3 +45,9 @@ acme.sh --install-cert -d chika.example.com --ecc \
 ```
 chown -R nobody:nogroup /etc/ssl/private
 ```
+
+- 强制更新证书
+
+```
+acme.sh --renew -d chika.example.com --force --ecc
+```
