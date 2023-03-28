@@ -25,7 +25,7 @@ chown -R nobody:nogroup /etc/ssl/private
 chmod -R 0644 /etc/ssl/private/*
 ```
 
-- 每个月的1日0点自动检查/更新证书
+- 每个月的1日0点0分自动检查/更新证书
 
 ```
 printf "0 0 1 * * /root/update_certbot.sh\n" > update && crontab update && rm update
