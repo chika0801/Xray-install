@@ -24,9 +24,7 @@ chown -R nobody:nogroup /etc/ssl/private
 - acme使用standalone模式申请/更新证书时会监听80端口，如果80端口被占用会导致失败。
 - Let's Encrypt [速率限制](https://letsencrypt.org/zh-cn/docs/rate-limits/)。
 - 如果使用acme申请失败，请尝试使用[cerbot](https://github.com/chika0801/Xray-install/blob/main/certbot.md)。
-
-[点击查看详细步骤](https://github.com/chika0801/Xray-install/blob/main/acme.md)
-
+- [点击查看详细步骤](https://github.com/chika0801/Xray-install/blob/main/acme.md)
 - 备份已申请的SSL证书：进入 **/etc/ssl/private** 目录，下载证书文件 **fullchain.cer** 和私钥文件 **private.key**。
 - SSL证书有效期是90天，acme每60天自动更新一次。
 
