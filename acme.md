@@ -2,6 +2,9 @@
 
 ```
 apt install -y socat
+```
+
+```
 curl https://get.acme.sh | sh
 ```
 
