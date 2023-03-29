@@ -1,3 +1,5 @@
+**将chika.example.com替换成你设置的域名**
+
 - 安装certbot
 
 ```
@@ -10,13 +12,13 @@ snap install --classic certbot
 ln -s /snap/bin/certbot /usr/bin/certbot
 ```
 
-- 使用standalone模式申请/更新证书时会监听80端口，如果80端口被占用会导致失败
+- 使用 Standalone 模式为 chika.example.com 申请 RSA 证书
 
 ```
 certbot certonly --standalone --register-unsafely-without-email -d chika.example.com
 ```
 
-- 将证书文件和私钥文件，复制到 /etc/ssl/private 目录，配合Xray服务端配置文件
+- 将 chika.example.com 的证书安装到 /etc/ssl/private 目录，设置证书权限，配合Xray服务端配置文件
 
 ```
 cp /etc/letsencrypt/archive/*/fullchain*.pem /etc/ssl/private/fullchain.cer
