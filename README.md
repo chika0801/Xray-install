@@ -10,11 +10,11 @@ chown -R nobody:nogroup /etc/ssl/private
 
 - [使用证书时权限不足](https://github.com/v2fly/fhs-install-v2ray/wiki/Insufficient-permissions-when-using-certificates-zh-Hans-CN)
 
-#### 用[acme](https://github.com/acmesh-official/acme.sh)申请SSL证书
+**使用[acme](https://github.com/acmesh-official/acme.sh)申请SSL证书**
 
 - 你需要先购买一个域名，将主域名（或添加一个子域名），指向你VPS的IP。等待约2-5分钟，让DNS解析生效。可以通过ping你设置的域名，查看返回的IP是否正确。
 - [点击查看详细步骤](https://github.com/chika0801/Xray-install/blob/main/acme.md)
-- 如果使用[acme](https://github.com/chika0801/Xray-install/blob/main/acme.md)申请失败，请尝试使用[cerbot](https://github.com/chika0801/Xray-install/blob/main/certbot.md)。
+- 如果使用acme申请失败，请尝试使用[cerbot](https://github.com/chika0801/Xray-install/blob/main/certbot.md)。
 - 备份已申请的SSL证书：进入 **/etc/ssl/private** 目录，下载证书文件 **fullchain.cer** 和私钥文件 **private.key**。
 - SSL证书有效期是90天，acme每60天自动更新一次。
 
