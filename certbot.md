@@ -20,11 +20,16 @@ ln -s /snap/bin/certbot /usr/bin/certbot
 certbot certonly --standalone --register-unsafely-without-email -d chika.example.com
 ```
 
-- 将 chika.example.com 的证书安装到 /etc/ssl/private 目录，设置证书权限，配合Xray服务端配置文件
+- 将 chika.example.com 的证书安装到 /etc/ssl/private 目录
 
 ```
 cp /etc/letsencrypt/archive/*/fullchain*.pem /etc/ssl/private/fullchain.cer
 cp /etc/letsencrypt/archive/*/privkey*.pem /etc/ssl/private/private.key
+```
+
+- 设置证书权限，配合Xray服务端配置文件
+
+```
 chown -R nobody:nogroup /etc/ssl/private
 chmod -R 0644 /etc/ssl/private/*
 ```
