@@ -1,5 +1,7 @@
 **将chika.example.com替换成你设置的域名**
 
+**使用 standalone 模式申请/更新证书时会监听 80 端口，如果 80 端口被占用会导致失败**
+
 - 安装certbot
 
 ```
@@ -12,7 +14,7 @@ snap install --classic certbot
 ln -s /snap/bin/certbot /usr/bin/certbot
 ```
 
-- 使用 Standalone 模式为 chika.example.com 申请 RSA 证书
+- 使用 standalone 模式为 chika.example.com 申请 RSA 证书
 
 ```
 certbot certonly --standalone --register-unsafely-without-email -d chika.example.com
