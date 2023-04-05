@@ -1,4 +1,6 @@
-**将chika.example.com替换成你设置的域名**
+**将 chika.example.com 替换成你设置的域名**
+
+**使用 standalone 模式申请/更新证书时会监听 80 端口，如果 80 端口被占用会导致失败**
 
 - 安装acme
 
@@ -28,7 +30,7 @@ acme.sh --upgrade --auto-upgrade
 acme.sh --set-default-ca --server letsencrypt
 ```
 
-- 使用 Standalone 模式为 chika.example.com 申请 ECC 证书
+- 使用 standalone 模式为 chika.example.com 申请 ECC 证书
 
 ```
 acme.sh --issue -d chika.example.com --standalone --keylength ec-256
