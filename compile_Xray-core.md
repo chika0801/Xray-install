@@ -20,7 +20,7 @@ go mod download -x
 **linux-amd64**
 
 ```
-go build -v -o xray -trimpath -ldflags "-s -w -buildid=" ./main
+GOOS=linux GOARCH=amd64 go build -v -o xray -trimpath -ldflags "-s -w -buildid=" ./main
 ```
 
 **windows-amd64**
