@@ -1,0 +1,53 @@
+{
+    "log": {
+        "loglevel": "warning"
+    },
+    "inbounds": [
+        {
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+                "udp": true
+            }
+        }
+    ],
+    "outbounds": [
+        {
+            "protocol": "vless",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "", // 服务端的 IP
+                        "port": 443,
+                        "users": [
+                            {
+                                "id": "chika", // 与服务端一致
+                                "encryption": "none",
+                                "flow": "xtls-rprx-vision"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "tcp",
+                "security": "reality",
+                "realitySettings": {
+                    "show": false,
+                    "fingerprint": "chrome",
+                    "serverName": "www.lovelive-anime.jp", // 与服务端一致
+                    "publicKey": "Z84J2IelR9ch3k8VtlVhhs5ycBUlXA7wHBWcBrjqnAw", // 服务端执行 xray x25519 生成，私钥对应的公钥，填 "Public key" 的值
+                    "shortId": "6ba85179e30d4fc2", // 与服务端一致
+                    "spiderX": ""
+                }
+            },
+            "mux": {
+                "enabled": true, // 若主玩游戏，建议填false
+                "concurrency": -1,
+                "xudpConcurrency": 16,
+                "xudpProxyUDP443": "reject"
+            }
+        }
+    ]
+}
