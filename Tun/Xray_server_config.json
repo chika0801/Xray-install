@@ -10,7 +10,7 @@
             "settings": {
                 "clients": [
                     {
-                        "id": "chika", // 执行 xray uuid 生成，或 1-30 字节的字符串
+                        "id": "chika",
                         "flow": "xtls-rprx-vision"
                     }
                 ],
@@ -20,15 +20,15 @@
                 "network": "tcp",
                 "security": "reality",
                 "realitySettings": {
-                    "show": false, // 若为 true，输出调试信息
-                    "dest": "www.lovelive-anime.jp:443", // 目标网站最低标准：国外网站，支持 TLSv1.3、X25519 与 H2，域名非跳转用（主域名可能被用于跳转到 www）
+                    "show": false,
+                    "dest": "www.lovelive-anime.jp:443",
                     "xver": 0,
-                    "serverNames": [ // 客户端可用的 serverName 列表，暂不支持 * 通配符
+                    "serverNames": [
                         "www.lovelive-anime.jp"
                     ],
-                    "privateKey": "2KZ4uouMKgI8nR-LDJNP1_MHisCJOmKGj9jUjZLncVU", // 执行 xray x25519 生成，填 "Private key" 的值
-                    "shortIds": [ // 客户端可用的 shortId 列表，可用于区分不同的客户端
-                        "6ba85179e30d4fc2" // 0 到 f，长度为 2 的倍数，长度上限为 16，可留空，或执行 openssl rand -hex 8 生成
+                    "privateKey": "2KZ4uouMKgI8nR-LDJNP1_MHisCJOmKGj9jUjZLncVU",
+                    "shortIds": [
+                        "6ba85179e30d4fc2"
                     ]
                 }
             }
