@@ -4,7 +4,7 @@
 
 2. 参考[sing-box Windows 客户端使用方法](https://github.com/chika0801/sing-box-examples/tree/main/Tun)，使用这个[sing-box 客户端配置文件](https://github.com/chika0801/Xray-install/blob/main/Tun/sing-box_client_config.json)。主要区别是由 **sing-box** 提供 **Tun** 模式，处理透明代理环境下的DNS解析，把解析后得到的IP，通过嗅探获得域名，IP和域名作为匹配条件，进入路由部分，并且不使用 **"sniff_override_destination"** 参数，即发送到服务端的请求是IP，不把IP还原成域名发送到服务端。
 
-3. 在v2rayN中添加自定义服务器，使用这个[v2rayN 客户端配置文件](https://github.com/chika0801/Xray-install/blob/main/Tun/v2rayN_client_config.json)。主要区别是 **Xray** 只负责连接服务端，并且使用到 Xray 最新版本的新特性。
+3. 在v2rayN中添加自定义服务器，使用这个[v2rayN 客户端配置文件](https://github.com/chika0801/Xray-install/blob/main/Tun/v2rayN_client_config.json)。主要区别是 **Xray** 只负责连接服务端，并且使用到最新版本的功能。
 
 注意事项
 
