@@ -8,6 +8,8 @@
 
 注意事项
 
+0. 默认 Xray 和 sing-box 均使用最新版本。
+
 1. 协议组合用 **VLESS-XTLS-uTLS-REALITY** 举例，如需改用其它协议组合，请自行参照修改。
 
 2. 若 **sing-box** 出现突然CPU、内存占用猛增，甚至蓝屏，日志快速刷新报错信息。建议尝试使用 [**fakeip**](https://github.com/chika0801/Xray-install/blob/main/Tun/sing-box_client_config_fakeip.json) 模式，如果还是复现，建议尝试使用其它协议组合。如果还是不能解决，建议放弃这套方案，直接用 [**sing-box**](https://github.com/chika0801/sing-box-examples/tree/main/Tun) 出站连接服务端。
