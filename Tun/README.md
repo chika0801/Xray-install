@@ -13,3 +13,17 @@
 2. 若 **sing-box** 出现突然CPU、内存占用猛增，甚至蓝屏，日志快速刷新报错信息。建议尝试使用 [**fakeip**](https://github.com/chika0801/Xray-install/blob/main/Tun/sing-box_client_config_fakeip.json) 模式，如果还是复现，建议尝试使用其它协议组合。如果还是不能解决，建议放弃这套方案，直接用 [**sing-box**](https://github.com/chika0801/sing-box-examples/tree/main/Tun) 出站连接服务端。
 
 3. 先有鸡还是先有蛋的问题，建议提前在sing-box所在文件夹里准备好geoip.db和geosite.db文件。谁先启动有无影响的问题，我自己是v2rayN开机自启，然后手动启动sing-box打开Tun模式。
+
+4. 若服务端有例如将netflix的域名分流到另外一个VPS的需求，可尝试使用 **"sniffing"** + **"routeOnly": true**。此时服务端会将请求的IP还原成域名，进入路由部分，匹配到对应的域名转发规则，但是发送（出站）的请求还是IP。所以如果出现netflix最终解锁失败，你需要在最终解锁的VPS配置参数中添加 **"sniffing"** + **"routeOnly": false** 参数内容。
+
+```
+            "sniffing": {
+                "enabled": true,
+                "destOverride": [
+                    "http",
+                    "tls",
+                    "quic"
+                ],
+            "routeOnly": true
+            }
+```
