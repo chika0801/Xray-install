@@ -6,6 +6,8 @@
 
 3. 在v2rayN中添加自定义服务器，使用这个[v2rayN 客户端配置文件](https://github.com/chika0801/Xray-install/blob/main/Tun/v2rayN_client_config.json)。主要区别是 **Xray** 只负责连接服务端，并且使用到最新版本的功能。
 
+4. 在v2rayNG中添加自定义配置，使用这个[v2rayNG 客户端配置文件](https://github.com/chika0801/Xray-install/blob/main/Tun/v2rayNG_client_config.json)，并在v2rayNG的设置中勾选`启用本地DNS`。
+
 注意事项
 
 0. 默认 Xray 和 sing-box 均使用最新版本。
