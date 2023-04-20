@@ -14,7 +14,7 @@
 
 3. 先有鸡还是先有蛋的问题，建议提前在sing-box所在文件夹里准备好geoip.db和geosite.db文件。谁先启动有无影响的问题，我自己是v2rayN开机自启，然后手动启动sing-box打开Tun模式。
 
-4. 若服务端有例如将netflix的域名分流到另外一个VPS的需求，可尝试使用 **"sniffing"** + **"routeOnly": true**。此时服务端会将请求的IP还原成域名，进入路由部分，匹配到对应的域名转发规则，但是发送（出站）的请求还是IP。所以如果出现netflix最终解锁失败，你需要在最终解锁的VPS配置参数中添加 **"sniffing"** + **"routeOnly": false** 参数内容。
+4. 若服务端有例如将netflix的域名分流到另外一个VPS的需求，可尝试使用 **"sniffing"** + **"routeOnly": true**。此时服务端会将请求的IP还原成域名，进入路由部分，匹配到对应的域名转发规则，但是发送（出站）的请求还是IP。所以如果出现netflix最终解锁失败，需要在最终解锁VPS的配置中添加 **"sniffing"** + **"routeOnly": false** 的参数内容。
 
 ```
             "sniffing": {
