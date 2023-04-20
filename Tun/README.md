@@ -16,14 +16,14 @@
 
 - 重启Windows系统。
 - 将sing-box客户端配置文件中的`"stack": "system",`改为`"stack": "gvisor",`。
-- 使用sing-box 客户端配置文件 [**fakeip**](https://github.com/chika0801/Xray-install/blob/main/Tun/sing-box_client_config_fakeip.json) 版本。
+- 使用sing-box客户端配置文件 [**fakeip**](https://github.com/chika0801/Xray-install/blob/main/Tun/sing-box_client_config_fakeip.json) 版本。
 - 尝试使用其它协议组合。
 - 放弃这套方案，使用 [**sing-box**](https://github.com/chika0801/sing-box-examples/tree/main/Tun) 出站连接服务端。
 - 重装Windows系统。
 
-3. 先有鸡还是先有蛋的问题，建议提前在sing-box所在文件夹里准备好geoip.db和geosite.db文件。谁先启动有无影响的问题，我自己是v2rayN开机自启，然后手动启动sing-box打开Tun模式。
+3. 先有鸡还是先有蛋的问题，建议提前在sing-box所在文件夹里准备好geoip.db和geosite.db文件。谁先启动的问题，我自己是v2rayN开机自启，然后手动启动sing-box打开Tun模式。
 
-4. 若服务端有例如将netflix的域名分流到另外一个VPS的需求（或使用warp解锁openai），可尝试使用 **"sniffing"** + **"routeOnly": true** 的参数内容。此时服务端会将请求的IP还原成域名，进入路由部分，匹配到对应的域名转发规则，但是发送（出站）的请求还是IP。所以如果出现netflix解锁失败，需要在解锁VPS的配置中添加 **"sniffing"** + **"routeOnly": false** 的参数内容。
+4. 分流相关的问题，若服务端有例如将netflix的域名分流到另外一个VPS的需求（或使用warp解锁openai），可尝试使用 **"sniffing"** + **"routeOnly": true** 的参数内容。此时服务端会将请求的IP还原成域名，进入路由部分，匹配到对应的域名转发规则，但是发送（出站）的请求还是IP。所以如果出现netflix解锁失败，需要在解锁VPS的配置中添加 **"sniffing"** + **"routeOnly": false** 的参数内容。
 
 ```
             "sniffing": {
