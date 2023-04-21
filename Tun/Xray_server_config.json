@@ -33,7 +33,7 @@
                 }
             },
             "sniffing": {
-                "enabled": false, // 不使用 "sniffing" 参数
+                "enabled": false,
                 "destOverride": [
                     "http",
                     "tls",
