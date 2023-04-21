@@ -38,7 +38,8 @@
                     "http",
                     "tls",
                     "quic"
-                ]
+                ],
+            "routeOnly": false
             }
         }
     ],
