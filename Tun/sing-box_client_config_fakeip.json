@@ -95,6 +95,7 @@
                 "geosite": [
                     "geolocation-!cn"
                 ],
+                "rewrite_ttl": 100,
                 "outbound": "proxy"
             },
             {
