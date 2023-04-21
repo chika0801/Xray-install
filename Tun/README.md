@@ -8,11 +8,11 @@
 
 注意事项
 
-0. 默认 Xray 和 sing-box 均使用最新版本。
+1. 默认 Xray 和 sing-box 均使用最新版本。
 
-1. 协议组合用 **VLESS-XTLS-uTLS-REALITY** 举例，如需改用其它协议组合，请自行参照修改。
+2. 协议组合用 **VLESS-XTLS-uTLS-REALITY** 举例，如需改用其它协议组合，请自行参照修改。
 
-2. 若 **sing-box.exe** 莫名出现CPU、内存占用猛增，日志快速刷新报错信息，建议尝试以下方法。
+3. 若 **sing-box.exe** 莫名出现CPU、内存占用猛增，日志快速刷新报错信息，建议尝试以下方法。
 
 - 重启Windows系统。
 - 将sing-box客户端配置文件中的`"stack": "system",`改为`"stack": "gvisor",`。
@@ -20,9 +20,9 @@
 - 尝试使用其它协议组合。
 - 放弃这套方案，使用 [**sing-box**](https://github.com/chika0801/sing-box-examples/tree/main/Tun) 出站连接服务端。
 
-3. 先有鸡还是先有蛋的问题，建议提前在sing-box所在文件夹里准备好[geoip.db](https://github.com/soffchen/sing-geoip/releases)和[geosite.db](https://github.com/soffchen/sing-geoip/releases)文件。谁先启动的问题，我是v2rayN开机自启，手动运行sing-box。
+4. 先有鸡还是先有蛋的问题，建议提前在sing-box所在文件夹里准备好[geoip.db](https://github.com/soffchen/sing-geoip/releases)和[geosite.db](https://github.com/soffchen/sing-geoip/releases)文件。谁先启动的问题，我是v2rayN开机自启，手动运行sing-box。
 
-4. 分流相关的问题，若服务端有例如将netflix的域名分流到另外一个VPS的需求（或使用warp解锁openai），可尝试使用 **"sniffing"** + **"routeOnly": true** 的参数内容。此时服务端会将请求的IP还原成域名，进入路由部分，匹配到对应的域名转发规则，但是发送（出站）的请求还是IP。所以如果出现netflix解锁失败，需要在解锁VPS的配置中添加 **"sniffing"** + **"routeOnly": false** 的参数内容。
+5. 分流相关的问题，若服务端有例如将netflix的域名分流到另外一个VPS的需求（或使用warp解锁openai），可尝试使用 **"sniffing"** + **"routeOnly": true** 的参数内容。此时服务端会将请求的IP还原成域名，进入路由部分，匹配到对应的域名转发规则，但是发送（出站）的请求还是IP。所以如果出现netflix解锁失败，需要在解锁VPS的配置中添加 **"sniffing"** + **"routeOnly": false** 的参数内容。
 
 ```
             "sniffing": {
