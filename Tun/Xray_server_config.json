@@ -31,6 +31,14 @@
                         "6ba85179e30d4fc2"
                     ]
                 }
+            },
+            "sniffing": {
+                "enabled": false, // 不使用 "sniffing" 参数
+                "destOverride": [
+                    "http",
+                    "tls",
+                    "quic"
+                ]
             }
         }
     ],
