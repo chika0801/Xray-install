@@ -40,6 +40,7 @@
                 "geosite": [
                     "geolocation-!cn"
                 ],
+                "rewrite_ttl": 300,
                 "server": "dns_proxy"
             },
             {
@@ -95,7 +96,6 @@
                 "geosite": [
                     "geolocation-!cn"
                 ],
-                "rewrite_ttl": 100,
                 "outbound": "proxy"
             },
             {
