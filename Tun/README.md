@@ -1,10 +1,10 @@
 快速安装
 
-1. 参考[sing-box Windows 客户端使用方法](https://github.com/chika0801/sing-box-examples/tree/main/Tun)，使用这个[sing-box 客户端配置文件](https://github.com/chika0801/Xray-install/blob/main/Tun/sing-box_client_config.json)。简易说明：由 **sing-box** 提供 **Tun** 模式（透明代理环境），接管程序发出的网络访问请求（域名或IP）。域名进入 **"dns"** 部分，按预设的规则进行DNS解析，解析返回的IP（直接请求的IP）进入 **"route"** 部分。使用 **"sniff"** 参数，获得IP被解析前的域名（直接请求的IP无域名信息）。IP和域名作为条件，按预设的规则进行分流。并且不使用 **"sniff_override_destination"** 参数。即sing-box发送到Xray的请求是IP，不会把IP还原成域名。
+1. 参考[sing-box Windows 客户端使用方法](https://github.com/chika0801/sing-box-examples/tree/main/Tun)，使用这个[sing-box 客户端配置文件](https://github.com/chika0801/Xray-install/blob/main/Tun/sing-box_client_config.json)。简易说明：由 **sing-box** 提供 **Tun** 模式（透明代理环境），接管程序发出的网络访问请求（域名或IP）。域名进入 **"dns"** 部分，按预设的规则进行DNS解析，解析返回的IP（直接请求的IP）进入 **"route"** 部分。使用 **"sniff"** 参数，获得IP被解析前的域名（直接请求的IP无域名信息）。IP和域名作为条件，按预设的规则进行分流。并且不使用 **"sniff_override_destination"** 参数。即sing-box发送到Xray的请求是 **IP**，不会把IP还原成域名。
 
-2. 在v2rayN中添加自定义服务器，使用这个[v2rayN 客户端配置文件](https://github.com/chika0801/Xray-install/blob/main/Tun/v2rayN_client_config.json)。简易说明：Xray接收到sing-box发送来的IP，并且不使用 **"sniffing"** 参数，只负责连接服务端，即Xray发送到服务端的请求是IP。
+2. 在v2rayN中添加自定义服务器，使用这个[v2rayN 客户端配置文件](https://github.com/chika0801/Xray-install/blob/main/Tun/v2rayN_client_config.json)。简易说明：Xray接收到sing-box发送来的IP，并且不使用 **"sniffing"** 参数，只负责连接服务端，即Xray发送到服务端的请求是 **IP**。
 
-3. 参考[Xray REALITY 安装指南](https://github.com/chika0801/Xray-install/blob/main/REALITY.md)，使用这个[Xray 服务端配置文件](https://github.com/chika0801/Xray-install/blob/main/Tun/Xray_server_config.json)。简易说明：服务端Xray接收到客户端Xray发来的IP **IP**，并且不使用 **"sniffing"** 参数。即服务端不把接收到的IP还原成域名，就不会再进行一次DNS解析。
+3. 参考[Xray REALITY 安装指南](https://github.com/chika0801/Xray-install/blob/main/REALITY.md)，使用这个[Xray 服务端配置文件](https://github.com/chika0801/Xray-install/blob/main/Tun/Xray_server_config.json)。简易说明：服务端Xray接收到客户端Xray发来的 **IP**，并且不使用 **"sniffing"** 参数。即服务端不把接收到的IP还原成域名，就不会再进行一次DNS解析。
 
 注意事项
 
