@@ -16,7 +16,6 @@
 
 - 重启Windows系统。
 - 将sing-box客户端配置文件中的`"stack": "system",`改为`"stack": "gvisor",`。
-- 使用sing-box客户端配置文件 [**fakeip**](https://github.com/chika0801/Xray-install/blob/main/Tun/sing-box_client_config_fakeip.json) 版本。
 - 尝试使用其它协议组合。
 - 放弃这套方案，使用 [**sing-box**](https://github.com/chika0801/sing-box-examples/tree/main/Tun) 出站连接服务端。
 
