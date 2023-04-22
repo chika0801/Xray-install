@@ -46,5 +46,3 @@
 1. https://sing-box.sagernet.org/zh/faq/fakeip/
 
 2. https://sekai.icu/posts/udp-fqdn-in-transport-proxy/
-
-3. https://blog.skk.moe/post/i-have-my-unique-dns-setup/
