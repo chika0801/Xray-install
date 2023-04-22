@@ -37,5 +37,4 @@
 **参考链接**
 
 1. https://sing-box.sagernet.org/zh/faq/fakeip/
-
 2. https://sekai.icu/posts/udp-fqdn-in-transport-proxy/
