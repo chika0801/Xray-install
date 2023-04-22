@@ -1,4 +1,4 @@
-快速安装
+**快速安装**
 
 1. 参考[sing-box Windows 客户端使用方法](https://github.com/chika0801/sing-box-examples/tree/main/Tun)，使用这个[sing-box 客户端配置文件](https://github.com/chika0801/Xray-install/blob/main/Tun/sing-box_client_config.json)。
 
@@ -12,7 +12,7 @@
 
 - 服务端接收到客户端发送来的 **IP**，并且不使用 **"sniffing"** 参数，不会把IP还原成域名。
 
-注意事项
+**注意事项**
 
 1. 默认 Xray 和 sing-box 使用最新版本。
 
@@ -41,7 +41,7 @@
             }
 ```
 
-参考链接
+**参考链接**
 
 1. https://sing-box.sagernet.org/zh/faq/fakeip/
 
