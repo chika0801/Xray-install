@@ -47,15 +47,6 @@
                 "concurrency": -1,
                 "xudpConcurrency": 16,
                 "xudpProxyUDP443": "reject"
-            },
-            "sniffing": {
-                "enabled": false,
-                "destOverride": [
-                    "http",
-                    "tls",
-                    "quic"
-                ],
-            "routeOnly": false
             }
         }
     ]
