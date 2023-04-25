@@ -2,6 +2,24 @@
     "log": {
         "loglevel": "warning"
     },
+    "routing": {
+        "domainStrategy": "AsIs",
+        "rules": [
+            {
+                "type": "field",
+                "ip": [
+                    "geoip:private"
+                ],
+                "outboundTag": "block"
+            },
+            {
+                "type": "field",
+                "port": "443",
+                "network": "udp",
+                "outboundTag": "block"
+            }
+        ]
+    },
     "inbounds": [
         {
             "listen": "0.0.0.0",
