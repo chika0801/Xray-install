@@ -10,6 +10,13 @@
                 "port": "443",
                 "network": "udp",
                 "outboundTag": "block"
+            },
+            {
+                "type": "field",
+                "ip": [
+                    "geoip:private"
+                ],
+                "outboundTag": "block"
             }
         ]
     },
