@@ -179,7 +179,7 @@
             "tag": "proxy",
             "server": "127.0.0.1",
             "server_port": 10808,
-            "udp_fragment": true
+            "version": "5"
         },
         {
             "type": "direct",
