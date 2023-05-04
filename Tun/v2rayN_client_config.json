@@ -8,7 +8,8 @@
             "port": 10808,
             "protocol": "socks",
             "settings": {
-                "udp": true
+                "udp": true,
+                "ip": "127.0.0.1"
             },
             "sniffing": {
                 "enabled": false,
