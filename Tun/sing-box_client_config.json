@@ -14,7 +14,7 @@
             },
             {
                 "tag": "dns_direct",
-                "address": tls://223.6.6.6",
+                "address": "tls://223.6.6.6",
                 "strategy": "ipv4_only", // 若客户端准备好了IPv6，可改为 prefer_ipv6
                 "detour": "direct"
             },
