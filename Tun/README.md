@@ -41,8 +41,8 @@
         },
 ```
 
-3. 在v2rayN中添加自定义配置服务器，使用这个 [v2rayN 客户端配置文件](https://github.com/chika0801/Xray-install/blob/main/Tun/v2rayN_client_config.json)，Core类型选Xray，Socks端口填0。
-4. 在服务端安装 Xray，使用这个 [Xray 服务端配置文件](https://github.com/chika0801/Xray-install/blob/main/Tun/Xray_server_config.json)。
+2. 在v2rayN中添加自定义配置服务器，使用这个 [v2rayN 客户端配置文件](https://github.com/chika0801/Xray-install/blob/main/Tun/v2rayN_client_config.json)，Core类型选Xray，Socks端口填0。
+3. 在服务端安装 Xray，使用这个 [Xray 服务端配置文件](https://github.com/chika0801/Xray-install/blob/main/Tun/Xray_server_config.json)。
 
 </details>
 
