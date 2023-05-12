@@ -1,8 +1,50 @@
 ### 快速安装
 
-1. 参考 [sing-box Windows 客户端使用方法](https://github.com/chika0801/sing-box-examples/blob/main/Tun/README.md)，使用这个 [sing-box 客户端配置文件](https://github.com/chika0801/Xray-install/blob/main/Tun/sing-box_client_config.json)。
-2. 在v2rayN中添加自定义服务器，使用这个 [v2rayN 客户端配置文件](https://github.com/chika0801/Xray-install/blob/main/Tun/v2rayN_client_config.json)。
-3. 在服务端安装 Xray，使用这个 [Xray 服务端配置文件](https://github.com/chika0801/Xray-install/blob/main/Tun/Xray_server_config.json)。
+1. 参考 [sing-box Windows 客户端使用方法](https://github.com/chika0801/sing-box-examples/blob/main/Tun/README.md)，将 [sing-box Windows 客户端配置](https://github.com/chika0801/sing-box-examples/blob/main/Tun/config_client_windows.json) 进行下如修改。
+
+<details><summary>点击查看</summary><br>
+
+原内容
+```jsonc
+        {
+            "type": "vless",
+            "tag": "proxy",
+            "server": "", // 服务端的 IP
+            "server_port": 443,
+            "uuid": "chika",
+            "flow": "xtls-rprx-vision",
+            "tls": {
+                "enabled": true,
+                "server_name": "www.lovelive-anime.jp",
+                "utls": {
+                    "enabled": true,
+                    "fingerprint": "chrome"
+                },
+                "reality": {
+                    "enabled": true,
+                    "public_key": "Z84J2IelR9ch3k8VtlVhhs5ycBUlXA7wHBWcBrjqnAw",
+                    "short_id": "6ba85179e30d4fc2"
+                }
+            },
+            "packet_encoding": "xudp"
+        },
+```
+
+替换为
+```jsonc
+        {
+            "type": "socks",
+            "tag": "proxy",
+            "server": "127.0.0.1",
+            "server_port": 10808,
+            "version": "5"
+        },
+```
+
+</details>
+
+3. 在v2rayN中添加自定义服务器，使用这个 [v2rayN 客户端配置文件](https://github.com/chika0801/Xray-install/blob/main/Tun/v2rayN_client_config.json)。
+4. 在服务端安装 Xray，使用这个 [Xray 服务端配置文件](https://github.com/chika0801/Xray-install/blob/main/Tun/Xray_server_config.json)。
 
 ### 工作流程
 
