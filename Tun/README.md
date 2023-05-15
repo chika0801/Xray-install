@@ -7,26 +7,8 @@
 原内容
 ```jsonc
         {
-            "type": "vless",
             "tag": "proxy",
-            "server": "", // 服务端的 IP
-            "server_port": 443,
-            "uuid": "chika",
-            "flow": "xtls-rprx-vision",
-            "tls": {
-                "enabled": true,
-                "server_name": "www.lovelive-anime.jp",
-                "utls": {
-                    "enabled": true,
-                    "fingerprint": "chrome"
-                },
-                "reality": {
-                    "enabled": true,
-                    "public_key": "Z84J2IelR9ch3k8VtlVhhs5ycBUlXA7wHBWcBrjqnAw",
-                    "short_id": "6ba85179e30d4fc2"
-                }
-            },
-            "packet_encoding": "xudp"
+            // 粘贴你的客户端配置，需要保留 "tag": "proxy",
         },
 ```
 
