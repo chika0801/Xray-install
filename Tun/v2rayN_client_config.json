@@ -23,40 +23,7 @@
     ],
     "outbounds": [
         {
-            "protocol": "vless",
-            "settings": {
-                "vnext": [
-                    {
-                        "address": "", // 服务端的 IP
-                        "port": 443,
-                        "users": [
-                            {
-                                "id": "chika",
-                                "encryption": "none",
-                                "flow": "xtls-rprx-vision"
-                            }
-                        ]
-                    }
-                ]
-            },
-            "streamSettings": {
-                "network": "tcp",
-                "security": "reality",
-                "realitySettings": {
-                    "show": false,
-                    "fingerprint": "chrome",
-                    "serverName": "www.lovelive-anime.jp",
-                    "publicKey": "Z84J2IelR9ch3k8VtlVhhs5ycBUlXA7wHBWcBrjqnAw",
-                    "shortId": "6ba85179e30d4fc2",
-                    "spiderX": ""
-                }
-            },
-            "mux": {
-                "enabled": true, // 若主玩游戏，建议填false
-                "concurrency": -1,
-                "xudpConcurrency": 16,
-                "xudpProxyUDP443": "reject"
-            }
+            // 粘贴你的客户端配置
         }
     ]
 }
