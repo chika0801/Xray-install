@@ -9,15 +9,6 @@
             "protocol": "socks",
             "settings": {
                 "udp": true
-            },
-            "sniffing": {
-                "enabled": false,
-                "destOverride": [
-                    "http",
-                    "tls",
-                    "quic"
-                ],
-                "routeOnly": false
             }
         }
     ],
