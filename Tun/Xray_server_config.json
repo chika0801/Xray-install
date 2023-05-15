@@ -22,34 +22,7 @@
     },
     "inbounds": [
         {
-            "listen": "0.0.0.0",
-            "port": 443,
-            "protocol": "vless",
-            "settings": {
-                "clients": [
-                    {
-                        "id": "chika",
-                        "flow": "xtls-rprx-vision"
-                    }
-                ],
-                "decryption": "none"
-            },
-            "streamSettings": {
-                "network": "tcp",
-                "security": "reality",
-                "realitySettings": {
-                    "show": false,
-                    "dest": "www.lovelive-anime.jp:443",
-                    "xver": 0,
-                    "serverNames": [
-                        "www.lovelive-anime.jp"
-                    ],
-                    "privateKey": "2KZ4uouMKgI8nR-LDJNP1_MHisCJOmKGj9jUjZLncVU",
-                    "shortIds": [
-                        "6ba85179e30d4fc2"
-                    ]
-                }
-            },
+            // 粘贴你的服务端配置
             "sniffing": {
                 "enabled": false,
                 "destOverride": [
