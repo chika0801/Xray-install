@@ -18,8 +18,7 @@
             "type": "socks",
             "tag": "proxy",
             "server": "127.0.0.1",
-            "server_port": 10808,
-            "version": "5"
+            "server_port": 10808
         },
 ```
 
