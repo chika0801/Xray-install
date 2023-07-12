@@ -5,8 +5,8 @@
 原内容
 ```jsonc
         {
-            "tag": "proxy",
-            // 粘贴你的客户端配置，需要保留 "tag": "proxy",
+            // 粘贴你的客户端配置，需要保留 "tag": "proxy"
+            "tag": "proxy"
         },
 ```
 
