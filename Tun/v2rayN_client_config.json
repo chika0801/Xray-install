@@ -5,7 +5,7 @@
     "inbounds": [
         {
             "listen": "127.0.0.1",
-            "port": 10808,
+            "port": 50000,
             "protocol": "socks",
             "settings": {
                 "udp": true
