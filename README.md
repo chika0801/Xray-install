@@ -53,12 +53,6 @@ curl -Lo /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika
 curl -Lo /usr/local/share/xray/geoip.dat https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat && curl -Lo /usr/local/share/xray/geosite.dat https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat
 ```
 
-- 每天07:00自动更新
-
-```
-printf "0 7 * * * /root/update_geodata.sh\n" > update && crontab update && rm update && printf "#\041/usr/bin/env bash\ncurl -sLo /usr/local/share/xray/geoip.dat https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat\ncurl -sLo /usr/local/share/xray/geosite.dat https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat\nsystemctl restart xray\n" > update_geodata.sh && chmod +x update_geodata.sh
-```
-
 5. 启动程序
 
 ```
