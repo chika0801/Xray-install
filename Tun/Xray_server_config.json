@@ -5,14 +5,6 @@
     "inbounds": [
         {
             // 粘贴你的服务端配置
-            "sniffing": {
-                "enabled": false,
-                "destOverride": [
-                    "http",
-                    "tls",
-                    "quic"
-                ]
-            }
         }
     ],
     "outbounds": [
