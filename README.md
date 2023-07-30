@@ -60,7 +60,7 @@ systemctl restart xray && systemctl restart nginx && sleep 0.2 && systemctl stat
 | 检查 | `xray -test -config /usr/local/etc/xray/config.json` |
 | 重启 | `systemctl restart xray` |
 | 状态 | `systemctl status xray` |
-| 查看日志 | `journalctl -u xray --output cat -e` |
-| 实时日志 | `journalctl -u xray --output cat -f` |
+| 查看日志 | `journalctl -u xray -o cat -e` |
+| 实时日志 | `journalctl -u xray -o cat -f` |
 
 ## [**客户端配置示例**](https://github.com/chika0801/Xray-examples/tree/main/VLESS-XTLS-Vision)
