@@ -45,3 +45,17 @@ GOOS=windows GOARCH=amd64 GOAMD64=v3 go build -v -o xray.exe -trimpath -ldflags 
 ```
 
 [About GOAMD64](https://github.com/golang/go/wiki/MinimumRequirements#amd64)
+
+复制文件
+
+**linux-amd64**
+
+```
+cp -f /root/Xray-core/xray /usr/local/bin/xray && chmod +x /usr/local/bin/xray
+```
+
+**windows-amd64**
+
+```
+cp -f /root/Xray-core/xray.exe /root/xray.exe
+```
