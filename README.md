@@ -57,7 +57,8 @@ systemctl restart xray && systemctl restart nginx && sleep 0.2 && systemctl stat
 | :--- | :--- |
 | 程序 | **/usr/local/bin/xray** |
 | 配置 | **/usr/local/etc/xray/config.json** |
-| 检查 | `xray -test -config /usr/local/etc/xray/config.json` |
+| geoip | **/usr/local/share/xray/geoip.db** |
+| geosite | **/usr/local/share/xray/geosite.db** |
 | 重启 | `systemctl restart xray` |
 | 状态 | `systemctl status xray` |
 | 查看日志 | `journalctl -u xray -o cat -e` |
