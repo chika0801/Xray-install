@@ -35,13 +35,13 @@ go mod download -x
 **linux-amd64**
 
 ```
-GOOS=linux GOARCH=amd64 GOAMD64=v2 go build -v -o xray -trimpath -ldflags "-s -w -buildid=" ./main
+CGO_ENABLED=0 GOOS=linux GOARCH=amd64 GOAMD64=v2 go build -v -o xray -trimpath -ldflags "-s -w -buildid=" ./main
 ```
 
 **windows-amd64**
 
 ```
-GOOS=windows GOARCH=amd64 GOAMD64=v3 go build -v -o xray.exe -trimpath -ldflags "-s -w -buildid=" ./main
+CGO_ENABLED=0 GOOS=windows GOARCH=amd64 GOAMD64=v3 go build -v -o xray.exe -trimpath -ldflags "-s -w -buildid=" ./main
 ```
 
 [About GOAMD64](https://github.com/golang/go/wiki/MinimumRequirements#amd64)
