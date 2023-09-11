@@ -1,5 +1,9 @@
 name: Xray
 
+env:
+  ENV_LINUX: CGO_ENABLED=0 GOOS=linux GOARCH=amd64 GOAMD64=v2
+  ENV_WINDOWS: CGO_ENABLED=0 GOOS=windows GOARCH=amd64 GOAMD64=v3
+
 on:
   workflow_dispatch:
 
@@ -31,8 +35,10 @@ jobs:
     - name: go build
       run: | 
         cd Xray-core
-        CGO_ENABLED=0 GOOS=linux GOARCH=amd64 GOAMD64=v2 go build -v -o xray -trimpath -ldflags "-s -w -buildid=" ./main
-        CGO_ENABLED=0 GOOS=windows GOARCH=amd64 GOAMD64=v3 go build -v -o xray.exe -trimpath -ldflags "-s -w -buildid=" ./main
+        export ${{ env.ENV_LINUX }}
+        go build -v -o xray -trimpath -ldflags "-s -w -buildid=" ./main
+        export ${{ env.ENV_WINDOWS }}
+        go build -v -o xray.exe -trimpath -ldflags "-s -w -buildid=" ./main
 
     - name: Upload files
       uses: actions/upload-artifact@v3
