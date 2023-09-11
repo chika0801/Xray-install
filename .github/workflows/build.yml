@@ -24,7 +24,7 @@ jobs:
 
     - name: git clone
       run: |
-        git clone -b main --single-branch --depth 1 https://github.com/XTLS/Xray-core.git
+        git clone --depth 1 https://github.com/XTLS/Xray-core.git
         cd Xray-core
         go mod download
 
