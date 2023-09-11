@@ -14,8 +14,8 @@ chown -R nobody:nogroup /etc/ssl/private
 
 ### **使用[acme](https://github.com/acmesh-official/acme.sh)申请SSL证书**
 
-- [点击查看详细步骤](https://github.com/chika0801/Xray-install/blob/main/acme.md)
-- 如果使用acme申请失败，请尝试使用[cerbot](https://github.com/chika0801/Xray-install/blob/main/certbot.md)
+- [点击查看详细步骤](acme.md)
+- 如果使用acme申请失败，请尝试使用[cerbot](certbot.md)
 - 备份已申请的SSL证书：进入 **/etc/ssl/private** 目录，下载证书文件 **fullchain.cer** 和私钥文件 **private.key**
 - SSL证书有效期是90天，acme每60天自动更新一次
 
