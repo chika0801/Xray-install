@@ -1,4 +1,4 @@
-name: Xray
+name: xray
 
 env:
   ENV_LINUX: CGO_ENABLED=0 GOOS=linux GOARCH=amd64 GOAMD64=v2
@@ -29,12 +29,11 @@ jobs:
     - name: git clone
       run: |
         git clone --depth 1 https://github.com/XTLS/Xray-core.git
-        cd Xray-core
-        go mod download
 
     - name: go build
       run: | 
         cd Xray-core
+        go mod download
         export ${{ env.ENV_LINUX }}
         go build -v -o xray -trimpath -ldflags "-s -w -buildid=" ./main
         export ${{ env.ENV_WINDOWS }}
