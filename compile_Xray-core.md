@@ -19,7 +19,7 @@ apt install -y git
 ```
 git clone https://github.com/XTLS/Xray-core.git
 cd Xray-core
-go mod download -x
+go mod download
 ```
 
 更新代码
@@ -27,7 +27,7 @@ go mod download -x
 ```
 cd Xray-core
 git pull
-go mod download -x
+go mod download
 ```
 
 编译命令
