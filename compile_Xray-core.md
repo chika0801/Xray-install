@@ -57,7 +57,7 @@ cd ..
 **linux-amd64**
 
 ```
-cp -f Xray-core/xray /usr/local/bin/xray
+cp -f Xray-core/xray /usr/local/bin/
 chmod +x /usr/local/bin/xray
 ```
 
