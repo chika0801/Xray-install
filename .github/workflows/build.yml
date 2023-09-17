@@ -21,9 +21,6 @@ jobs:
     - name: Initialize Go module
       run: go mod init github.com/XTLS/Xray-core
 
-    - name: Show go env
-      run: go env
-
     - name: git clone
       run: |
         git clone --depth 1 https://github.com/XTLS/Xray-core.git
