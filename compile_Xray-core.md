@@ -34,6 +34,7 @@ cd ..
 
 ```
 cd Xray-core
+sed -i '/build/ s/Custom/'$(git rev-parse --short HEAD)'/' ./core/core.go
 go mod download
 go env -w CGO_ENABLED=0 GOOS=linux GOARCH=amd64 GOAMD64=v2
 go build -v -o xray -trimpath -ldflags "-s -w -buildid=" ./main
