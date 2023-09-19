@@ -28,6 +28,7 @@ jobs:
     - name: go build
       run: | 
         cd Xray-core
+        sed -i '/build/ s/Custom/'$(git rev-parse --short HEAD)'/' ./core/core.go
         go mod download
         go env -w ${{ env.ENV_LINUX }}
         go build -v -o xray -trimpath -ldflags "-s -w -buildid=" ./main
