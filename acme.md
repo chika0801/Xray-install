@@ -14,10 +14,8 @@ apt install -y socat
 curl https://get.acme.sh | sh
 ```
 
-- 设置acme的别名
-
 ```
-alias acme.sh=~/.acme.sh/acme.sh
+source ~/.bashrc
 ```
 
 - 设置acme自动更新
