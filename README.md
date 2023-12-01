@@ -58,10 +58,10 @@ apt install -y gnupg2 ca-certificates lsb-release ubuntu-keyring && curl https:/
 systemctl stop nginx && apt purge -y nginx && rm -r /etc/systemd/system/nginx.service.d/
 ```
 
-3. 下载[配置](https://github.com/chika0801/Xray-examples/blob/main/VLESS-XTLS-Vision/config_server.json)
+3. 下载[配置](https://github.com/chika0801/Xray-examples/blob/main/VLESS-Vision-TLS/config_server.json)
 
 ```
-curl -Lo /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-XTLS-Vision/config_server.json && curl -Lo /etc/nginx/nginx.conf https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-XTLS-Vision/nginx.conf
+curl -Lo /usr/local/etc/xray/config.json https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-Vision-TLS/config_server.json && curl -Lo /etc/nginx/nginx.conf https://raw.githubusercontent.com/chika0801/Xray-examples/main/VLESS-Vision-TLS/nginx.conf
 ```
 
 4. 启动程序
